@@ -1,0 +1,737 @@
+{
+    "baseUrl": "https://raw.githubusercontent.com/Jatin5120/College-Images/main/",
+    "data": {
+        "slideShow": [
+            "Slide_Show/1.jpg",
+            "Slide_Show/2.jpg",
+            "Slide_Show/3.jpg",
+            "Slide_Show/4.jpg",
+            "Slide_Show/5.jpg",
+            "Slide_Show/6.jpg",
+            "Slide_Show/7.jpg",
+            "Slide_Show/8.jpg",
+            "Slide_Show/9.jpg",
+            "Slide_Show/10.jpg",
+            "Slide_Show/11.jpg",
+            "Slide_Show/12.jpg",
+            "Slide_Show/13.jpg",
+            "Slide_Show/14.jpg",
+            "Slide_Show/15.jpg",
+            "Slide_Show/16.jpg",
+            "Slide_Show/17.jpg",
+            "Slide_Show/18.jpg",
+            "Slide_Show/19.jpg",
+            "Slide_Show/20.jpg",
+            "Slide_Show/21.jpg",
+            "Slide_Show/22.jpg"
+        ],
+        "noticeBoard": [
+            {
+                "topic": "INNOVANCE 2K19",
+                "lastDate": "05 Apr 2019",
+                "imageUrl": "Notice_Board/1.jpg",
+                "description": "Lyallpur Khalsa College of Engineering, Jalandhar is organising a TechFest 'INNOVANCE 2K19' on 5th April, 2019. The participants are required to make registration online by filling the following Form.",
+                "links": {
+                    "registration": "http://tinyurl.com/LKCEtechfest2019",
+                    "rules": "http://lkcengg.edu.in/downloads/Innovance2k19.pdf",
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Workshop on Entrepreneurship",
+                "lastDate": "22 Oct 2019",
+                "imageUrl": "Notice_Board/2.jpg",
+                "description": "IEEE students branch of CSE dept, LKCE is organising a workshop on Entrepreneurship on 22 Oct 2019. The resource person for the workshop is Mr. Ahsanul Haq, an Entrepreneur, Soft Skill Trainer.",
+                "links": null
+            },
+            {
+                "topic": "Convocation 2019",
+                "lastDate": "23 Nov 2019",
+                "imageUrl": "Notice_Board/3.jpg",
+                "description": "You will be pleased to know that Lyallpur Khalsa College of Engineering, Jalandhar is going to organize a convocation on 23rd Nov., 2019 at the college campus. We will appreciate if you kindly confirm attending the Convocation, latest by 7th November 2019 by registering for the event. \nWe look forward to welcoming you to the Convocation.",
+                "links": {
+                    "registration": "https://forms.gle/UNsw8WfSmBZv24HDA",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Faculty Development Programme",
+                "lastDate": "16 Dec 2019",
+                "imageUrl": "Notice_Board/4.jpg",
+                "description": "With a great contentment we would like to inform you that our college is organizing Six Days Faculty Development Program on 'Latest Trends in Teaching Pedagogy' from 16th Dec 2019 to 21st Dec 2019. We have invited various renowned resource persons from varied fields for this programme to explore latest pedagogical skills. Keeping in view the quality concerns and dynamics associated with current teaching learning process, we aim at providing a platform where teachers will enhance their pedagogical experience and will keep pace with academic world of todayâ€™s era.",
+                "links": {
+                    "registration": "http://lkcengg.edu.in/downloads/fdpreg.pdf",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "INNOVANCE 2020",
+                "lastDate": "12 Mar 2020",
+                "imageUrl": "Notice_Board/5.jpg",
+                "description": "In consonance with UGC order DOF. No, 1-14/2020 (website) dated 05.03.2020, Corona Virus COVID-19 is declared as a global pandemic and all the mass gatherings and congregations are to be postponed till the time disease COVID-19 is contained. In the same context, our annual Tech-Fest â€˜INNOVANCE 2020â€™ scheduled on 12th March, 2020 is postponed till further notice. \nIn the same light, an initiative has been taken by the institute in interest of humanity for the well-being of the society. Similar kind of support is expected from your good-self. The next decided date for the Tech-Fest â€˜INNOVANCE 2020â€™ will be intimated to your good self shortly.",
+                "links": null
+            },
+            {
+                "topic": "Poetry & Essay writing Competition",
+                "lastDate": null,
+                "imageUrl": "Notice_Board/6.jpg",
+                "description": "CSE department is organizing Poetry and Essay writing Competition for LKCE students.",
+                "links": {
+                    "registration": "https://tinyurl.com/tetskf7",
+                    "rules": null,
+                    "submissionLinks": [
+                        "https://tinyurl.com/uez4jxp",
+                        "https://tinyurl.com/rg9wd49"
+                    ]
+                }
+            },
+            {
+                "topic": "ADMIXTUR",
+                "lastDate": "20 Apr 2020",
+                "imageUrl": "Notice_Board/7.jpg",
+                "description": "Lyallpur Khalsa College of Engineering is organizing an online collage making competition ADMIXTUR on 20th April, 2020.",
+                "links": {
+                    "registration": "https://forms.gle/yrMj3tmePhWnLe3z7",
+                    "rules": null,
+                    "submissionLinks": [
+                        "https://forms.gle/mBGqt4hHLmVufPuQ8"
+                    ]
+                }
+            },
+            {
+                "topic": "Memories in a SNAP",
+                "lastDate": null,
+                "imageUrl": "Notice_Board/8.jpg",
+                "description": "Lyllapur Khalsa College of Engineering, Jalandhar is organizing Online Photography 'Memories in a Snap' and Best out of waste 'Marvelous Out of the Discard '.",
+                "links": {
+                    "registration": null,
+                    "rules": null,
+                    "submissionLinks": [
+                        "https://forms.gle/WqqJpGrMXHVrFPkS7",
+                        "https://forms.gle/f6NSA3wzFkgcCBjH8"
+                    ]
+                }
+            },
+            {
+                "topic": "ONLINE SLOGAN WRITING COMPETITION",
+                "lastDate": "11 may 2020",
+                "imageUrl": "Notice_Board/9.jpg",
+                "description": "Computer Science & Engg department of LKCE organising ONLINE SLOGAN WRITING COMPETITION on any one of the following theme.\nTHINK POSITIVE\nLEARNING DURING COVID -19\n\nOPEN TO ALL STUDENTS( AGE ABOVE 13 YEARS)",
+                "links": {
+                    "registration": "https://tinyurl.com/lkcesloganwriting",
+                    "rules": null,
+                    "submissionLinks": [
+                        "https://tinyurl.com/lkcesloganwriting"
+                    ]
+                }
+            },
+            {
+                "topic": "LKCE GOT TALENT",
+                "lastDate": "15 May 2020",
+                "imageUrl": "Notice_Board/6.jpg",
+                "description": "Computer Science & Engg Department of Lyllapur Khalsa College of Engineering, Jalandhar is organizing LKCE GOT TALENT\nAn Ad Designing Contest\nOPEN TO ALL STUDENTS (Age above 13 yrs.)\nParticipants may opt any one of the Content Model for Ad preparation and designing",
+                "links": {
+                    "registration": "http://lkcengg.edu.in/downloads/cm1.pdf",
+                    "rules": "http://lkcengg.edu.in/downloads/r.pdf",
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Intellectica",
+                "lastDate": "8 Jun 2020",
+                "imageUrl": "Notice_Board/10.jpg",
+                "description": "Students may participate in Picture perception and Description from 11.00-11.20 am.\nAnd Mental Ability Test From 12.00-12.20pm ",
+                "links": {
+                    "registration": "https://forms.gle/AZMAnyDeLVLQ7K3XA",
+                    "rules": null,
+                    "submissionLinks": [
+                        "https://forms.gle/fecCuFp1LjCN2AoX9",
+                        "https://forms.gle/J22GH2c5MVviHaQp8"
+                    ]
+                }
+            },
+            {
+                "topic": "International Webinar On The Talent Eco System",
+                "lastDate": "15 Jun 2020",
+                "imageUrl": "Notice_Board/11.jpg",
+                "description": "Department of Applied Science In Association with TOSS Global Management UAE/ India Organizes International webinar On The Talent Eco System Resource Person Dr. Steve Mc Kenna (Faculty of Business and Law, Curtin Business School, Perth, Western Australia) Date: 15 June 2020 Time: 12 Noon- 1:00 PM At Zoom Platform E Certificates will be issued to all the Participants\n\nFor Joining the Zoom Meeting Id : 747 776 0436 password: lkc\nCoordinator: Dr. Pawanpreet Kaur, M: 8558850606\nContact: 097817-06262, 098882-50413\nE-mail: info@lkcengg.edu.in",
+                "links": {
+                    "registration": "https://tinyurl.com/talenteco",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "E-SPARDHA 2020",
+                "lastDate": "23 Jun 2020",
+                "imageUrl": "Notice_Board/12.jpg",
+                "description": "LKCE, Jalandhar is going to organize e-SPARDHA, 2020 on 23rd June, 2020. Number of events are planned for this e-fest. Their details as mentioned below:\n\nList of Events:\n\nLAN gaming\nIndo Vs. Exotic look challenge\nCrossword\nIQ hunt\nCircuit Mania\nQuiz-Iconic Buildings in the World\n\nE-certificates will be provided to all participants.\nStudents with age 15 or above may register. For any query, you may contact: Er. Varun Sharma (9814501119) & Dr. Nancy Gupta (8283877900).\nThere are *cash prizes for each event:\n1000/- (INR) for the first position\n500/- (INR) for the second position.\n*Except for host institution participants",
+                "links": {
+                    "registration": "https://tinyurl.com/e-spardha2020-21",
+                    "rules": "http://lkcengg.edu.in/downloads/spardha.pdf",
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Webinar on Civil and Foundation Engineering Guide",
+                "lastDate": "19 Jun 2020",
+                "imageUrl": "Notice_Board/13.jpg",
+                "description": "Civil Engineering Department is organizing a webinar on Civil and Foundation Engineering Guide by ER. Harish Sharma, Site manager (international Projects Department) BAUER Spezialtiebau Gambh on 19-06-2020 at 11:00 AM",
+                "links": null
+            },
+            {
+                "topic": "International Webinar CAREER STRIKE",
+                "lastDate": "25 Jun 2020",
+                "imageUrl": "Notice_Board/14.jpg",
+                "description": "International Webinar CAREER STRIKE By Dr Upasana Singh, Senior Lecturer Discipline of Information Systems and Technology University of KwaZulu Natal, Westville Campus, in Durban South Africa.\n\nDate: 25 / 06 / 2020 Thursday\nTiming 12: 30 - 13: 30\nMeeting ID: 336 607 1145\nPassword: career\nFor any query, Contact: Er.Vikram Dhiman 7814879655 ",
+                "links": {
+                    "registration": "https: //tinyurl.com/LKCE-SECURITY",
+                    "rules": null,
+                    "submissionLinks": [
+                        "https: //us02web.zoom.us/j/3366071145?pwd=b2Izb1pTVkxISys1dnllTHNveU5RQT09"
+                    ]
+                }
+            },
+            {
+                "topic": "SAYONARA-2020",
+                "lastDate": "10 Jul 2020",
+                "imageUrl": "Notice_Board/15.jpg",
+                "description": "Lyallpur Khalsa College of Engineering is going to organize e-farewell SAYONARA-2020 to bid adieu to the final year students on 15-07-2020 (10:00 AM onwards). The event will be conducted in the virtual environment through ZOOM meeting application. Ms./Mr. farewell competition is planned for the passing out students. The final year students are required to register at the following Google form link for the participation in the competition.\n\n1.\tPhotograph in modeling attire\t10 MB\n2.\tVideo Clip including their introduction followed by talent showcase (maximum three minute duration)\t25 MB",
+                "links": {
+                    "registration": null,
+                    "rules": null,
+                    "submissionLinks": [
+                        "https://tinyurl.com/sayonara-2020"
+                    ]
+                }
+            },
+            {
+                "topic": "IT Service Management",
+                "lastDate": "11 Jul 2020",
+                "imageUrl": "Notice_Board/16.jpg",
+                "description": "The ECE department of LKCE organizes international webinar under corporate Interaction Series on IT Service Management. The date and timings for the event is 11-07-2020 from 1100 to 1200 hours. E-certificates will be provided to all participants.\nResource Person:\nMr. Ritul Thakur\nSr. Service Delivery Manager\nAcclivis Technologies and Solutions Pvt. Ltd.\n(Member of CITIC Telecom International)\nSINGAPORE",
+                "links": {
+                    "registration": "https://tinyurl.com/webinar-ece",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Latest Evolution in Computer Science",
+                "lastDate": "23 Jul 2020",
+                "imageUrl": "Notice_Board/17.jpg",
+                "description": "The CSE department of LKCE organizes three days Short Term Training Programme on Latest Evolution in Computer Science. The date and timings for the event from 22-07-2020 to 24-07-2020.This STTP will bridge the gap between industry and academia by blending the savoir-faire of corporate and academicians. Eminent personalities from Industry and academia of international and national repute will address the congregation.\nNOTE:\nE-certificates will be provided to all participants.\nStudents of age 17yrs or above can register",
+                "links": {
+                    "registration": "https://tinyurl.com/LKCE-SECURITY",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Job Opportunities in Government Sector after Civil Engineering",
+                "lastDate": "19 Jul 2020",
+                "imageUrl": "Notice_Board/18.jpg",
+                "description": "Department of Civil Engineering is going to organize a webinar on â€œ Job Opportunities in Government Sector after Civil Engineeringâ€ on 19.07.2020 (Sunday) at 3:00 pm. they will highlight about the various fields related to the Civil Engineering Emphasizing specially on government sector and preparation strategies for govt. exams.\nResource Person:\nEr. Pusphraj Singh\n( SDE, PSPCL)",
+                "links": null
+            },
+            {
+                "topic": "Aptitude Test Skills & Training",
+                "lastDate": "17 Jul 2020",
+                "imageUrl": "Notice_Board/19.jpg",
+                "description": "CSE in coordination with Training & Placement dept. is organizing One day Workshop on Resume Writing & Interview Skills. The date and timings for the event is 17-07-2020 at 10:30am.\nResource Person:\nMr. Anshul Wadhwa\nCo-Founder, AptiGuide\n\nZOOM Meeting ID: 97779738372\nPassword: 396080\nEvent Coordinator: Dr. Pooja Dhand (9872476060)\nEvent Coordinator: Dr. Amarjeet Kaur (9463505370)",
+                "links": {
+                    "registration": "https://tinyurl.com/Lkce-resume",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Resume Writing & Interview Skills",
+                "lastDate": "18 Jul 2020",
+                "imageUrl": "Notice_Board/20.jpg",
+                "description": "CSE in coordination with Training & Placement dept. is organizing One day Workshop on Resume Writing & Interview Skills. The date and timings for the event is 18-07-2020 at 10:30am.\nResource Person:\nMr. Anshul Wadhwa\nCo-Founder, AptiGuide\n\nZOOM Meeting ID: 97779738372\nPassword: 396080\nEvent Coordinator: Dr. Pooja Dhand (9872476060)\nEvent Coordinator: Dr. Amarjeet Kaur (9463505370)",
+                "links": {
+                    "registration": "https://tinyurl.com/Lkce-resume",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Webinar on career options for civil engineering",
+                "lastDate": "18 Jul 2020",
+                "imageUrl": "Notice_Board/21.jpg",
+                "description": "Civil department is organizing Webinar on career option for civil engineering. The date and timings for the event is 18-07-2020 at 12:00 to 1:00pm.\nResource Person:\nEr. Gagan deep\nAssistant professor,LKCE\n\nZOOM Meeting ID: 9926618996\nPassword: 12345\nEvent Coordinator: Er. Gagan deep(9888873355)",
+                "links": null
+            },
+            {
+                "topic": "Webinar on WORLD OF CONCRETE",
+                "lastDate": "23 Jul 2020",
+                "imageUrl": "Notice_Board/22.jpg",
+                "description": "Department of Civil Engineering is going to organize a webinar on WORLD OF CONCRETE on 23.07.2020 at 11:00 am.\nResource Person:\nEr. Dinesh sharma\n(Zonal Head ,Customer Technical Services, JK Cement Ltd)",
+                "links": null
+            },
+            {
+                "topic": "e-Expedition",
+                "lastDate": "30 Jul 2020",
+                "imageUrl": "Notice_Board/23.jpg",
+                "description": "Department of ECE at Lyallpur Khalsa College of Engineering is going to organize an event e-Expedition on July 30, 2020 to trigger innovative minds of todayâ€™s youth. These activities are fun filled, helpful for learning and beneficial for mental fitness. Solving puzzles helps the brain engage in a stimulating cognitive activity. Therefore, the motive of this event is to enhance the problem solving skills of the participants thus enhancing their overall personality.\nEvent Coordinator: Dr. Silky khurana",
+                "links": {
+                    "registration": "https://tinyurl.com/LKCE-Expedition",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Online rakhi making competition",
+                "lastDate": "3 Aug 2020",
+                "imageUrl": "Notice_Board/24.jpg",
+                "description": "Department of Applied Science is going to organize a online rakhi making competition on 03th aug,2020. E-certificates will be provided to the winners\nEvent cordinator:\nDr. sarita(8219454861)",
+                "links": null
+            },
+            {
+                "topic": "e-KHUSHAMDEED, 2020",
+                "lastDate": "24 Aug 2020",
+                "imageUrl": "Notice_Board/25.jpg",
+                "description": "School of Engineering organizes 6-Days Online Student Induction Program for the Newly Admitted Students.\n\nMeeting ID: 820 939 7410\nPassword: SIP2020\n\nEvent Coordinator: ER. VARUN SHARMA (9876586085)\nDR. NANCY GUPTA (8283877900)",
+                "links": {
+                    "registration": "https://zoom.us/j/8209397410?pwd=VG1sREZSSXZ6VmxaMmhBRHRDa0NJZz09",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Webinar on Carbonation of Self Compacting Concrete",
+                "lastDate": "24 Sep 2020",
+                "imageUrl": "Notice_Board/26.jpg",
+                "description": "Department of Civil Engineering is going to organizing webinar on â€œCarbonation of Self Compacting Concreteâ€ on 24.09.2020 at 11.30 am. In this webinar, Dr. Navdeep Singh (Assistant Professor, NIT Jalandhar) will be guide about the issues related to the Self Compacting Concrete.",
+                "links": {
+                    "registration": "https://forms.gle/2dwu63sxUVrrVbVm6",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Vasant Panchami",
+                "lastDate": "16 Feb 2021",
+                "imageUrl": "Notice_Board/27.jpg",
+                "description": "LKCTC is celebrating Vasant Panchami on 16th February, 2021, 11.30 am onwards in the College Ground. Various competitions are scheduled on this occasion listed as below:\n1. Most Vibrant Kite Design\n2. Most Eco-Friendly Kite Design\n3. Most Innovative Kite Design\n4. Kite Flying competition\nEvent Coordinator:\nDr. Nancy Gupta (8283877900)\nEr. Gagan Deep (9888873355)",
+                "links": {
+                    "registration": "https://docs.google.com/forms/d/1pERU6B1gT1Iz0NRC8SAB-O7QgFikOAqJ2jMUyp_Yhw8/edit?ts=60261cea",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Webinar on PLC Software STEP-7 Microwin Smart",
+                "lastDate": "19 Feb 2021",
+                "imageUrl": "Notice_Board/28.jpg",
+                "description": "ECE Department of LKC TC in collaboration with T&P Cell is going to organize a webinar on PLC Software STEP-7 Microwin Smart On February 19th, 2021Timings: 10:00 A.M. byMs. Rajinder Kaur, Technical Trainer (Wonder Automation Pvt. Ltd. Mohali).\nFaculty Coordinator:\nEr.Lovdeep Singh (Ph-9464060944)",
+                "links": {
+                    "registration": "https://forms.gle/hdM3YwNxGvuvGyUdA",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Poster Making Competition",
+                "lastDate": "15 Mar 2021",
+                "imageUrl": "Notice_Board/6.jpg",
+                "description": "With humble submission and commemorating 400th Birth Anniversary of Shri Guru Teg Bahadur g, Department of Mechanical Engineering has planned an event of Poster making competition the details of which are as follows:\n\nEvent- Commemorating 400th Birth Anniversary of Shri Guru Teg Bahadur ji. Poster Making Competition\n\nDate- 15/03/2021 (Monday)\nOrganizing Department- Mechanical Engineering Department LKCTC\nCoordinator- Er. Sarbrinder Pal Singh Randhawa (AP ME Dept.)\nVenue- Drawing Hall Room number- 313 (New Building)\nTiming- 12:00 PM onwards\nOpen to All branches of school Of Engineering. (ME,CSE,ECE,CE)",
+                "links": null
+            },
+            {
+                "topic": "E TECH SYMPHONIC",
+                "lastDate": "9 Apr 2021",
+                "imageUrl": "Notice_Board/29.jpg",
+                "description": "It is a matter of immense pleasure for us to inform you that at Lyallpur Khalsa College Technical Campus, we are going to organize Inter College and Inter School technical e-fest eTech-Symphonic , A confluence of innovative ideas for better tomorrow , on 9th April, 2021",
+                "links": {
+                    "registration": "https://tinyurl.com/e-TechSymphonic",
+                    "rules": "http://lkcengg.edu.in/downloads/etech.pdf",
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "FUTURAMA",
+                "lastDate": "12 Apr 2021",
+                "imageUrl": "Notice_Board/30.jpg",
+                "description": "Innovation Club of LKCTC in association with Mechanical Engineering Department organizes FUTURAMA (Digital poster making competition) on 12th april 2021",
+                "links": {
+                    "registration": "https://forms.gle/aEPDAzAaXAxpV5QC8",
+                    "rules": "http://lkcengg.edu.in/downloads/futurama.pdf",
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Capsule Program",
+                "lastDate": "19 Apr 2021",
+                "imageUrl": "Notice_Board/31.jpg",
+                "description": "CSE department in association with Training and Placement Department is organising Capsule Program on Aptitude Skills from 19 April 2021 onwards (30 hrs Programme).",
+                "links": null
+            },
+            {
+                "topic": "Online Workshop on Full Stack Development",
+                "lastDate": "22 Apr 2021",
+                "imageUrl": "Notice_Board/32.jpg",
+                "description": "CSE department in association with Training and Placement Department and in Collaboration with Tech Mahindra is organising Online Workshop on Full Stack Development on 22nd April 2021 at 2:30 pm.",
+                "links": {
+                    "registration": "https://docs.google.com/forms/d/e/1FAIpQLScHtw-RUZQ-3ATNW46sWZuMeOYy6noatWkjvRB2vAC9iZY2QA/viewform?vc=0&c=0&w=1&flr=0",
+                    "rules": null,
+                    "submissionLinks": null
+                }
+            },
+            {
+                "topic": "Alumni Talk",
+                "lastDate": "23 Apr 2021",
+                "imageUrl": "Notice_Board/33.jpg",
+                "description": "Department of Computer Science and Engineering of LKCTC is organizing an online alumni talk series (Vol:2, No.1) on topic â€œCareer Awareness â€ for students of CSE 4th and CSE 6th on 23rd April, 2021. The talk will be carried out by two former students of CSE, Er. Kajal Satija, System Engineer, TCS and Er. Muskan Gulati, Software Engineer, Bebo Technologies.",
+                "links": null
+            },
+            {
+                "topic": "Awareness Session",
+                "lastDate": "30 Apr 2021",
+                "imageUrl": "Notice_Board/34.jpg",
+                "description": "The Department of Applied Science of School of Engineering, Lyallpur Khalsa College Technical Campus is going to organize an awareness session on how to â€œBuild your profile to be industry readyâ€ for first year students (B.Tech. Regular, B.Tech LEET, B.Sc. MLS and B.Voc.). The session will be addressed by Dr. Dharamvir Uppal (a leading Business Coach and Certified Master NLP) on April 30, 2021, 10:00 a.m. onwards. The session will help students gain knowledge about appearing in interviews and getting placements.",
+                "links": null
+            },
+            {
+                "topic": "BootCamp with FUEL",
+                "lastDate": "1 May 2021",
+                "imageUrl": "Notice_Board/35.jpg",
+                "description": "The ECE department in Collaboration with the Training and Placement Cell is organising a bootcamp in collaboration with FUEL to enhance the employability skills of the students and enable them to start their successful career. Under this camp a 60Hrs skill-based training shall be provided to the students encompassing the domain knowledge in artificial intelligence,Soft skills as well as Aptitude skills.",
+                "links": null
+            },
+            {
+                "topic": "BootCamp with FUEL",
+                "lastDate": "1 May 2021",
+                "imageUrl": "Notice_Board/36.jpg",
+                "description": "The CSE department in Collaboration with the Training and Placement Cell is organising a bootcamp in collaboration with FUEL to enhance the employability skills of the students and enable them to start their successful career. Under this camp a 60Hrs skill-based training shall be provided to the students encompassing the domain knowledge in artificial intelligence, Soft skills as well as Aptitude skills.",
+                "links": null
+            },
+            {
+                "topic": "Alumni interaction cum Webinar",
+                "lastDate": "5 May 2021",
+                "imageUrl": "Notice_Board/37.jpg",
+                "description": "The ECE department is organising an Alumni interaction cum Webinar on Automation and its Types on 5th May 2021which will help the students to have a practical understanding about automation and related job opportunities. The resource person will be Er. Rohit Duggal, Alumni ECE Department LKCTC Jalandhar and Automation Engineer at Guru Kirpa Automation, Mandi Gobindgarh, Fatehgarh Sahib.",
+                "links": null
+            },
+            {
+                "topic": "E-FOTOPEDIA",
+                "lastDate": "8 May 2021",
+                "imageUrl": "Notice_Board/38.jpg",
+                "description": "The ECE department organizes an event on E-FOTOPEDIA (Digital Collage Design Contest). The date for the event is 8th May, 2021.\n\nEligibility Criteria: All students of age group 15 years and above can participate.\nThemes of the event:\n1. Green Living\n2. Role of Engineering in combating COVID-19\nEvent Coordinator: Er. Pallavi Sharma (6283805394)",
+                "links": {
+                    "registration": null,
+                    "rules": null,
+                    "submissionLinks": [
+                        "https://tinyurl.com/photogramdesign"
+                    ]
+                }
+            }
+        ],
+        "about": {
+            "title": "LKCTC",
+            "imageUrl": "about.png",
+            "description": "Affiliated to Punjab Technical University.\nLKCE is affiliated to Punjab Technical University and approved by AICTE, Punjab. It has started its operation with intend to indoctrinate knowledge.\nWe aspire to nourish young talents capable to compete in the imminent era. Our students are well taught to acquire skill set coupled with mental strength to accomplish their target with a focus on social ethical and economic human values. Through LKCE, students can turn their own visions into action while structuring their future."
+        },
+        "courses": {
+            "bsc": [
+                {
+                    "name": "Medical Lab Sciences",
+                    "imageUrl": "Courses/BSC-01.jpg",
+                    "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader as a Medical Laboratory Scientist, education and learning experience.",
+                    "mission": "• Study emphasis on diagnosis, treatment and prevention of diseases.\n• Aims to equip Medical Laboratory Scientists with current knowledge.\n• To impart skills for analysing laboratory with quality checks.",
+                    "eligibility": "The candidate should have qualified 10+2(Med. or Non-Med.). The total number of seats available are 30.",
+                    "opportunities": "• Military Services\n• Colleges & Universities\n• Blood Donor Centre\n• Pharmaceutical and Medicine Manufacturing Industries\n• Scientific and Research Development Services\n• Academic Institutions\n• Hospitals\n• Clinics\n• Government Agencies\n• Biotechnology Companies",
+                    "career": "B.Sc (Medical Lab Sciences) is concerned with with the treatment, diagnosis and prevention of disease through the use of clinical laboratory tests. Hence they can get job opportunities in these specialised fields:\n\n•Medical Officer\n•Medical Services Associate\n•Resident Medical Officer\n•Research Associate\n•Medical Technologist\n•Medical coder\n•Laboratory Testing Manager\n•Laboratory Manager\n•Healthcare counsellor"
+                }
+            ],
+            "btech": [
+                {
+                    "name": "Civil Engineering",
+                    "imageUrl": "Courses/BTECH-01.jpg",
+                    "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in civil engineering, education and learning experience.",
+                    "mission": "• To serve the society by providing industrial oriented education to its students for a successful professional career.\n• To inculcate professional ethics through quality and modern construction practices.\n• To promote moral and ethical values among students",
+                    "eligibility": "The candidate should have qualified 10+2 or should be diploma holder. The total number of seats available are 30 for the CE department.",
+                    "opportunities": "• Graduates will have thorough knowledge in sub fields of Civil Engineering so that they can expertize themselves in the field of Civil Engineering. The programme covers the design as well as field knowledge of Civil Engineering.\n• Graduates would be motivated to works collaboratively on various disciplinary projects so as to engage them in practical learning process that will help them to achieve their professional goals.\n• Graduates will have upper hand in designing so as to make them able to participate in creative, synthetic and integrative activities of Civil Engineering.\n• Graduates will have good communication skills so that they can able to express their ideas clearly and confidently.\n• To create the curiosity, desire and ability to learn throughout the life among Graduates so that they will be competent enough to pursue-higher education in technical or management field.",
+                    "career": "Civil Engineering is the key to many of the issues affecting our lives today. Civil engineers solve problems, design, build and maintain our living and working spaces. They design a new stadium, work on a local by-pass or railway line, assess a damaged structure and manage a multi-million pound construction project.\n\n• Civil Engineering Consultants/Contractors.\n• Constructions of Bridges, Dams, Roads, Harbors, Sewer, Pipelines & Other Structures.\n• Survey, Design, Costing, Estimating, Traffic Studies, Draughting, Materials Investigation and testing."
+                },
+                {
+                    "name": "Computer Science and Engineering",
+                    "imageUrl": "Courses/BTECH-02.jpg",
+                    "vision": "To groom students into competent engineers and entrepreneurs, by inculcating technical education, ethical and moral values through measurable and continuous improvement methods.",
+                    "mission": "• To model students ready for industry by grooming their employability skills using academia and corporate collaboration.\n• To blend theoretical knowledge and practical applications with the aid of trainings, peer learning and sound academic practices.\n• Cultivate leadership skills, social awareness and responsibility among the students through various co-curriculum and extra curriculum activities.\n• To encourage the involvement of faculty in pursuing their own academic excellence through the aid of faculty development programmes, short term training programmes, seminars, workshops, etc.",
+                    "eligibility": "The candidate should have qualified 10+2 or should be diploma holder. The total number of seats available are 120 for the CSE department.",
+                    "opportunities": "• To provide the basic knowledge of engineering concepts and fundamentals to computer graduates by logical and practical approach for problem solving and function effectively as a skilled computer engineer and pursue their higher education or emerge as an entrepreneur.\n• To inculcate creative abilities by imparting knowledge and skills to analyze, design, test and implement various software applications.\n• To instill leadership capabilities, social-economic orientation, commitment to ones profession, professional ethics and community services for the protection of environment.",
+                    "career": "Computer science and engineering has revolutionized a world that was there only a moment ago, continues to have unparalleled impact in today's world, and has a steadily increasing scope that is shaping tomorrow's world. There are thousands of national and multinational software companies that offer jobs to Computer Engineers, some of the famous names are IBM, CISCO, TCS, WIPRO, INFOSYS, GOOGLE, MICROSOFT, YAHOO and ORACLE.\n\n• Software Developers\n• Design Engineers in Web applications, Network Security and management solutions\n• Computing and IT Consultants\n• System Administrator\n• Finance Industry\n• Simulation in IT companies"
+                },
+                {
+                    "name": "Electronics and Communication Engineering",
+                    "imageUrl": "Courses/BTECH-03.jpg",
+                    "vision": "To meet global standards of excellence in academic activities related to Electronics & Communication Engineering through innovative and effective teaching practices, industry tie-ups & to produce creative solutions to societal needs.",
+                    "mission": "• To provide a vibrant & dynamic academic environment through industry collaborations, usage of modern tools, innovative teaching learning aids & experienced faculty.\n• To achieve global recognition by providing ethical and value based education aiming at enhancing employability of graduates through proper career guidance, skill development and promotion of entrepreneurship.\n• To inculcate human or moral values in students through an honest & scientific approach making them socially responsible citizens.",
+                    "eligibility": "The candidate should have qualified 10+2 or should be diploma holder. The total number of seats available are 30 for the ECE department.",
+                    "opportunities": "• To acquire the knowledge of Mathematics, Science and Engineering fundamentals to solve complex engineering problems in analog/digital electronic system/subsystems.\n• To achieve professional excellence through industry-oriented learning.\n• To Promote best teaching practices to enhance the technical, logical, &     managerial skills in graduates so that the students communicate effectively and manage resources skillfully as members and leaders of the profession.\n• Ethically and socially responsible for the development of country and     community.",
+                    "career": "Scope of Electronics and Communication Engineering is very vast, keeping in view the fact that modern technology uses Electronics, chips, transistors, fibre optics etc. extensively in our day to day life. The developments of various fields like nanotechnology, robotics, high speed automated processors in embedded systems and image processors provides a budding engineers wide range of opportunities.\nThe Electronic engineers would be involved in sustaining cutting edge technology to stay ahead in competition. An electronic engineer can find a job in Consumer electronics manufacturing organization, Telecommunication & IT industries, Health care equipment manufacturing, Mobile communication, Internet technologies, Power Electronics, and other industries like steel, petroleum and chemical industry, directing control and testing production process. They may also work with computers and electronic equipment in the medical, manufacturing, industrial control, telecommunications, aeronautical and military fields.\n\n• Biomedical Instrumentation\n• Mobile Communication\n• Defence Industry\n• Space and research organizations\n• Manufacturing- PCB, IC etc.\n• Electronic industries-Design and fabrication of devices, embedded systems     etc.\n• Instrumentation in Automobile Industry\n• IT Companies"
+                },
+                {
+                    "name": "Mechanical Engineering",
+                    "imageUrl": "Courses/BTECH-04.jpg",
+                    "vision": "To build up finest graduates from the Department of Mechanical Engineering by achieving better-quality performance together in current and upcoming technologies and to make them ethically strong to contribute to the region and the country.",
+                    "mission": "• To impart best technical knowledge to the students to gain the finest practical and professional skills.\n• To collaborate with the industries and research centres of repute to improve the technical and practical skills of the students.\n• To provide friendly environment to the faculty for participation in academic and research activities in order to help the students to accomplish their desired objective.\n• To provide the excellent infrastructure facilities pertaining to Mechanical Engineering.",
+                    "eligibility": "The candidate should have qualified 10+2 or should be diploma holder. The total number of seats available are 60 for the ME department.",
+                    "opportunities": "• Apply the fundamentals of mathematics, science and engineering to solve the engineering problems of design, production, quality and manufacturing pertaining to core and related engineering domain.\n• Accomplish the professional task with managerial attributes and engineering skills in an ethical and responsible manner.\n• Demonstrate motivation towards pursuing higher education in the institutes of national and global repute to deal with prevalent / emerging needs of society and industry.\n• Pursue their career in the reputed organizations engaged in the manufacturing, design and other associated fields.",
+                    "career": "Mechanical engineers are hugely demanded in both India and abroad. The growth is ample in this industry, in fact increasing, as more and more people are showing interest in this field. Mechanical Engineers can work in thermal power industry, gas turbines industry, air conditioning and refrigeration industry, oil and gas exploration and refining industries, agricultural sector, educational sector, aviation companies, shipping industries, aerospace industry, armed forces, pharmaceutical, automobile industry and many other government sectors.\n\n• Computer Aided Design and Manufacturing\n• Product Engineering Industry\n• Automobile Industry\n• Defense Industry\n• Aviation Industry\n• Maintenance Industry\n• Infrastructure Industry"
+                }
+            ],
+            "bvoc": [
+                {
+                    "name": "Automobile Servicing",
+                    "imageUrl": "Courses/BVOC-01.jpg",
+                    "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Automobile Servicing, education and learning experience.",
+                    "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
+                    "eligibility": "The candidate should have qualified 10+2. The total number of seats available are 25 for the B.Voc courses.",
+                    "opportunities": "• Provides judicious mix of skills relating to a profession\n• Provides flexibility to the students by means of pre-defined entry and multiple exit points\n• Curriculum is designed to instill more practical skills, job training, project development to make student employable.\n• Collaboration with Industry to make students Industry Ready",
+                    "career": "Vocational or skill based education is becoming more and more significant with the passing time. B.Voc (Bachelor of Vocation) is an emerging course in India that aims in providing adequate skills required for a particular trade to candidates. It deals more with application based studies rather than focusing on only theoretical knowledge. The career opportunities in this course are as follows:\n\n• Automobile Maintenance Advisor\n• Workshop Manager\n• Spare Parts Inventory In charge\n• Service Technician\n• Quality Assurance Engineer\n• Military Engineering Services\n• Group Instructor\n• Entrepreneur\n• Workshop Technician\n• Project Analyst"
+                },
+                {
+                    "name": "Building Construction and Technology",
+                    "imageUrl": "Courses/BVOC-01.jpg",
+                    "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Building Construction and Technology, education and learning experience.",
+                    "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
+                    "eligibility": "The candidate should have qualified 10+2. The total number of seats available are 25 for the B.Voc courses.",
+                    "opportunities": "• Provides judicious mix of skills relating to a profession\n• Provides flexibility to the students by means of pre-defined entry and multiple exit points\n• Curriculum is designed to instill more practical skills, job training, project development to make student employable.\n• Collaboration with Industry to make students Industry Ready",
+                    "career": "Vocational or skill based education is becoming more and more significant with the passing time. B.Voc (Bachelor of Vocation) is an emerging course in India that aims in providing adequate skills required for a particular trade to candidates. It deals more with application based studies rather than focusing on only theoretical knowledge. The career opportunities in this course are as follows:\n\n• Drafts Man\n• Concrete Mix Designer\n• Project Manager\n• Construction Site Engineer\n• Site Supervisor\n• Building Surveyor\n• Technical Report Writer"
+                },
+                {
+                    "name": "Data and Web Analytics",
+                    "imageUrl": "Courses/BVOC-01.jpg",
+                    "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Data and Web Analytics, education and learning experience.",
+                    "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
+                    "eligibility": "The candidate should have qualified 10+2. The total number of seats available are 25 for the B.Voc courses.",
+                    "opportunities": "• Provides judicious mix of skills relating to a profession\n• Provides flexibility to the students by means of pre-defined entry and multiple exit points\n• Curriculum is designed to instill more practical skills, job training, project development to make student employable.\n• Collaboration with Industry to make students Industry Ready",
+                    "career": "Vocational or skill based education is becoming more and more significant with the passing time. B.Voc (Bachelor of Vocation) is an emerging course in India that aims in providing adequate skills required for a particular trade to candidates. It deals more with application based studies rather than focusing on only theoretical knowledge. The career opportunities in this course are as follows:\n\n• Vocational Training Associate\n• Unit Manager\n• Project Manager\n• IT Systems Analyst\n• Data Scientist\n• Data Analytics Consultant\n• Digital Marketing Manager"
+                },
+                {
+                    "name": "Refrigeration and Air Conditioning",
+                    "imageUrl": "Courses/BVOC-01.jpg",
+                    "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Refrigeration and Air Conditioning services, education and learning experience.",
+                    "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
+                    "eligibility": "The candidate should have qualified 10+2. The total number of seats available are 25 for the B.Voc courses.",
+                    "opportunities": "• Provides judicious mix of skills relating to a profession\n• Provides flexibility to the students by means of pre-defined entry and multiple exit points\n• Curriculum is designed to instill more practical skills, job training, project development to make student employable.\n• Collaboration with Industry to make students Industry Ready",
+                    "career": "Vocational or skill based education is becoming more and more significant with the passing time. B.Voc (Bachelor of Vocation) is an emerging course in India that aims in providing adequate skills required for a particular trade to candidates. It deals more with application based studies rather than focusing on only theoretical knowledge. The career opportunities in this course are as follows:\n\n• Refrigeration System Manager\n• Air Conditioning Design Engineer\n• Spare Parts Inventory In charge\n• Service Technician\n• Quality Assurance Engineer\n• Military Engineering Services\n• Group Instructor\n• Production Engineer\n• Workshop Technician\n• Project Analyst"
+                }
+            ],
+            "diploma": [
+                {
+                    "name": "Civil Engineering",
+                    "imageUrl": "Courses/DIP-01.jpg",
+                    "vision": "DIPLOMA Courses (Polytechnic) at LKCE got established in 2019 under the aegis of Khalsa College Lyallpur Education Charitable Trust and affiliated to Punjab State Board of Technical Education and Industrial Training, Chandigarh. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers.",
+                    "mission": "A DIPLOMA Course would help you achieve practical knowledge of training on the basic level. After attaining a polytechnic diploma, you could straightaway apply for jobs in the same field and often in the government or private sectors. Many students even opt for jobs immediately after their polytechnic course gets over, and pursue their degree course while working. So, basically they earn while they learn!",
+                    "eligibility": "The candidate should have qualified 10th pass with Mathematics, Science & English subjects and 12th pass in (Science/vocational stream) or ITI course for Diploma â€“ Lateral Entry.",
+                    "opportunities": "• Students, who opt for diplomas are taught the practical and technical part of a course, while degrees are more theoretical. Students completed with diplomas are now in demand for their technical skills.\n• Today technical jobs are more available than office jobs. Employers want people with practical knowledge rather than theoretical knowledge.\n• The technical part taught in diploma courses makes you ready for the job market. The rise in demand for people with technical skills has made things even easier to find a job.",
+                    "career": "Junior Engineer/Technical supervisors in Government (Central or State) or their allied Public Sector Units\nTop Government departments/ Companies hiring Polytechnic Diploma Graduates\n• Railways\n• Indian Army\n• PWD B&R, Irrigation, Water supply & Sanitation, PUDA etc.\n• GAIL, ONGC, DRDO, BHEL, NTPC etc.\n\nSupervisor/Technicians/Engineers in Private Sector\nTop private sector companies hiring Polytechnic Diploma Holders\n• Construction Firms Unitech, DLF, Jaypee, GMR Infra, L&T etc.\n• Computer Engineering Firms TCS, HCL, Wipro, Polaris, Seimens etc.\n• Mechanical Engineering Firms - Maruti Suzuki, Toyota, TATA Motors, Mahindra, Bajaj Auto, Hindustan Unilever, Voltas, etc."
+                },
+                {
+                    "name": "Computer Science & Engineering",
+                    "imageUrl": "Courses/DIP-01.jpg",
+                    "vision": "DIPLOMA Courses (Polytechnic) at LKCE got established in 2019 under the aegis of Khalsa College Lyallpur Education Charitable Trust and affiliated to Punjab State Board of Technical Education and Industrial Training, Chandigarh. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers.",
+                    "mission": "A DIPLOMA Course would help you achieve practical knowledge of training on the basic level. After attaining a polytechnic diploma, you could straightaway apply for jobs in the same field and often in the government or private sectors. Many students even opt for jobs immediately after their polytechnic course gets over, and pursue their degree course while working. So, basically they earn while they learn!",
+                    "eligibility": "The candidate should have qualified 10th pass with Mathematics, Science & English subjects and 12th pass in (Science/vocational stream) or ITI course for Diploma â€“ Lateral Entry.",
+                    "opportunities": "• Students, who opt for diplomas are taught the practical and technical part of a course, while degrees are more theoretical. Students completed with diplomas are now in demand for their technical skills.\n• Today technical jobs are more available than office jobs. Employers want people with practical knowledge rather than theoretical knowledge.\n• The technical part taught in diploma courses makes you ready for the job market. The rise in demand for people with technical skills has made things even easier to find a job.",
+                    "career": "Junior Engineer/Technical supervisors in Government (Central or State) or their allied Public Sector Units\nTop Government departments/ Companies hiring Polytechnic Diploma Graduates\n• Railways\n• Indian Army\n• PWD B&R, Irrigation, Water supply & Sanitation, PUDA etc.\n• GAIL, ONGC, DRDO, BHEL, NTPC etc.\n\nSupervisor/Technicians/Engineers in Private Sector\nTop private sector companies hiring Polytechnic Diploma Holders\n• Construction Firms Unitech, DLF, Jaypee, GMR Infra, L&T etc.\n• Computer Engineering Firms TCS, HCL, Wipro, Polaris, Seimens etc.\n• Mechanical Engineering Firms - Maruti Suzuki, Toyota, TATA Motors, Mahindra, Bajaj Auto, Hindustan Unilever, Voltas, etc."
+                },
+                {
+                    "name": "Mechanical Engineering",
+                    "imageUrl": "Courses/DIP-01.jpg",
+                    "vision": "DIPLOMA Courses (Polytechnic) at LKCE got established in 2019 under the aegis of Khalsa College Lyallpur Education Charitable Trust and affiliated to Punjab State Board of Technical Education and Industrial Training, Chandigarh. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers.",
+                    "mission": "A DIPLOMA Course would help you achieve practical knowledge of training on the basic level. After attaining a polytechnic diploma, you could straightaway apply for jobs in the same field and often in the government or private sectors. Many students even opt for jobs immediately after their polytechnic course gets over, and pursue their degree course while working. So, basically they earn while they learn!",
+                    "eligibility": "The candidate should have qualified 10th pass with Mathematics, Science & English subjects and 12th pass in (Science/vocational stream) or ITI course for Diploma â€“ Lateral Entry.",
+                    "opportunities": "• Students, who opt for diplomas are taught the practical and technical part of a course, while degrees are more theoretical. Students completed with diplomas are now in demand for their technical skills.\n• Today technical jobs are more available than office jobs. Employers want people with practical knowledge rather than theoretical knowledge.\n• The technical part taught in diploma courses makes you ready for the job market. The rise in demand for people with technical skills has made things even easier to find a job.",
+                    "career": "Junior Engineer/Technical supervisors in Government (Central or State) or their allied Public Sector Units\nTop Government departments/ Companies hiring Polytechnic Diploma Graduates\n• Railways\n• Indian Army\n• PWD B&R, Irrigation, Water supply & Sanitation, PUDA etc.\n• GAIL, ONGC, DRDO, BHEL, NTPC etc.\n\nSupervisor/Technicians/Engineers in Private Sector\nTop private sector companies hiring Polytechnic Diploma Holders\n• Construction Firms Unitech, DLF, Jaypee, GMR Infra, L&T etc.\n• Computer Engineering Firms TCS, HCL, Wipro, Polaris, Seimens etc.\n• Mechanical Engineering Firms - Maruti Suzuki, Toyota, TATA Motors, Mahindra, Bajaj Auto, Hindustan Unilever, Voltas, etc."
+                }
+            ]
+        },
+        "testimonials": [
+            {
+                "name": "Iqbal Singh",
+                "department": "CSE",
+                "imageUrl": "Testimonials/1.jpg",
+                "quote": "My time at lKCE was an experience I will cherish forever. I am very proud to be a student of such college .LKCE has given me a wonderful life with good career and continuous motivation. Life as a LKCE student is unique in its own way. Here Education are perfectly balanced with extra curriculars to achieve overall development of the students."
+            },
+            {
+                "name": "Sakshi",
+                "department": "CSE",
+                "imageUrl": "Testimonials/2.jpg",
+                "quote": "My 3 years at lyallpur khalsa college of Engineering have been excellent and a memory to cherish for a lifetime. The years spent here have been full of learning opportunities that were full of fun and frolic and sometimes with academic grind that one has to go through. The environment here  makes you a better person to face the challenges of the corporate world.."
+            },
+            {
+                "name": "Nikita",
+                "department": "CSE",
+                "imageUrl": "Testimonials/3.jpg",
+                "quote": "Think Different, that is one thing that our college urges in and to far extent succeed in teaching to its students which invariably helps to achieve what you need. It nourished me and thus gave me an opportunity to define me."
+            },
+            {
+                "name": "Ayush Sharma",
+                "department": "CSE",
+                "imageUrl": "Testimonials/4.jpg",
+                "quote": "At the very outset I would like to express my heartiest thanks to the LKCE family. I extend my warm regards to my dept, the Dept. of COMPUTER SCIENCE & ENGINEERING which has immensely helped me succeed."
+            },
+            {
+                "name": "Sunanda",
+                "department": "CSE",
+                "imageUrl": "Testimonials/5.jpg",
+                "quote": "The college provided me the opportunity to learn and develop through the knowledge given in the lectures and practicals in the laboratories."
+            },
+            {
+                "name": "Anu",
+                "department": "ECE",
+                "imageUrl": "Testimonials/6.jpg",
+                "quote": "I am extremely grateful  to the management and staff  of LKCE for their tireless efforts  to ensure a bright and prosperous future for us."
+            },
+            {
+                "name": "Sahibdeep",
+                "department": "ECE",
+                "imageUrl": "Testimonials/7.jpg",
+                "quote": "The management and staff of LKCE really helped me in improving my personality, communication, aptitude and technical skills."
+            },
+            {
+                "name": "Rubina",
+                "department": "CSE",
+                "imageUrl": "Testimonials/8.jpg",
+                "quote": "The college provided me the opportunity to learn and develop through the knowledge given in the lectures and practicals in the laboratories."
+            },
+            {
+                "name": "Prabhjot Singh",
+                "department": "ECE",
+                "imageUrl": "Testimonials/9.jpg",
+                "quote": "I take this opportunity to extend my gratitude to LKCE and Department faculty for chiselling my career and sparing their precious time in kindling our talents."
+            }
+        ],
+        "news": [
+            {
+                "imageUrl": "News/1.jpg",
+                "headline": "Students got Top Position in University",
+                "date": "26 Nov 2020"
+            },
+            {
+                "imageUrl": "News/2.jpg",
+                "headline": "Constitution Day Celebration",
+                "date": "29 Nov 2020"
+            },
+            {
+                "imageUrl": "News/3.jpg",
+                "headline": "Tie up with Amazon",
+                "date": "06 Dec 2020"
+            },
+            {
+                "imageUrl": "News/4.jpg",
+                "headline": "Expert talk on Human Values",
+                "date": "06 Dec 2020"
+            },
+            {
+                "imageUrl": "News/5.jpg",
+                "headline": "Students Placed",
+                "date": "09 Dec 2020"
+            },
+            {
+                "imageUrl": "News/6.jpg",
+                "headline": "Mathematics Day Celebration",
+                "date": "23 Dec 2020"
+            },
+            {
+                "imageUrl": "News/7.jpg",
+                "headline": "Students appearing Physically for Exams",
+                "date": "07 Jan 2021"
+            },
+            {
+                "imageUrl": "News/8.jpg",
+                "headline": "Internation Conference",
+                "date": "25 Jan 2021"
+            },
+            {
+                "imageUrl": "News/9.jpg",
+                "headline": "BMC Flyover visit",
+                "date": "11 Mar 2021"
+            }
+        ],
+        "industrial_visits": [
+            {
+                "title": "Industrial Visit organized by Department of CE Department",
+                "description": "The department of CE of Lyallpur Khalsa College of engineering arranged an industrial visit at Nirmal Kutia, Seechewal &Sultanpur Lodhi.The purpose of this visit was to enable the students to gain exposure to industrial environment and grass root trends in the field of Environmental Engg.& sewage water treatment.\nThe students of CE 3rd& CE 5th semester were accompanied by Er. Tarundeep Singh (Asstt. Professor,CE) &Er.Divya Chopra (Asstt. Professor, CE) who shared their knowledge and experience.\nStudents had the honor to meet and had a live discussion session with Balbir Singh Seechewal Ji who single-handed cleaned and restored Kali Bein River, a 160 km long tributary of Beas in Doaba region of Punjab.",
+                "images": [
+                    "Industrial_Visits/101.jpg",
+                    "Industrial_Visits/102.jpg",
+                    "Industrial_Visits/103.jpg"
+                ]
+            },
+            {
+                "title": "Industrial Visit organized by Department of CSE Department",
+                "description": "Department of Computer Science and Engineering has organized an industrial visit to Impinge Solutions, Mohali, for the students of B.Tech(CSE)-5th",
+                "images": [
+                    "Industrial_Visits/201.jpg",
+                    "Industrial_Visits/202.jpg",
+                    "Industrial_Visits/203.jpg"
+                ]
+            },
+            {
+                "title": "WONDER AUTOMATION SYSTEMS, Mohali",
+                "description": "Department of ECE arranged one day industrial visit for B.Tech ECE 3rd and 5th Sem students to WONDER AUTOMATION SYSTEMS, Mohali.",
+                "images": [
+                    "Industrial_Visits/301.jpg",
+                    "Industrial_Visits/302.jpg",
+                    "Industrial_Visits/303.jpg"
+                ]
+            },
+            {
+                "title": "Industrial Visit to SEBIZ organized by Department of Computer Science and Engineering",
+                "description": "CSE Dept. of Lyallpur Khalsa College of Engineering, Jalandhar organized an industrial visit Sebiz Infotech, Mohali on 5th Oct 2019.",
+                "images": [
+                    "Industrial_Visits/401.jpg"
+                ]
+            },
+            {
+                "title": "Industrial Visit organized by Department of Computer Science and Engineering",
+                "description": "CSE Dept. of Lyallpur Khalsa College of Engineering, Jalandhar organized an industrial visit to PUNCOM, Mohali on 20th Feb, 2019.\nThe second year students of B.Tech. Computer Science and Engineering visited the Punjab Communication Limited (PUNCOM) facility located in Mohali. The students were made aware of the functioning of large scale labs, especially those catering to assembly and manufacturing. The industrial visit was an enlightening one for the curious young minds of LKCE. Around 50 students accompanied by Er. Varun Sharma (AP, CSE)and Er. Rani Geetika (AP, CSE) visited the industry.\nThe students were quite pleased and stated that they were glad to be a part of the LKCE institute which always provides them a hands on experience with their curriculum.\nProf. Sukhbir Singh Chatha, Director Academic Affairs and Er. R. S. Deol, Director LKCE appreciated the efforts of departments and also motivated to plan these types of visits in future also.",
+                "images": [
+                    "Industrial_Visits/501.jpg",
+                    "Industrial_Visits/502.jpg"
+                ]
+            },
+            {
+                "title": "Industrial Visit organized by Department of Applied Science",
+                "description": "The Department of Applied Science of Lyallpur Khalsa College of Engineering organized an industrial visit for the Ist year students of all the branches ( CSE & ECE & ME & CE) on 07/10/2018 at Central Institute of Handtools and Verka milk plant. The students were made aware of various tools , machinery and their functions.\nThe faculty members Dr. Munish Aggarwal, H.O.D, Applied Science, Ms. Jagriti Dutta , Ms. Bani Dhaul and Ms. Anamika Sharma accompanied the students. Dr. R.S. Deol (Director LKCE) appreciated the efforts of the faculty & motivated them to conduct such kind of activities in future also.",
+                "images": [
+                    "Industrial_Visits/601.jpg",
+                    "Industrial_Visits/602.jpg"
+                ]
+            },
+            {
+                "title": "Industrial Visit organized by Department of Civil Engineering",
+                "description": "The Department of Civil Engineering of Lyallpur Khalsa College of Engineering arranged industrial visits for the students of Civil engineering. 3rd semester students went to Panesar RMC Batching Plant and 5th semester students went to Sewage treatment Plant, Pholriwal, Jalandhar. These visits proved to be a wonderful learning experience as it helped the students to gain better knowledge of the practical aspects of Ready Mix concrete plant and Sewage treatment plant.\nThe students of 3rd semester were accompanied by Er. Harsh Kumar and Er. Divya Chopra and students of 5th semester were accompanied by Er. Gagandeep Arora and Er. Harsh Kakkar (Asstt. Professors, CE) who shared their knowledge and experience. All together the visit was an enthralling experience and LKCE look forward to have such visits more frequently in the future.\nS. Sukhbir Singh Chatha (Director Academics, KCL Group) said that LKCE is committed to strengthen the academic learning of their students by keeping this practice of arranging industrial visits regularly.\nEr. R.S. Deol (Director, LKCE) appreciated the Department of Civil Engineering for arranging the Industrial visit. He said that that these kind of industrial visits help the students to understand the actual practical implementation of the concepts which they are studying theoretically.",
+                "images": [
+                    "Industrial_Visits/701.jpg",
+                    "Industrial_Visits/702.jpg",
+                    "Industrial_Visits/703.jpg",
+                    "Industrial_Visits/704.jpg"
+                ]
+            },
+            {
+                "title": "Industrial Visit to Guru Gobind Singh Thermal Power Plant Ropar",
+                "description": "'Theory without Practice is Blind, where Practical without Theory is Deaf'\nIndustrial visit is an important T&P activity that gives a clear insight of practical exposure to the engineering scholars. As a part of wholesome learning process, One day Industrial visit to 'Guru Gobind Singh Super Thermal Power Plant, Ropar' was organized by the ECE and ME department and T&P Department of LKCE on Tuesday, 19th September, 2018. Total 51 students (27 from ME and 24 from ECE) accompanied by Er. Harmanpreet Singh, AP ME deptt. and Er. Jasmeen Kaur, AP ECE Deptt. participated in this visit. Er. R. S. Deol, Director LKCE and Prof. Sukhbir Singh Chatha, Director Academic Affairs appreciated the efforts of departments and also motivated to plan these types of visits in future also.",
+                "images": [
+                    "Industrial_Visits/801.jpg",
+                    "Industrial_Visits/802.jpg"
+                ]
+            },
+            {
+                "title": "Industrial visit at GNA Gears, Mehtiana",
+                "description": "On 29th October 2018, Department of Mechanical Engineering and T&P Cell organized an Industrial Visit of the Vth Semester Mechanical Engineering students to GNA GEARS Mehtiana. The purpose of visit was to enhance the practical & technical skills related to the CNC technology, Dry machining used in manufacturing industry along with work flow of industry. Advanced CAM technology was practically explained by the experts Mr. Amit and Mr.Gurmeet Singh. Er. Sarbrinder Pal Singh, AP, ME Deptt. and Mr. Harpreet Singh, Lab. Tech. accompanied the students and guided them about the future job prospects in Mechanical Engineering. Dr. Sukhraj Singh, HOD Department of Mechanical Engineering said these types of visits are necessary to aware the students about the latest technology being used by industry.\nEr. R. S. Deol (Director, LKCE) appreciated the Department of ME & Mr. Arun Dutta, Assistant Director T&P for arranging the Industrial visit. He said that that these kind of industrial visits help the students to understand the actual practical implementation of the concepts which they are studying theoretically. S. Sukhbir Singh Chatha (Director Academics, KCL Group) said that LKCE is committed to strengthen the academic learning of their students by keeping this practice of arranging industrial visits regularly.",
+                "images": [
+                    "Industrial_Visits/901.jpg"
+                ]
+            }
+        ]
+    }
+}

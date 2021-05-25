@@ -1,0 +1,97 @@
+{
+    "baseUrl": "https://raw.githubusercontent.com/Jatin5120/College-Images/main/",
+    "data": {
+        "title": "Lyallpur Khalsa College Technical Campus",
+        "imageUrl": "about.png",
+        "about": {
+            "lkctc": "The Lyallpur Khalsa College of Engineering got established in 2013 under the aegis of Khalsa College Lyallpur Education Charitable Trust. The Institute is located in the heart of city on a prime piece of land. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers and scientists.\nThe institute as a first step will provide the education in the field of Mechanical Engineering, Civil Engineering, Electronics &amp; Communication Engineering and Computer Science &amp; Engineering disciplines, the most sought after disciplines at present due to the huge potential for the industry absorbing the good students in these fields and very rapid investments taking place in the region.\n\nThe Institute not only celebrates freedom of thought, cultivates vision and encourages growth, but also inculcates human values and concern for the environment and the society.",
+            "trust": "The Khalsa College Lyallpur Education Charitable Trust has a glorious past in the service to the society especially in the field of education.\n\nThe seeds of the legacy were sown before partition-at Lyallpur (Pakistan) in the year 1908 by establishing the organization's first educational institute by the great sage, a kindred soul Sant Attar Singh Ji Mastuana.\n\nAfter partition, the governing council of the Trust established its roots at Jalandhar during the year 1948 through ardent efforts of S. Swaran Singh Ji, Union Cabinet Minister and thereafter the Trust was headed by the renowned educationist & administrator S. Balbir Singh Ji, Member Parliament under whose able leadership and guidance the institutions run by the Trust established its landmark in the field of education.\n\nPresently under the leadership of Sardarni Balbir Kaur, the distinguished members of the Trust are successfully running a number of multi-disciplinary educational institutions with strength of nearly nine thousand students in the areas ranging from Arts & Literature to Management & IT."
+        },
+        "vision": "To contribute to the region & the country at large through innovative excellence in experimental based scientific and technical education with a focus on research so as to be a valuable resource for the corporate world and the humankind and to become a source of pride of all countrymen.",
+        "mission": "To impart quality education and training and to carry out research in consonance with the vision of the Institute, by providing state-of-the-art infrastructure and a learner friendly atmosphere in synergy with innovative pedagogy and global networking; to produce world class and socially responsive academicians, leaders and practitioners in various disciplines.",
+        "governing_body": [
+            {
+                "name": "Sardarni Balbir Kaur",
+                "designation": "President",
+                "imageUrl": "Governing_Body/GB-001.jpg"
+            },
+            {
+                "name": "Sardarni Urmiljeet Kaur",
+                "designation": "Hon. Secretary",
+                "imageUrl": "Governing_Body/GB-002.jpg"
+            },
+            {
+                "name": "S. Jaspal Singh Waraich",
+                "designation": "Hon. Jt. Secretary",
+                "imageUrl": "Governing_Body/GB-003.jpg"
+            },
+            {
+                "name": "S. Deepinder Singh Purewal",
+                "designation": "Member",
+                "imageUrl": "Governing_Body/GB-004.jpg"
+            },
+            {
+                "name": "Sardarni Kartar Kaur",
+                "designation": "Member",
+                "imageUrl": "Governing_Body/GB-005.jpg"
+            },
+            {
+                "name": "Dr. Paramjit Kaur Panag",
+                "designation": "Member",
+                "imageUrl": "Governing_Body/GB-006.jpg"
+            },
+            {
+                "name": "S. Gurdeep Singh Sangha",
+                "designation": "Member",
+                "imageUrl": "Governing_Body/GB-007.jpg"
+            },
+            {
+                "name": "S. Resham Singh",
+                "designation": "Member",
+                "imageUrl": "Governing_Body/GB-008.jpg"
+            }
+        ],
+        "core_team": [
+            {
+                "name": "Sardarni Balbir Kaur",
+                "designation": "President",
+                "imageUrl": "Core_Team/CT-001.jpg",
+                "message": "Dear Students,\n\nI am glad to share with you that Lyallpur Khalsa College of Engineering, Jalandhar (LKCE) is a part of 100 years young–Khalsa College Lyallpur Education Charitable Trust. Located in the heart of Doaba region of Punjab, it has been established to prepare the students with technical and professional skills in the Engineering which is regarded as primary engine of economic growth, employment creation and prosperity. We believe that 'Learning how to do things better- matters'. It is with this conviction that we have established LKCE armed with modern infrastructure, latest pedagogical aids & experienced and dedicated mentors.\n\nThe management of LKCE is committed in its endeavor to provide students with the best of the employment opportunities. We emphasize greatly on industry inputs, hands on training and facilitate the students on developing essential abilities & capabilities to make them more adaptable to the dynamic corporate and industrial environment in global perspective.\n\nLKCE is a place, which ensures that the student receives a high quality education and an all round personality development.\n\nBlessings\nBalbir Kaur"
+            },
+            {
+                "name": "S. Sukhbir Singh Chatha",
+                "designation": "Group Director",
+                "imageUrl": "Core_Team/CT-002.jpg",
+                "message": "Dear Students,\n\nAt LKCE, we strongly believe in disseminating world class technical education and having the best of the faculty drawn from the best of the Institutions of Northern India who have brought with them the best academic and industrial experience to enhance the knowledge of the students in order to help them to build a successful career.\n\nLKCE has the locational advantage of being situated in the heart of the city. Our students are our top priority and all our efforts are centric towards them. Further, I assure that at LKCE you will have a wonderful and pleasing experience.\n\nWarm Wishes\nSukhbir Singh Chatha"
+            },
+            {
+                "name": "Dr. R.S. Deol",
+                "designation": "Dy. Director (A.A.)",
+                "imageUrl": "Core_Team/CT-003.jpg",
+                "message": "Dear Students,\n\nIt gives me immense pleasure in welcoming, on behalf of LKCE, the new entrants to this organization which has a century old legacy in the field of education.\n\nLKCE possesses world class infrastructure, including highly qualified faculty members and well-equipped laboratories, for hands on experience. Students are exposed to the most modern and up-to-date curriculum and contemporary developments in various disciplines of engineering. In addition to developing excellent scientific and engineering skills our graduates will be molded into well-rounded personalities, developing presentation and communication skills, and actively participating in extracurricular activities.\nI welcome you again in LKCE family.\n\nWith Best Wishes\nDr. R. S. Deol"
+            },
+            {
+                "name": "Dr. D.S. Rao",
+                "designation": "Director",
+                "imageUrl": "Core_Team/CT-004.jpg",
+                "message": "Dear Students,\n\nLyallpur Khalsa College of Engineering, over last few years has served to encourage Excellence in a great variety of disciplines in the field of Engineering. It is now a trend-setter in the context of New Educational Objectives. We will continue to serve the cause of Indiaâ€™s greatness as a â€˜Knowledge Societyâ€™. I feel confident that the college is progressing in the right direction to build an Engineering institution of great social impact.\n\nThis is my firm belief that the rich values and traditions imbibed here would carry you to greater heights. In the end I take this opportunity to welcome you all at LKCE and wish you all the very best in accomplishing your dreams\nI welcome you again in LKCE family.\n\nWith Best Wishes\nDr. D. S. Rao"
+            }
+        ],
+        "address": "Jalandhar Cantt. Road,\nJalandhar, Punjab\n144004",
+        "contact": [
+            "+91 181-2350400",
+            "+91 181-2350402",
+            "+91 181-2350403"
+        ],
+        "email": [
+            "info@lkcengg.edu.in",
+            "admission@lkcengg.edu.in"
+        ],
+        "social_media": {
+            "facebook": "https://www.facebook.com/LKCEngg",
+            "twitter": "https://twitter.com/lkcengg",
+            "instagram": "https://www.instagram.com/lkctc_jal/",
+            "linkedin": "https://www.linkedin.com/school/lyallpur-khalsa-college-of-engineering/"
+        }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "baseUrl": "https://raw.githubusercontent.com/Jatin5120/College-Images/main/",
+    "data": {
+        "awards": {
+            "heading": "Awards & Felicitations",
+            "awards": [
+                {
+                    "description": "Lyallpur Khalsa College of Engineering awarded Certificate for Most Innovative Engineering College in Jalandhar by Prime time Research Media Pvt. Ltd at Global Excellence Awards, 2015 ceremony.",
+                    "images": [
+                        "Awards_and_Felicitations/Award-001.jpg",
+                        "Awards_and_Felicitations/Award-002.jpg",
+                        "Awards_and_Felicitations/Award-003.jpg"
+                    ]
+                },
+                {
+                    "description": "Dr. D. S. Rao, Director, Lyallpur Khalsa College of Engineering, being conferred with Indian Achievers Award for Excellence in Education at 49th National Achieversâ€™ & CSR Summit held at New Delhi on 18th September, 2019.",
+                    "images": [
+                        "Awards_and_Felicitations/Award-004.jpg",
+                        "Awards_and_Felicitations/Award-005.jpg"
+                    ]
+                }
+            ]
+        },
+        "achievements": {
+            "heading": "Academic Achievements",
+            "achievements": [
+                {
+                    "heading": "NPTEL Course Completion",
+                    "imageUrl": "Academic_Achievements/Achievement-001.jpg",
+                    "description": "It's a matter of great proud that eight students and a faculty from department of Computer Science and Engineering of Lyallpur Khalsa College of Engineering have successfully completed 12 Week NPTEL Course MHRD, Government of India initiative. Students of CSE 4th Semester Muskan, Jatin, Komal, Aishlee, Shivam, Pawanpreet Singh. Navdeep Kaur, Richu are awarded with NPTEL Elite certificate Such activity helping students to secure jobs and others to crack competitive exams, SPOC of LKCE Er. Vikram Dhiman, AP, CSE mentoring the students of CSE for NPTEL Swayam Course on Internets of Things. He discussed all the possibilities with which skills can be enhanced. Towards the end S. Sukhbir Singh Chatha, Director Academic Affairs, KCL Group encouraged the students and faculty of CSE dept. to participate more in such productive activities and congratulated the department for the successful accomplishments. Dr. D.S. Rao, Director, LKCE and Dr. R.S. Deol, Dy. Director, Academic Affairs, KCL Group congratulated the students and motivated them to keep their spirits high in future as well. They also appreciated the efforts of Er. Vikram Dhiman for guiding the students towards sparkling success."
+                },
+                {
+                    "heading": "Curriculum Focus",
+                    "imageUrl": "Academic_Achievements/Achievement-002.jpg",
+                    "description": "The real essence of curriculum design and delivery is to make students highly innovative & adaptive to become congruent to the industry requirements.\n\nAt LKCE, the emphasis is laid on enhancing conceptual knowledge, building analytical reasoning, improving communication etiquettes and nurturing problem solving skills among the students. The curriculum focuses on teaching & understanding latest technologies and other technical competencies in the various disciplines of engineering to prepare our students to successfully perform in the industry or to become successful entrepreneurs.\n\nThe Institute endeavour to tie up with ISTE, IEEE, ACM, etc. for further enrichment of practical inputs among students."
+                },
+                {
+                    "heading": "Teaching Methodology",
+                    "imageUrl": null,
+                    "description": "At LKCE, our endeavour is to provide in-depth learning of the course contents through the use of audio visual equipments, practicals, demonstrations, projects, workshop jobs, assignments, simulations, research based projects and presentations by students. These innovative teaching techniques create a collaborative learning environment and builds stronger student-teacher relationship which provides a congenial knowledge sharing atmosphere."
+                },
+                {
+                    "heading": "Personality Enhancement",
+                    "imageUrl": "Academic_Achievements/Achievement-003.jpg",
+                    "description": "Personality is the sum total of ways in which an individual reacts and interacts with others. It is an amalgamation of one's behavior, attitude and communication skills. At LKCE, we strongly believe that these traits contribute a lot towards the holistic growth and development of students, as it is our responsibility to give our students the opportunity to enhance their personality traits to make them elevate their personality."
+                },
+                {
+                    "heading": "Experiential Learning",
+                    "imageUrl": null,
+                    "description": "Students' learning is excellent, when their knowledge precipitates through transformation of theoretical understandings into practical learning experiences of their own; as it is blended with hands on experience on whatever we read & learn. With this objective, our students are exposed to the activities like Simulation Exercises, Live Projects, Web Based Learning Activities, Design / Development of IT Projects, Setting-up of Entrepreneurial Ventures, etc."
+                },
+                {
+                    "heading": "Consultancy Works",
+                    "imageUrl": null,
+                    "description": "LKCE encourages its faculty to undertake consultancy work through which the faculty contributes toward the industrial growth, strengthen institute-industry interface and enrich their professional experience. Currently our institute is offering Civil Engineering consultancy services in Surveying, Structural Designing, Town Planning, Testing of materials for construction. Our recent project of survey plotting and town planning was held at Basti BawaKhel (Nagra) and its cost Rs. 13 lakhs approximately."
+                },
+                {
+                    "heading": "Innovation Club",
+                    "imageUrl": null,
+                    "description": "Innovation Club is formed to encourage the young minds to show up with innovative & useful ideas. The objective is to enable the students to be aware of their inner potential and cultivate creativityas well as innovative thinking by proactive academic activities and research. The Vision of the group is to provide the best opportunity to the students to attain technical excellence in the field of Engineering and Emerging Technologies and to develop a comprehensive and integrated personality.\n\nUnder this club, the following Innovative projects were undertaken by the various engineering departments:\n\n→Internal Combustion Engine of two stroke and\n→stroke vehicles\n→Water level indicator\n→Traffic Light Controller\n→Mosquito Repellers\n→Dual Tone Multifrequency Decoder\n→Lie Detector"
+                }
+            ]
+        },
+        "conferences": {
+            "heading": "Workshops & Conferences",
+            "description": "In today's era of cut throat competition, updating ourselves with the latest technologies & advancements is one of the major challenges. We at LKCE believe in giving exposure to our students with respect to the emerging trends in their respective fields. In an endeavour in this direction, following workshops and conferences are conducted in the Institute",
+            "conferences": [
+                {
+                    "topic": "ICETEM-2021\nInternational Conference on Emerging Trends in Engineering and Management",
+                    "description": "ICETEM-2021\nInternational Conference on Emerging Trends in Engineering and Management\nJanuary 23, 2021\nOrganized by\nLyallpur Khalsa College Technical Campus\nIn Association with\nUniversity of KwaZulu-Natal,South Africa & IKG-PTU,Kapurthala.",
+                    "images": [
+                        "Conference_and_Workshops/101.jpg",
+                        "Conference_and_Workshops/102.jpg",
+                        "Conference_and_Workshops/103.jpg"
+                    ],
+                    "links": [
+                        {
+                            "display_text": "Details",
+                            "important": true,
+                            "url": "https://www.lkcengg.edu.in/conference/index.html"
+                        },
+                        {
+                            "display_text": "Glimpse",
+                            "important": false,
+                            "url": "http://lkcengg.edu.in/PhotoGallery.php?album=ICETEM+2021"
+                        }
+                    ]
+                },
+                {
+                    "topic": "ICETEM-2019\nInternational Conference on Emerging Trends in Engineering and Management",
+                    "description": "ICETEM-2019\nInternational Conference on Emerging Trends in Engineering and Management\nApril 27, 2019\nOrganized by\nLyallpur Khalsa College Technical Campus\nIn Association with\nUniversity of KwaZulu-Natal,South Africa & IKG-PTU,Kapurthala.\n\nAbout the Lyallpur Khalsa College of Engineering: The Lyallpur Khalsa College of Engineering got established in 2013 under the aegis of Khalsa College Lyallpur Education Charitable Trust. The Institute is located in the heart of city on a prime piece of land. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers and scientists. The institute as a first step will provide the education in the field of Computer Science & Engineering, Mechanical Engineering, Civil Engineering and Electronics & Communication Engineering disciplines, the most sought after disciplines at present due to the huge potential for the industry absorbing the good students in these fields and very rapid investments taking place in the region.\n\nAbout the Khalsa College Lyallpur Institute of Management & Technology: For the past 100 years Khalsa College Lyallpur Educational Charitable Trust has successfully created a position for itself as a leader in education due to its unwavering commitment towards imparting quality knowledge. Khalsa College Lyallpur Institute of Management & Technology echoes the vision of our founders who believed that the best way of surviving change is to initiate it. Our Institute strives to develop leaders keeping in view the expectations of the present day business world. The managerial and leadership abilities of its students are developed through well designed courses which are taught by our distinguished and experienced faculty.",
+                    "images": [
+                        "Conference_and_Workshops/201.jpg",
+                        "Conference_and_Workshops/202.jpg",
+                        "Conference_and_Workshops/203.jpg",
+                        "Conference_and_Workshops/204.jpg",
+                        "Conference_and_Workshops/205.jpg",
+                        "Conference_and_Workshops/206.jpg",
+                        "Conference_and_Workshops/207.jpg",
+                        "Conference_and_Workshops/208.jpg",
+                        "Conference_and_Workshops/209.jpg",
+                        "Conference_and_Workshops/210.jpg",
+                        "Conference_and_Workshops/211.jpg"
+                    ],
+                    "links": [
+                        {
+                            "display_text": "Registration",
+                            "important": true,
+                            "url": "http://lkcengg.edu.in/Reg-Form.docx"
+                        },
+                        {
+                            "display_text": "Brochure",
+                            "important": false,
+                            "url": "http://lkcengg.edu.in/ICETEM%20-2019.pdf"
+                        }
+                    ]
+                },
+                {
+                    "topic": "IoT challenge 2016",
+                    "description": "IoT challenge 2016\nheld in\nLyallpur Khalsa college of Engineering\non August 12-13, 2016",
+                    "images": [
+                        "Conference_and_Workshops/301.jpg",
+                        "Conference_and_Workshops/302.jpg",
+                        "Conference_and_Workshops/303.jpg",
+                        "Conference_and_Workshops/304.jpg",
+                        "Conference_and_Workshops/305.jpg",
+                        "Conference_and_Workshops/306.jpg",
+                        "Conference_and_Workshops/307.jpg",
+                        "Conference_and_Workshops/308.jpg",
+                        "Conference_and_Workshops/309.jpg"
+                    ],
+                    "links": null
+                },
+                {
+                    "topic": "Lectures by Experts",
+                    "description": "Inviting speakers from the industries and top institutions to share their knowledge & experience with our students is a routine practice in LKCE. Following guests from the industry & academic institutions shared their valuable inputs with the students of LKCE in last academic sessions",
+                    "images": [
+                        "Conference_and_Workshops/401.jpg",
+                        "Conference_and_Workshops/402.jpg",
+                        "Conference_and_Workshops/403.jpg"
+                    ],
+                    "links": null
+                }
+            ]
+        }
+    }
+}

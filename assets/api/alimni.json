@@ -1,0 +1,304 @@
+{
+    "baseUrl": "https://raw.githubusercontent.com/Jatin5120/College-Images/main/",
+    "data": {
+        "link": "https://docs.google.com/forms/d/e/1FAIpQLSdOMFNIcSEsp6V5HovmJR0NUBW0-oNjKNwDSTTupvLRKVd0vQ/viewform?vc=0&c=0&w=1",
+        "alumni": {
+            "ce": [
+                {
+                    "name": "Charandeep sandhi",
+                    "batch": "2015-19",
+                    "job": "Senior Site Engineer",
+                    "company": "MAC Builders and Contractors",
+                    "email": "charandeepsandhi96@gmail.com",
+                    "mobile": "9592950983",
+                    "imageUrl": "Brand_Ambassdors/CE-01.jpg"
+                },
+                {
+                    "name": "Sumita",
+                    "batch": "2015-19",
+                    "job": "Engineer",
+                    "company": "Congruex Consulting ltd.",
+                    "email": "jassumita@gmail.com",
+                    "mobile": "9569876495",
+                    "imageUrl": "Brand_Ambassdors/CE-02.jpg"
+                },
+                {
+                    "name": "Sharnjeet Singh Sondhi",
+                    "batch": "2014-18",
+                    "job": "Highway Engineer",
+                    "company": "Mks Group Ltd.",
+                    "email": "sharnsondhi583@gmail.com",
+                    "mobile": "9814943320",
+                    "imageUrl": "Brand_Ambassdors/CE-03.jpg"
+                },
+                {
+                    "name": "Rishav Ohri",
+                    "batch": "2014-18",
+                    "job": "Project Manager",
+                    "company": "RAP projects",
+                    "email": "Rishav.ohri95@gmail.com",
+                    "mobile": "",
+                    "imageUrl": "Brand_Ambassdors/CE-04.jpg"
+                },
+                {
+                    "name": "Dinesh Sharma",
+                    "batch": "2013-17",
+                    "job": "Junior Execultive Deptt.",
+                    "company": "Jindal reality limited",
+                    "email": "Dinesh.csharma18@gmail.com",
+                    "mobile": "9988313066",
+                    "imageUrl": "Brand_Ambassdors/CE-05.jpg"
+                },
+                {
+                    "name": "Shivam Gogna",
+                    "batch": "2015-19",
+                    "job": "Engineer",
+                    "company": "Congruex Consulting Asia Pacific",
+                    "email": "Shivi.gogna@gmail.com",
+                    "mobile": "7696444454",
+                    "imageUrl": "Brand_Ambassdors/CE-06.jpg"
+                },
+                {
+                    "name": "Nitesh Chowdhary",
+                    "batch": "2013-17",
+                    "job": "Junior Engineer",
+                    "company": "SJ Contracts Pvt. Ltd Pune",
+                    "email": "Cnitesh366@gmail.com",
+                    "mobile": "6280174055",
+                    "imageUrl": "Brand_Ambassdors/CE-07.jpg"
+                },
+                {
+                    "name": "Sarabjeet Singh Sondhi",
+                    "batch": "2014-18",
+                    "job": "Highway Engineer",
+                    "company": "Mks Group Ltd.",
+                    "email": "Sarabjeetsondhi95@gmail.com",
+                    "mobile": "8728870318",
+                    "imageUrl": "Brand_Ambassdors/CE-08.jpg"
+                }
+            ],
+            "cse": [
+                {
+                    "name": "Ruby kala",
+                    "batch": "2016-20",
+                    "job": "Android developer",
+                    "company": "Seasia Educational Culture",
+                    "email": "rubykala753@gmail.com",
+                    "mobile": "8968638259",
+                    "imageUrl": "Brand_Ambassdors/CSE-01.jpg"
+                },
+                {
+                    "name": "Ritika Pathak",
+                    "batch": "2016-20",
+                    "job": "Java developer",
+                    "company": "Seasia Educational Culture",
+                    "email": "ritzzs395@gmail.com",
+                    "mobile": "8427548268",
+                    "imageUrl": "Brand_Ambassdors/CSE-02.jpg"
+                },
+                {
+                    "name": "Ayush Sharma",
+                    "batch": "2013-17",
+                    "job": "Java developer",
+                    "company": "Vayam Technology Limited",
+                    "email": "sharma20ayush@gmail.com",
+                    "mobile": "7696396730",
+                    "imageUrl": "Brand_Ambassdors/CSE-03.jpg"
+                },
+                {
+                    "name": "Nikita Seth",
+                    "batch": "2013-17",
+                    "job": "Senior tech analyst",
+                    "company": "Oak North Global",
+                    "email": "nikitasethi400@gmail.com",
+                    "mobile": "8130972285",
+                    "imageUrl": "Brand_Ambassdors/CSE-04.jpg"
+                },
+                {
+                    "name": "Kajal Satija",
+                    "batch": "2015-19",
+                    "job": "Assistant System Engineer",
+                    "company": "TCS",
+                    "email": "kajalsatija1997@gmail.com",
+                    "mobile": "8288933130",
+                    "imageUrl": "Brand_Ambassdors/CSE-05.jpg"
+                },
+                {
+                    "name": "Paras Dua",
+                    "batch": "2016-20",
+                    "job": "Developer",
+                    "company": "TCS",
+                    "email": "parasdua1997@gmail.com",
+                    "mobile": "8568015594",
+                    "imageUrl": "Brand_Ambassdors/CSE-06.jpg"
+                },
+                {
+                    "name": "Twinkle Punj",
+                    "batch": "2015-19",
+                    "job": "Project developer",
+                    "company": "HP",
+                    "email": "twinkzpunj2716@gmail.com",
+                    "mobile": "9988313066",
+                    "imageUrl": "Brand_Ambassdors/CSE-07.jpg"
+                },
+                {
+                    "name": "Ketan Sharma",
+                    "batch": "2015-19",
+                    "job": "IT-operations Engineer",
+                    "company": "Cogniter Technologies",
+                    "email": "ketan2296@gmail.com",
+                    "mobile": "9357700096",
+                    "imageUrl": "Brand_Ambassdors/CSE-08.jpg"
+                },
+                {
+                    "name": "Sakshi",
+                    "batch": "2015-18",
+                    "job": "Android developer",
+                    "company": "Solitaire Infosys",
+                    "email": "sakshimohinial18@gmail.com",
+                    "mobile": "9517237020",
+                    "imageUrl": "Brand_Ambassdors/CSE-09.jpg"
+                },
+                {
+                    "name": "Iqbal singh",
+                    "batch": "2015-18",
+                    "job": "Software Engineer",
+                    "company": "Bebo Technologies",
+                    "email": "balli7888@gmail.com",
+                    "mobile": "9872731046",
+                    "imageUrl": "Brand_Ambassdors/CSE-10.jpg"
+                },
+                {
+                    "name": "Muskan gulati",
+                    "batch": "2016-20",
+                    "job": "Associate Engineer",
+                    "company": "Bebo Technologies",
+                    "email": "Muskangulati.1997@gmail.com",
+                    "mobile": "8556959556",
+                    "imageUrl": "Brand_Ambassdors/CSE-11.jpg"
+                }
+            ],
+            "ece": [
+                {
+                    "name": "Anu Saini",
+                    "batch": "2015-19",
+                    "job": "Senior Marketing Executive",
+                    "company": "Zapbuild technologies",
+                    "email": "sainianu906@gmail.com",
+                    "mobile": "9417290710",
+                    "imageUrl": "Brand_Ambassdors/ECE-01.jpg"
+                },
+                {
+                    "name": "Rohit Kumar",
+                    "batch": "2015-19",
+                    "job": "Service Engineer",
+                    "company": "Wonder Systems Ltd",
+                    "email": "rohit.duggal.789@gmail.com",
+                    "mobile": "8289081712",
+                    "imageUrl": "Brand_Ambassdors/ECE-02.jpg"
+                },
+                {
+                    "name": "Prabhjot Singh",
+                    "batch": "2015-19",
+                    "job": "Enrolled in Mobile Application",
+                    "company": "Montreal, Quebec, Canada",
+                    "email": "prabhjotflorapsf@gmail.com",
+                    "mobile": "14383645211",
+                    "imageUrl": "Brand_Ambassdors/ECE-03.jpg"
+                },
+                {
+                    "name": "Nitish",
+                    "batch": "2015-19",
+                    "job": "",
+                    "company": "",
+                    "email": "nitish.nk.2014@gmail.com",
+                    "mobile": "9803235741",
+                    "imageUrl": "Brand_Ambassdors/ECE-04.jpg"
+                },
+                {
+                    "name": "Shifali",
+                    "batch": "2015-19",
+                    "job": "",
+                    "company": "",
+                    "email": "shifalirajput97@gmail.com",
+                    "mobile": "8283072197",
+                    "imageUrl": "Brand_Ambassdors/ECE-05.jpg"
+                },
+                {
+                    "name": "Anjali",
+                    "batch": "2016-20",
+                    "job": "System engineer",
+                    "company": "Advance Solutions",
+                    "email": "anjaliangel135@gmail.com",
+                    "mobile": "9877988230",
+                    "imageUrl": "Brand_Ambassdors/ECE-06.jpg"
+                },
+                {
+                    "name": "Sunidhi",
+                    "batch": "2016-20",
+                    "job": "System engineer",
+                    "company": "Advance Solutions",
+                    "email": "sunidhisrivastava80@gmail.com",
+                    "mobile": "9463469485",
+                    "imageUrl": "Brand_Ambassdors/ECE-07.jpg"
+                },
+                {
+                    "name": "Manpreet Kaur",
+                    "batch": "2016-20",
+                    "job": "System engineer",
+                    "company": "Advance Solutions",
+                    "email": "priyas63476@gmail.com",
+                    "mobile": "8264369163",
+                    "imageUrl": "Brand_Ambassdors/ECE-08.jpg"
+                },
+                {
+                    "name": "Aakriti",
+                    "batch": "2016-20",
+                    "job": "System engineer",
+                    "company": "Advance Solutions",
+                    "email": "aakritisrivastava32@gmail.com",
+                    "mobile": "9646495227",
+                    "imageUrl": "Brand_Ambassdors/ECE-09.jpg"
+                }
+            ],
+            "me": [
+                {
+                    "name": "Harmanpreet Singh",
+                    "batch": "2015-19",
+                    "job": "Senior Marketing Executive",
+                    "company": "Jaro Top Scholar",
+                    "email": "hpsoffical09@gmail.com",
+                    "mobile": "7859020007",
+                    "imageUrl": "Brand_Ambassdors/ECE-01.jpg"
+                },
+                {
+                    "name": "Jagjot Singh",
+                    "batch": "2015-19",
+                    "job": "Senior Technology Analyst",
+                    "company": "Sukhjit Starch,phagwara",
+                    "email": "jagjotnavjot@gmail.com",
+                    "mobile": "8528427738",
+                    "imageUrl": "Brand_Ambassdors/ECE-02.jpg"
+                },
+                {
+                    "name": "Jatin Duggal",
+                    "batch": "2015-19",
+                    "job": "Mechanical Engineer",
+                    "company": "Krome Dispence",
+                    "email": "jatinduggal42@gmail.com",
+                    "mobile": "9023211992",
+                    "imageUrl": "Brand_Ambassdors/ECE-03.jpg"
+                },
+                {
+                    "name": "Ranjit Singh",
+                    "batch": "2014-18",
+                    "job": "GET",
+                    "company": "Raps itech",
+                    "email": "engineeranjitsingh@gmail.com",
+                    "mobile": "9417682948",
+                    "imageUrl": "Brand_Ambassdors/ECE-04.jpg"
+                }
+            ]
+        }
+    }
+}
