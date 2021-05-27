@@ -3,30 +3,31 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CurrentTheme extends ChangeNotifier {
-  CurrentTheme._();
+  CurrentTheme();
 
   bool isDark = false;
-  // late MyAnimation myAnimation;
-  // ThemeData currentThemeData = ThemeData.light();
+  bool _isInitialized = false;
+  ThemeMode currentThemeMode = ThemeMode.light;
+
   static late SharedPreferences prefs;
 
   setPreference() async {
     prefs = await SharedPreferences.getInstance();
     print("Shared Preference Initiated");
+    _isInitialized = prefs.containsKey('isDark');
     isDark = prefs.getBool('isDark') ?? false;
+    currentThemeMode = _isInitialized
+        ? isDark
+            ? ThemeMode.dark
+            : ThemeMode.light
+        : ThemeMode.system;
     print('isDark: $isDark');
-    // myAnimation = MyAnimation(isDark);
-    // currentThemeData = isDark ? ThemeData.dark() : ThemeData.light();
     notifyListeners();
   }
 
-  changeTheme() async {
-    isDark = !isDark;
+  setTheme(ThemeMode themeMode) async {
     prefs = await SharedPreferences.getInstance();
-    print("Theme Changed");
-    // currentThemeData = isDark ? ThemeData.dark() : ThemeData.light();
-    prefs.setBool('isDark', isDark);
-    print('isDark: $isDark');
+    this.currentThemeMode = themeMode;
     notifyListeners();
   }
 }

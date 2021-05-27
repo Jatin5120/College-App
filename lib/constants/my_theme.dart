@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:college_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -36,7 +38,11 @@ class MyThemeData {
     textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(primary: MyColors.selectedColor)),
     elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(primary: MyColors.selectedColor)),
+      style: ElevatedButton.styleFrom(
+        primary: MyColors.selectedColor,
+        textStyle: TextStyle(color: MyColors.lightForeground),
+      ),
+    ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         primary: MyColors.selectedColor,
@@ -152,9 +158,11 @@ class MyThemeData {
     textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(primary: MyColors.lightForeground)),
     elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-            primary: MyColors.lightForeground,
-            textStyle: TextStyle(color: MyColors.darkForeground))),
+      style: ElevatedButton.styleFrom(
+        primary: MyColors.lightForeground,
+        textStyle: TextStyle(color: MyColors.darkForeground),
+      ),
+    ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         primary: MyColors.lightForeground,

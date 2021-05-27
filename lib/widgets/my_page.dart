@@ -1,5 +1,6 @@
 import 'package:college_app/constants/constants.dart';
 import 'package:college_app/widgets/widgets.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class MyPage extends StatefulWidget {
@@ -51,70 +52,82 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
     final double position = (size.width / 30).roundToDouble();
     final double margin = (size.width / 40).roundToDouble();
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
-        child: Stack(
-          children: [
-            MyDrawer(),
-            AnimatedPositioned(
-              top: 0,
-              bottom: 0,
-              right: isOpen ? -size.width * 0.6 : 0,
-              left: isOpen ? size.width * 0.6 : 0,
-              duration: duration,
-              child: ScaleTransition(
-                scale: scaleAnimation,
-                child: Material(
-                  animationDuration: duration,
-                  elevation: UIConfigurations.elevation,
-                  borderRadius: isOpen
-                      ? UIConfigurations.bgCardBorderRadius
-                      : BorderRadius.zero,
-                  child: ClipRRect(
+        child: GestureDetector(
+          onHorizontalDragUpdate: (DragUpdateDetails details) {
+            if (details.delta.dx < 0 && isOpen) {
+              print(details.delta.dx);
+              controller.reverse();
+              setState(() {
+                isOpen = false;
+              });
+            }
+          },
+          child: Stack(
+            children: [
+              MyDrawer(),
+              AnimatedPositioned(
+                top: 0,
+                bottom: 0,
+                right: isOpen ? -size.width * 0.6 : 0,
+                left: isOpen ? size.width * 0.6 : 0,
+                duration: duration,
+                child: ScaleTransition(
+                  scale: scaleAnimation,
+                  child: Material(
+                    animationDuration: duration,
+                    elevation: UIConfigurations.elevation,
                     borderRadius: isOpen
                         ? UIConfigurations.bgCardBorderRadius
                         : BorderRadius.zero,
-                    child: Scaffold(
-                      body: Stack(
-                        children: [
-                          widget.child!,
-                          Positioned(
-                            top: margin,
-                            left: margin,
-                            right: margin,
-                            child: MyAppBar(
-                              size: size,
-                              title: Text(
-                                widget.title!,
-                                style: Theme.of(context).textTheme.headline5,
+                    child: ClipRRect(
+                      borderRadius: isOpen
+                          ? UIConfigurations.bgCardBorderRadius
+                          : BorderRadius.zero,
+                      child: Scaffold(
+                        body: Stack(
+                          children: [
+                            widget.child!,
+                            Positioned(
+                              top: margin,
+                              left: margin,
+                              right: margin,
+                              child: MyAppBar(
+                                size: size,
+                                title: Text(
+                                  widget.title!,
+                                  style: Theme.of(context).textTheme.headline5,
+                                ),
+                                isImage: false,
                               ),
-                              isImage: false,
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
+                        floatingActionButton: FloatingActionButton(
+                          onPressed: () {},
+                          tooltip: 'query',
+                          child: Icon(MyIcons.message),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Positioned(
-              top: position,
-              left: position,
-              child: IconButton(
-                icon: AnimatedIcon(
-                  icon: AnimatedIcons.close_menu,
-                  progress: buttonAnimation,
+              Positioned(
+                top: position,
+                left: position,
+                child: IconButton(
+                  icon: AnimatedIcon(
+                    icon: AnimatedIcons.close_menu,
+                    progress: buttonAnimation,
+                  ),
+                  onPressed: () => drawerAnimation(),
                 ),
-                onPressed: () => drawerAnimation(),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'query',
-        child: Icon(MyIcons.message),
       ),
     );
   }

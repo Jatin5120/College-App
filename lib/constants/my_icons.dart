@@ -52,4 +52,5 @@ class MyIcons {
   static const IconData menu = IconData(0xe816, fontFamily: _kFontFam);
   static const IconData arrow_right = IconData(0xe817, fontFamily: _kFontFam);
   static const IconData close = IconData(0xe818, fontFamily: _kFontFam);
+  static const IconData placement = IconData(0xe819, fontFamily: _kFontFam);
 }

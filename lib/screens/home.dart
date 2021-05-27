@@ -41,8 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double padding = (size.width / 40).roundToDouble();
-    final EdgeInsets margin = EdgeInsets.symmetric(horizontal: 20);
     // getData();
     return MyPage(
       title: 'Home',
@@ -52,13 +50,54 @@ class _HomeScreenState extends State<HomeScreen> {
           if (snapShot.hasData) {
             return HomePage(snapShot: snapShot);
           } else {
-            return Container(
-              child: Center(
-                child: Text('No data'),
-              ),
-            );
+            return BuildLoading(size: size);
           }
         },
+      ),
+    );
+  }
+}
+
+class BuildLoading extends StatelessWidget {
+  const BuildLoading({
+    Key? key,
+    required this.size,
+  }) : super(key: key);
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return MyShimmerEffect(
+      child: ListView(
+        physics: NeverScrollableScrollPhysics(),
+        children: [
+          SizedBox(height: size.height / 10),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 3 / 2,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.appBarBorderRadius,
+            aspectRatio: 10 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.smallCardBorderRadius,
+            aspectRatio: 3 / 2,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.appBarBorderRadius,
+            aspectRatio: 10 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 1,
+          ),
+        ],
       ),
     );
   }
@@ -77,16 +116,14 @@ class HomePage extends StatelessWidget {
   late List<dynamic> diploma;
   late List<dynamic> testimonials;
   late List<dynamic> news;
+  late List<dynamic> industrialVisits;
 
   HomePage({Key? key, required this.snapShot}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     final double padding = (size.width / 40).roundToDouble();
-    final EdgeInsets margin = EdgeInsets.symmetric(
-      horizontal: 20,
-      vertical: 20.0,
-    );
+    final EdgeInsets margin = EdgeInsets.all(20.0);
     data = snapShot.data['data'];
     slides = data['slideShow'];
     noticeBoard = data['noticeBoard'].reversed.toList();
@@ -97,12 +134,14 @@ class HomePage extends StatelessWidget {
     diploma = data['courses']['diploma'];
     testimonials = data['testimonials'];
     news = data['news'];
+    industrialVisits = data['industrial_visits'];
     return ListView(
       children: <Widget>[
         SizedBox(height: size.height / 10),
         BuildSlideShow(margin: margin, slides: slides),
         SubHeader(title: 'Events', padding: padding, onPressed: () {}),
         BuildEvents(noticeBoard: noticeBoard, margin: margin),
+        SubHeader(title: 'About', padding: padding, onPressed: () {}),
         BuildAbout(margin: margin, about: about, padding: padding),
         SubHeader(title: 'Courses', padding: padding, onPressed: () {}),
         for (int i = 0; i < bsc.length; i++)
@@ -142,24 +181,48 @@ class HomePage extends StatelessWidget {
             imageUrl: diploma[i]['imageUrl'],
           ),
         SubHeader(title: 'Testimonials', padding: padding, onPressed: () {}),
-        for (int i = 0; i < testimonials.length; i++)
-          BuildTestimonial(
-              margin: margin, testimonial: testimonials[i], padding: padding),
+        BuildTestimonials(
+            margin: margin, testimonials: testimonials, padding: padding),
+        SubHeader(
+            title: 'News & Headlines', padding: padding, onPressed: () {}),
+        BuildNews(news: news, margin: margin, padding: padding),
+        SubHeader(
+            title: 'Industrial Visits', padding: padding, onPressed: () {}),
+        for (int i = 0; i < industrialVisits.length; i++)
+          BuildIndustrialVisits(
+              margin: margin,
+              industrialVisits: industrialVisits,
+              i: i,
+              padding: padding),
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 12.0),
+            child: OutlinedButton(
+              child: Text(
+                'Need Help?',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              onPressed: () {},
+            ),
+          ),
+        ),
       ],
     );
   }
 }
 
-class BuildTestimonial extends StatelessWidget {
-  const BuildTestimonial({
+class BuildIndustrialVisits extends StatelessWidget {
+  const BuildIndustrialVisits({
     Key? key,
     required this.margin,
-    required this.testimonial,
+    required this.industrialVisits,
+    required this.i,
     required this.padding,
   }) : super(key: key);
 
   final EdgeInsets margin;
-  final Map<String, dynamic> testimonial;
+  final List industrialVisits;
+  final int i;
   final double padding;
 
   @override
@@ -169,16 +232,23 @@ class BuildTestimonial extends StatelessWidget {
       child: Card(
         margin: margin,
         shape: RoundedRectangleBorder(
-            borderRadius: UIConfigurations.bgCardBorderRadius),
+          borderRadius: UIConfigurations.bgCardBorderRadius,
+        ),
         child: ClipRRect(
           borderRadius: UIConfigurations.bgCardBorderRadius,
           child: Column(
             children: [
-              ClipRRect(
-                borderRadius: UIConfigurations.bgCardBorderRadius,
-                child: AspectRatio(
-                  aspectRatio: 20 / 9,
-                  child: ShowImage(testimonial['imageUrl']),
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: ClipRRect(
+                  borderRadius: UIConfigurations.bgCardBorderRadius,
+                  child: PageView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: industrialVisits[i]['images'].length,
+                    itemBuilder: (context, index) {
+                      return ShowImage(industrialVisits[i]['images'][index]);
+                    },
+                  ),
                 ),
               ),
               Padding(
@@ -188,33 +258,189 @@ class BuildTestimonial extends StatelessWidget {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      testimonial['name'],
-                      style: Theme.of(context).textTheme.headline5,
+                      industrialVisits[i]['title'],
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText1!
+                          .copyWith(fontWeight: FontWeight.w600),
                     ),
+                    SizedBox(height: padding),
                     Text(
-                      testimonial['department'],
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                    SizedBox(
-                      height: padding * 1.5,
-                    ),
-                    Text(
-                      testimonial['quote'],
+                      industrialVisits[i]['description'],
                       style: Theme.of(context).textTheme.bodyText2,
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 7,
                       textAlign: TextAlign.justify,
+                      maxLines: 6,
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class BuildNews extends StatelessWidget {
+  const BuildNews({
+    Key? key,
+    required this.news,
+    required this.margin,
+    required this.padding,
+  }) : super(key: key);
+
+  final List news;
+  final EdgeInsets margin;
+  final double padding;
+
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: 3 / 2,
+      child: PageView.builder(
+        physics: BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        itemCount: news.length,
+        itemBuilder: (_, index) {
+          return AspectRatio(
+            aspectRatio: 3 / 2,
+            child: Card(
+              margin: margin,
+              shape: RoundedRectangleBorder(
+                  borderRadius: UIConfigurations.smallCardBorderRadius),
+              child: ClipRRect(
+                borderRadius: UIConfigurations.smallCardBorderRadius,
+                child: Row(
+                  children: [
+                    AspectRatio(
+                      aspectRatio: 9 / 8,
+                      child: ClipRRect(
+                        borderRadius: UIConfigurations.smallCardBorderRadius,
+                        child: ShowImage(news[index]['imageUrl']),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              news[index]['headline'],
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 7,
+                              textAlign: TextAlign.justify,
+                            ),
+                            SizedBox(
+                              height: padding * 2,
+                            ),
+                            Text(
+                              news[index]['date'],
+                              style: Theme.of(context).textTheme.overline,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 7,
+                              textAlign: TextAlign.justify,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class BuildTestimonials extends StatelessWidget {
+  const BuildTestimonials({
+    Key? key,
+    required this.margin,
+    required this.testimonials,
+    required this.padding,
+  }) : super(key: key);
+
+  final EdgeInsets margin;
+  final List testimonials;
+  final double padding;
+
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: 1,
+      child: PageView.builder(
+        physics: BouncingScrollPhysics(),
+        itemCount: testimonials.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          return Card(
+            margin: margin,
+            shape: RoundedRectangleBorder(
+                borderRadius: UIConfigurations.bgCardBorderRadius),
+            child: ClipRRect(
+              borderRadius: UIConfigurations.bgCardBorderRadius,
+              child: Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: UIConfigurations.bgCardBorderRadius,
+                    child: AspectRatio(
+                      aspectRatio: 20 / 9,
+                      child: ShowImage(testimonials[index]['imageUrl']),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(padding * 2),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8.0),
+                              child: Icon(
+                                MyIcons.user,
+                                size: 16.0,
+                              ),
+                            ),
+                            Text(
+                              '${testimonials[index]['name']}  |  ',
+                              style: Theme.of(context).textTheme.headline5,
+                            ),
+                            Text(
+                              testimonials[index]['department'],
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: padding * 1.5,
+                        ),
+                        Text(
+                          testimonials[index]['quote'],
+                          style: Theme.of(context).textTheme.bodyText2,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 7,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -454,7 +680,11 @@ class BuildEvents extends StatelessWidget {
                                             i++)
                                           ElevatedButton(
                                             child: Text(
-                                              'Submit ${i + 1}',
+                                              notice['links']['submissionLinks']
+                                                          .length ==
+                                                      1
+                                                  ? 'Submit'
+                                                  : 'Submit ${i + 1}',
                                               style: TextStyle().copyWith(
                                                 color: MediaQuery
                                                             .platformBrightnessOf(
