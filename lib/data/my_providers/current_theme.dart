@@ -5,29 +5,29 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CurrentTheme extends ChangeNotifier {
   CurrentTheme();
 
-  bool isDark = false;
-  bool _isInitialized = false;
   ThemeMode currentThemeMode = ThemeMode.light;
+  String currentTheme = '${ThemeMode.light}';
 
   static late SharedPreferences prefs;
 
   setPreference() async {
     prefs = await SharedPreferences.getInstance();
     print("Shared Preference Initiated");
-    _isInitialized = prefs.containsKey('isDark');
-    isDark = prefs.getBool('isDark') ?? false;
-    currentThemeMode = _isInitialized
-        ? isDark
-            ? ThemeMode.dark
-            : ThemeMode.light
-        : ThemeMode.system;
-    print('isDark: $isDark');
+    currentTheme = prefs.getString('currentTheme') ?? '${ThemeMode.system}';
+    currentThemeMode = currentTheme == '${ThemeMode.dark}'
+        ? ThemeMode.dark
+        : currentTheme == '${ThemeMode.light}'
+            ? ThemeMode.light
+            : ThemeMode.system;
+    print("CurrenThemeMode : $currentThemeMode");
     notifyListeners();
   }
 
   setTheme(ThemeMode themeMode) async {
     prefs = await SharedPreferences.getInstance();
     this.currentThemeMode = themeMode;
+    prefs.setString('currentTheme', '${this.currentThemeMode}');
+    print("Changed CurrenThemeMode : $currentThemeMode");
     notifyListeners();
   }
 }

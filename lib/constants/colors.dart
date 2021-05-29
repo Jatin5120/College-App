@@ -9,6 +9,8 @@ class MyColors {
   static const Color lightSecondaryColor = Color(0xFFFF7B00);
   static const Color lightShadowColor = Color(0x4414263D);
   static const Color lightSplashColor = Color(0xFFFF3127);
+  static const Color lightShimmerColorOne = Color(0xFFE9E9ED);
+  static const Color lightShimmerColorTwo = Color(0xFF94949E);
 
   static const Color darkBackground = Color(0xFF24282D);
   static const Color darkForeground = Color(0xFF303C47);
@@ -16,6 +18,8 @@ class MyColors {
   static const Color darkSecondaryColor = Color(0xFFE41175);
   static const Color darkShadowColor = Color(0x880B0D0E);
   static const Color darkSplashColor = Color(0xFFC837AB);
+  static const Color darkShimmerColorOne = Color(0xFF66717F);
+  static const Color darkShimmerColorTwo = Color(0xFF393F47);
 
   static const Color selectedColor = Color(0xFF1F26FD);
 }

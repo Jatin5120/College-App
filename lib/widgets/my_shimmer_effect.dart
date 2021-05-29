@@ -1,4 +1,6 @@
+import 'package:college_app/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 class MyShimmerEffect extends StatefulWidget {
   final Widget? child;
@@ -13,6 +15,10 @@ class _MyShimmerEffectState extends State<MyShimmerEffect>
   late AnimationController controller;
   late Animation<Color?> colorOne;
   late Animation<Color?> colorTwo;
+  final List<Color> selectedList =
+      SchedulerBinding.instance!.window.platformBrightness == Brightness.dark
+          ? [MyColors.darkShimmerColorOne, MyColors.darkShimmerColorTwo]
+          : [MyColors.lightShimmerColorOne, MyColors.lightShimmerColorTwo];
 
   @override
   void initState() {
@@ -21,9 +27,9 @@ class _MyShimmerEffectState extends State<MyShimmerEffect>
       vsync: this,
       duration: Duration(milliseconds: 700),
     );
-    colorOne = ColorTween(begin: Colors.grey[100], end: Colors.grey[500])
+    colorOne = ColorTween(begin: selectedList[0], end: selectedList[1])
         .animate(controller);
-    colorTwo = ColorTween(begin: Colors.grey[500], end: Colors.grey[100])
+    colorTwo = ColorTween(begin: selectedList[1], end: selectedList[0])
         .animate(controller);
 
     controller.forward();

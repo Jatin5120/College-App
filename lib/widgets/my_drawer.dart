@@ -1,5 +1,6 @@
 import 'package:college_app/constants/constants.dart';
-import 'package:college_app/data/theme.dart';
+import 'package:college_app/data/my_providers/my_providers.dart';
+import 'package:college_app/data/data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,20 +13,30 @@ class MyDrawer extends StatefulWidget {
 
 class _MyDrawerState extends State<MyDrawer> {
   final List<DrawerItem> drawerItems = [
-    DrawerItem(icon: MyIcons.home, title: 'Home', onTap: () {}),
-    DrawerItem(icon: MyIcons.about, title: 'About', onTap: () {}),
-    DrawerItem(icon: MyIcons.achievements, title: 'Achievements', onTap: () {}),
-    DrawerItem(icon: MyIcons.placement, title: 'Placement', onTap: () {}),
-    DrawerItem(icon: MyIcons.alumni, title: 'Alumni', onTap: () {}),
-    DrawerItem(icon: MyIcons.help, title: 'Help', onTap: () {}),
+    DrawerItem(icon: MyIcons.home, title: 'Home', route: MyRoutes.home),
+    DrawerItem(icon: MyIcons.about, title: 'About', route: MyRoutes.about),
+    DrawerItem(
+        icon: MyIcons.achievements,
+        title: 'Achievements',
+        route: MyRoutes.achievement),
+    DrawerItem(
+        icon: MyIcons.placement, title: 'Placement', route: MyRoutes.placement),
+    DrawerItem(icon: MyIcons.alumni, title: 'Alumni', route: MyRoutes.alumni),
+    DrawerItem(icon: MyIcons.help, title: 'Help', route: MyRoutes.help),
   ];
-  bool isDark = true;
   late CurrentTheme currentTheme;
 
   @override
   void initState() {
     super.initState();
+    print("Drawer initState()");
     currentTheme = Provider.of<CurrentTheme>(context, listen: false);
+    currentTheme.setPreference();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override
@@ -64,46 +75,68 @@ class _MyDrawerState extends State<MyDrawer> {
               ],
             ),
             Expanded(
-              child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: drawerItems.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ClipRRect(
-                    borderRadius: UIConfigurations.smallCardBorderRadius,
-                    child: Card(
-                      margin: EdgeInsets.only(
-                        right: padding * 1.5,
-                        top: padding / 2.5,
-                      ),
-                      elevation: 0,
-                      shape: RoundedRectangleBorder(
+              child: Consumer2(
+                builder: (BuildContext context, CurrentRoute currentRoute,
+                    DrawerState drawerState, Widget? child) {
+                  return ListView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: drawerItems.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return ClipRRect(
                         borderRadius: UIConfigurations.smallCardBorderRadius,
-                      ),
-                      child: InkWell(
-                        onTap: drawerItems[index].onTap,
-                        onLongPress: () => Tooltip(
-                          message: drawerItems[index].title,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 24.0,
-                            vertical: 16.0,
+                        child: Card(
+                          margin: EdgeInsets.only(
+                            right: padding * 1.5,
+                            top: padding / 2.5,
                           ),
-                          child: Row(
-                            children: [
-                              Icon(drawerItems[index].icon),
-                              SizedBox(
-                                width: padding / 5,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              color:
+                                  MediaQuery.of(context).platformBrightness ==
+                                          Brightness.dark
+                                      ? MyColors.lightForeground
+                                      : MyColors.selectedColor,
+                              width: 2.0,
+                              style: currentRoute.getCurrentRoute ==
+                                      drawerItems[index].route
+                                  ? BorderStyle.solid
+                                  : BorderStyle.none,
+                            ),
+                            borderRadius:
+                                UIConfigurations.smallCardBorderRadius,
+                          ),
+                          child: InkWell(
+                            onTap: () {
+                              currentRoute.setRoute(drawerItems[index].route);
+                              drawerState.controller.reverse();
+                              drawerState.changeState(false);
+                            },
+                            onLongPress: () => Tooltip(
+                              message: drawerItems[index].title,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 24.0,
+                                vertical: 16.0,
                               ),
-                              Text(
-                                drawerItems[index].title,
-                                style: textTheme.headline6,
+                              child: Row(
+                                children: [
+                                  Icon(drawerItems[index].icon),
+                                  SizedBox(
+                                    width: padding / 5,
+                                  ),
+                                  Text(
+                                    drawerItems[index].title,
+                                    style: textTheme.headline6,
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   );
                 },
               ),
@@ -121,6 +154,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   ),
                   DropdownButton<ThemeMode>(
                     dropdownColor: Theme.of(context).scaffoldBackgroundColor,
+                    value: currentTheme.currentThemeMode,
                     items: <ThemeMode>[
                       ThemeMode.light,
                       ThemeMode.dark,
@@ -159,7 +193,7 @@ class _MyDrawerState extends State<MyDrawer> {
 class DrawerItem {
   final IconData icon;
   final String title;
-  final VoidCallback onTap;
+  final String route;
 
-  DrawerItem({required this.icon, required this.title, required this.onTap});
+  DrawerItem({required this.icon, required this.title, required this.route});
 }

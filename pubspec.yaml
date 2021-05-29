@@ -28,11 +28,19 @@ dependencies:
     http: ^0.13.3
     provider: ^5.0.0
     shared_preferences: ^2.0.5
-    shimmer: ^2.0.0
 
 dev_dependencies:
     flutter_test:
         sdk: flutter
+    flutter_native_splash: ^1.1.8+4
+
+flutter_native_splash:
+    color: "#B4DEF3"
+    color_dark: "#14263D"
+    image: assets/images/logo.png
+    image_dark: assets/images/logo.png
+    android: true
+    ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

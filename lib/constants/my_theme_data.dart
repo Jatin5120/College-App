@@ -15,6 +15,7 @@ class MyThemeData {
     primaryColor: MyColors.selectedColor,
     accentColor: MyColors.lightAccentColor,
     shadowColor: MyColors.lightShadowColor,
+    brightness: Brightness.light,
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       foregroundColor: MyColors.lightForeground,
       backgroundColor: MyColors.lightSecondaryColor,
@@ -40,7 +41,7 @@ class MyThemeData {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         primary: MyColors.selectedColor,
-        textStyle: TextStyle(color: MyColors.lightForeground),
+        onPrimary: MyColors.lightForeground,
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -135,6 +136,7 @@ class MyThemeData {
     primaryColor: MyColors.selectedColor,
     accentColor: MyColors.darkAccentColor,
     shadowColor: MyColors.darkShadowColor,
+    brightness: Brightness.dark,
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       foregroundColor: MyColors.lightForeground,
       backgroundColor: MyColors.darkSecondaryColor,
@@ -160,7 +162,7 @@ class MyThemeData {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         primary: MyColors.lightForeground,
-        textStyle: TextStyle(color: MyColors.darkForeground),
+        onPrimary: MyColors.darkForeground,
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(

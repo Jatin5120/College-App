@@ -1,9 +1,8 @@
-import 'package:college_app/constants/constants.dart';
 import 'package:flutter/material.dart';
+
+import 'package:college_app/constants/constants.dart';
+import 'package:college_app/data/data.dart';
 import 'package:college_app/widgets/widgets.dart';
-import 'package:flutter/services.dart';
-import 'dart:convert';
-// import 'package:http/http.dart' as http;
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -13,47 +12,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final url = 'http://192.168.1.1:80/';
-  late Map<String, dynamic> data;
-
-  Future<Map<String, dynamic>> getData() async {
-    // http.Response response = await http.get(Uri.parse(url));
-    try {
-      print("Reading");
-      String jsonResult = await rootBundle.loadString("assets/api/home.json");
-      data = json.decode(jsonResult);
-      // print(data);
-      String test = data['baseUrl'];
-      print(test);
-      return data;
-    } catch (e) {
-      debugPrint("Didn't get data\nError: $e");
-      return {'data': "No data"};
-    }
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
-
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    // getData();
-    return MyPage(
-      title: 'Home',
-      child: FutureBuilder(
-        future: getData(),
-        builder: (BuildContext context, AsyncSnapshot<dynamic> snapShot) {
-          if (snapShot.hasData) {
-            return HomePage(snapShot: snapShot);
-          } else {
-            return BuildLoading(size: size);
-          }
-        },
-      ),
+    return FutureBuilder(
+      future: fetchData(MyRoutes.home),
+      builder: (BuildContext context, AsyncSnapshot<dynamic> snapShot) {
+        if (snapShot.hasData) {
+          return HomePage(snapShot: snapShot);
+        } else {
+          return BuildLoading(size: size);
+        }
+      },
     );
   }
 }
@@ -544,7 +514,8 @@ class BuildAbout extends StatelessWidget {
         child: ClipRRect(
           borderRadius: UIConfigurations.bgCardBorderRadius,
           child: InkWell(
-            onTap: () {},
+            onTap: () =>
+                Navigator.pushReplacementNamed(context, MyRoutes.about),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -567,7 +538,8 @@ class BuildAbout extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline5,
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () => Navigator.pushReplacementNamed(
+                            context, MyRoutes.about),
                         icon: Icon(MyIcons.arrow_right),
                       )
                     ],
@@ -685,14 +657,6 @@ class BuildEvents extends StatelessWidget {
                                                       1
                                                   ? 'Submit'
                                                   : 'Submit ${i + 1}',
-                                              style: TextStyle().copyWith(
-                                                color: MediaQuery
-                                                            .platformBrightnessOf(
-                                                                context) ==
-                                                        Brightness.dark
-                                                    ? MyColors.darkForeground
-                                                    : null,
-                                              ),
                                             ),
                                             onPressed: () {},
                                           ),
