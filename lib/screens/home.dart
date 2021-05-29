@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:college_app/constants/constants.dart';
 import 'package:college_app/data/data.dart';
 import 'package:college_app/widgets/widgets.dart';

@@ -1,6 +1,5 @@
 import 'package:college_app/constants/constants.dart';
 import 'package:college_app/data/data.dart';
-import 'package:college_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class AchievementScreen extends StatefulWidget {

@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:college_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
