@@ -5,3 +5,5 @@ export 'show_image.dart';
 export 'sub_headers.dart';
 export 'my_shimmer_effect.dart';
 export 'shader_widget.dart';
+export 'swipable_image_card.dart';
+export 'sub_header.dart';

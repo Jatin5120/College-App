@@ -155,6 +155,7 @@ class MyThemeData {
     cardTheme: CardTheme(
       color: MyColors.darkForeground,
       elevation: UIConfigurations.elevation,
+      margin: UIConfigurations.margin,
     ),
     textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(primary: MyColors.lightForeground)),

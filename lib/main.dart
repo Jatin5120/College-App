@@ -18,17 +18,20 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => DrawerState()),
       ],
       builder: (context, child) {
-        final CurrentTheme currentTheme = context.watch<CurrentTheme>();
-        return MaterialApp(
-          title: 'LKCTC Mobile App',
-          debugShowCheckedModeBanner: false,
-          themeMode: currentTheme.currentThemeMode,
-          darkTheme: MyThemeData.darkThemeData,
-          theme: MyThemeData.lightThemeData,
-          // onGenerateRoute: RouteNavigator.generateRoute,
-          scrollBehavior:
-              ScrollBehavior().copyWith(physics: BouncingScrollPhysics()),
-          home: MyPage(),
+        return Consumer<CurrentTheme>(
+          builder:
+              (BuildContext context, CurrentTheme currentTheme, Widget? child) {
+            return MaterialApp(
+              title: 'LKCTC Mobile App',
+              debugShowCheckedModeBanner: false,
+              themeMode: currentTheme.currentThemeMode,
+              darkTheme: MyThemeData.darkThemeData,
+              theme: MyThemeData.lightThemeData,
+              scrollBehavior:
+                  ScrollBehavior().copyWith(physics: BouncingScrollPhysics()),
+              home: MyPage(),
+            );
+          },
         );
       },
     );

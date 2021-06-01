@@ -80,7 +80,7 @@ class _MyShimmerEffectState extends State<MyShimmerEffect>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: ShaderMask(
           shaderCallback: (rect) {
             return LinearGradient(

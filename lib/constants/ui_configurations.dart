@@ -10,6 +10,8 @@ class UIConfigurations {
   static BorderRadius smallCardBorderRadius = BorderRadius.circular(15);
   static BorderRadius bgCardBorderRadius = BorderRadius.circular(20);
 
+  static const EdgeInsets margin = EdgeInsets.all(20.0);
+
   static const IconThemeData darkIconTheme =
       IconThemeData(color: MyColors.lightForeground);
   static const IconThemeData lightIconTheme =

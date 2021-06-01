@@ -1,12 +1,12 @@
 import 'package:college_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-class SubHeader extends StatelessWidget {
+class BuildSubHeaderHome extends StatelessWidget {
   final double? padding;
   final VoidCallback? onPressed;
   final String? title;
 
-  const SubHeader(
+  const BuildSubHeaderHome(
       {Key? key,
       required this.padding,
       required this.onPressed,

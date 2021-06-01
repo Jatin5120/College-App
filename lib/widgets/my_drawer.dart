@@ -18,7 +18,7 @@ class _MyDrawerState extends State<MyDrawer> {
     DrawerItem(
         icon: MyIcons.achievements,
         title: 'Achievements',
-        route: MyRoutes.achievement),
+        route: MyRoutes.achievements),
     DrawerItem(
         icon: MyIcons.placement, title: 'Placement', route: MyRoutes.placement),
     DrawerItem(icon: MyIcons.alumni, title: 'Alumni', route: MyRoutes.alumni),
@@ -92,11 +92,17 @@ class _MyDrawerState extends State<MyDrawer> {
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                             side: BorderSide(
-                              color:
-                                  MediaQuery.of(context).platformBrightness ==
-                                          Brightness.dark
-                                      ? MyColors.lightForeground
-                                      : MyColors.selectedColor,
+                              color: currentTheme.currentThemeMode ==
+                                      ThemeMode.dark
+                                  ? MyColors.lightForeground
+                                  : currentTheme.currentThemeMode ==
+                                          ThemeMode.light
+                                      ? MyColors.selectedColor
+                                      : MediaQuery.of(context)
+                                                  .platformBrightness ==
+                                              Brightness.dark
+                                          ? MyColors.lightForeground
+                                          : MyColors.selectedColor,
                               width: 2.0,
                               style: currentRoute.getCurrentRoute ==
                                       drawerItems[index].route
@@ -108,9 +114,9 @@ class _MyDrawerState extends State<MyDrawer> {
                           ),
                           child: InkWell(
                             onTap: () {
-                              currentRoute.setRoute(drawerItems[index].route);
                               drawerState.controller.reverse();
                               drawerState.changeState(false);
+                              currentRoute.setRoute(drawerItems[index].route);
                             },
                             onLongPress: () => Tooltip(
                               message: drawerItems[index].title,

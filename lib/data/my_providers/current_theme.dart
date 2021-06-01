@@ -5,8 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CurrentTheme extends ChangeNotifier {
   CurrentTheme();
 
-  ThemeMode currentThemeMode = ThemeMode.light;
-  String currentTheme = '${ThemeMode.light}';
+  ThemeMode currentThemeMode = ThemeMode.system;
+  String currentTheme = '${ThemeMode.system}';
 
   static late SharedPreferences prefs;
 

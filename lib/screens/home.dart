@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:college_app/constants/constants.dart';
 import 'package:college_app/data/data.dart';
 import 'package:college_app/widgets/widgets.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -20,15 +21,15 @@ class _HomeScreenState extends State<HomeScreen> {
         if (snapShot.hasData) {
           return HomePage(snapShot: snapShot);
         } else {
-          return BuildLoading(size: size);
+          return BuildLoadingHome(size: size);
         }
       },
     );
   }
 }
 
-class BuildLoading extends StatelessWidget {
-  const BuildLoading({
+class BuildLoadingHome extends StatelessWidget {
+  const BuildLoadingHome({
     Key? key,
     required this.size,
   }) : super(key: key);
@@ -72,9 +73,16 @@ class BuildLoading extends StatelessWidget {
   }
 }
 
-// ignore: must_be_immutable
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  HomePage({Key? key, required this.snapShot}) : super(key: key);
+
   final AsyncSnapshot<dynamic> snapShot;
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   late Map<String, dynamic> data;
   late List<dynamic> slides;
   late List<dynamic> noticeBoard;
@@ -87,13 +95,10 @@ class HomePage extends StatelessWidget {
   late List<dynamic> news;
   late List<dynamic> industrialVisits;
 
-  HomePage({Key? key, required this.snapShot}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
-    final double padding = (size.width / 40).roundToDouble();
-    final EdgeInsets margin = EdgeInsets.all(20.0);
-    data = snapShot.data['data'];
+  void initState() {
+    super.initState();
+    data = widget.snapShot.data['data'];
     slides = data['slideShow'];
     noticeBoard = data['noticeBoard'].reversed.toList();
     about = data['about'];
@@ -104,18 +109,24 @@ class HomePage extends StatelessWidget {
     testimonials = data['testimonials'];
     news = data['news'];
     industrialVisits = data['industrial_visits'];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    final double padding = (size.width / 40).roundToDouble();
     return ListView(
       children: <Widget>[
         SizedBox(height: size.height / 10),
-        BuildSlideShow(margin: margin, slides: slides),
-        SubHeader(title: 'Events', padding: padding, onPressed: () {}),
-        BuildEvents(noticeBoard: noticeBoard, margin: margin),
-        SubHeader(title: 'About', padding: padding, onPressed: () {}),
-        BuildAbout(margin: margin, about: about, padding: padding),
-        SubHeader(title: 'Courses', padding: padding, onPressed: () {}),
+        BuildSlideShow(slides: slides),
+        BuildSubHeaderHome(title: 'Events', padding: padding, onPressed: () {}),
+        BuildEvents(noticeBoard: noticeBoard),
+        BuildSubHeaderHome(title: 'About', padding: padding, onPressed: () {}),
+        BuildAbout(about: about, padding: padding),
+        BuildSubHeaderHome(
+            title: 'Courses', padding: padding, onPressed: () {}),
         for (int i = 0; i < bsc.length; i++)
           SmallDetailCard(
-            margin: margin,
             padding: padding,
             borderRadius: UIConfigurations.smallCardBorderRadius,
             courseTitle: 'B.Sc',
@@ -124,7 +135,6 @@ class HomePage extends StatelessWidget {
           ),
         for (int i = 0; i < btech.length; i++)
           SmallDetailCard(
-            margin: margin,
             padding: padding,
             borderRadius: UIConfigurations.smallCardBorderRadius,
             courseTitle: 'B.Tech',
@@ -133,7 +143,6 @@ class HomePage extends StatelessWidget {
           ),
         for (int i = 0; i < bvoc.length; i++)
           SmallDetailCard(
-            margin: margin,
             padding: padding,
             borderRadius: UIConfigurations.smallCardBorderRadius,
             courseTitle: 'B.Voc',
@@ -142,36 +151,35 @@ class HomePage extends StatelessWidget {
           ),
         for (int i = 0; i < diploma.length; i++)
           SmallDetailCard(
-            margin: margin,
             padding: padding,
             borderRadius: UIConfigurations.smallCardBorderRadius,
             courseTitle: 'Diploma',
             name: diploma[i]['name'],
             imageUrl: diploma[i]['imageUrl'],
           ),
-        SubHeader(title: 'Testimonials', padding: padding, onPressed: () {}),
-        BuildTestimonials(
-            margin: margin, testimonials: testimonials, padding: padding),
-        SubHeader(
+        BuildSubHeaderHome(
+            title: 'Testimonials', padding: padding, onPressed: () {}),
+        BuildTestimonials(testimonials: testimonials, padding: padding),
+        BuildSubHeaderHome(
             title: 'News & Headlines', padding: padding, onPressed: () {}),
-        BuildNews(news: news, margin: margin, padding: padding),
-        SubHeader(
+        BuildNews(news: news, padding: padding),
+        BuildSubHeaderHome(
             title: 'Industrial Visits', padding: padding, onPressed: () {}),
-        for (int i = 0; i < industrialVisits.length; i++)
-          BuildIndustrialVisits(
-              margin: margin,
-              industrialVisits: industrialVisits,
-              i: i,
-              padding: padding),
+        for (Map<String, dynamic> visit in industrialVisits)
+          BuildSwipableImageCard(item: visit, padding: padding),
         Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 12.0),
-            child: OutlinedButton(
-              child: Text(
-                'Need Help?',
-                style: Theme.of(context).textTheme.headline6,
-              ),
-              onPressed: () {},
+            child: Consumer<CurrentRoute>(
+              builder: (context, currentRoute, child) {
+                return OutlinedButton(
+                  child: Text(
+                    'Need Help?',
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
+                  onPressed: () => currentRoute.setRoute(MyRoutes.about),
+                );
+              },
             ),
           ),
         ),
@@ -180,90 +188,14 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class BuildIndustrialVisits extends StatelessWidget {
-  const BuildIndustrialVisits({
-    Key? key,
-    required this.margin,
-    required this.industrialVisits,
-    required this.i,
-    required this.padding,
-  }) : super(key: key);
-
-  final EdgeInsets margin;
-  final List industrialVisits;
-  final int i;
-  final double padding;
-
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1,
-      child: Card(
-        margin: margin,
-        shape: RoundedRectangleBorder(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-        ),
-        child: ClipRRect(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-          child: Column(
-            children: [
-              AspectRatio(
-                aspectRatio: 16 / 9,
-                child: ClipRRect(
-                  borderRadius: UIConfigurations.bgCardBorderRadius,
-                  child: PageView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: industrialVisits[i]['images'].length,
-                    itemBuilder: (context, index) {
-                      return ShowImage(industrialVisits[i]['images'][index]);
-                    },
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: padding * 2,
-                  vertical: padding,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      industrialVisits[i]['title'],
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .copyWith(fontWeight: FontWeight.w600),
-                    ),
-                    SizedBox(height: padding),
-                    Text(
-                      industrialVisits[i]['description'],
-                      style: Theme.of(context).textTheme.bodyText2,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.justify,
-                      maxLines: 6,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class BuildNews extends StatelessWidget {
   const BuildNews({
     Key? key,
     required this.news,
-    required this.margin,
     required this.padding,
   }) : super(key: key);
 
   final List news;
-  final EdgeInsets margin;
   final double padding;
 
   @override
@@ -278,7 +210,6 @@ class BuildNews extends StatelessWidget {
           return AspectRatio(
             aspectRatio: 3 / 2,
             child: Card(
-              margin: margin,
               shape: RoundedRectangleBorder(
                   borderRadius: UIConfigurations.smallCardBorderRadius),
               child: ClipRRect(
@@ -333,12 +264,10 @@ class BuildNews extends StatelessWidget {
 class BuildTestimonials extends StatelessWidget {
   const BuildTestimonials({
     Key? key,
-    required this.margin,
     required this.testimonials,
     required this.padding,
   }) : super(key: key);
 
-  final EdgeInsets margin;
   final List testimonials;
   final double padding;
 
@@ -352,7 +281,6 @@ class BuildTestimonials extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Card(
-            margin: margin,
             shape: RoundedRectangleBorder(
                 borderRadius: UIConfigurations.bgCardBorderRadius),
             child: ClipRRect(
@@ -418,7 +346,6 @@ class BuildTestimonials extends StatelessWidget {
 class SmallDetailCard extends StatelessWidget {
   const SmallDetailCard({
     Key? key,
-    required this.margin,
     required this.padding,
     required this.courseTitle,
     required this.name,
@@ -426,7 +353,6 @@ class SmallDetailCard extends StatelessWidget {
     this.borderRadius,
   }) : super(key: key);
 
-  final EdgeInsets margin;
   final double padding;
   final String courseTitle;
   final String name;
@@ -438,7 +364,7 @@ class SmallDetailCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 5 / 2,
       child: Card(
-        margin: margin.copyWith(top: 10.0),
+        margin: UIConfigurations.margin.copyWith(top: 10),
         shape: RoundedRectangleBorder(
           borderRadius: borderRadius ?? BorderRadius.zero,
         ),
@@ -492,73 +418,73 @@ class SmallDetailCard extends StatelessWidget {
 class BuildAbout extends StatelessWidget {
   const BuildAbout({
     Key? key,
-    required this.margin,
     required this.about,
     required this.padding,
   }) : super(key: key);
 
-  final EdgeInsets margin;
   final Map<String, dynamic> about;
   final double padding;
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1,
-      child: Card(
-        margin: margin,
-        shape: RoundedRectangleBorder(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-        ),
-        child: ClipRRect(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-          child: InkWell(
-            onTap: () =>
-                Navigator.pushReplacementNamed(context, MyRoutes.about),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ClipRRect(
-                  borderRadius: UIConfigurations.bgCardBorderRadius,
-                  child: AspectRatio(
-                    aspectRatio: 16 / 9,
-                    child: ShowImage(about['imageUrl']),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: padding * 2,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        about['title'],
-                        style: Theme.of(context).textTheme.headline5,
+    return Consumer<CurrentRoute>(
+      builder: (context, currentRoute, child) {
+        return AspectRatio(
+          aspectRatio: 1,
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: UIConfigurations.bgCardBorderRadius,
+            ),
+            child: ClipRRect(
+              borderRadius: UIConfigurations.bgCardBorderRadius,
+              child: InkWell(
+                onTap: () => currentRoute.setRoute(MyRoutes.about),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: UIConfigurations.bgCardBorderRadius,
+                      child: AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: ShowImage(about['imageUrl']),
                       ),
-                      IconButton(
-                        onPressed: () => Navigator.pushReplacementNamed(
-                            context, MyRoutes.about),
-                        icon: Icon(MyIcons.arrow_right),
-                      )
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        left: padding * 2,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            about['title'],
+                            style: Theme.of(context).textTheme.headline5,
+                          ),
+                          IconButton(
+                            onPressed: () =>
+                                currentRoute.setRoute(MyRoutes.about),
+                            icon: Icon(MyIcons.arrow_right),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: padding * 2,
+                      ),
+                      child: Text(
+                        about['description'],
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                      ),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: padding * 2,
-                  ),
-                  child: Text(
-                    about['description'],
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 5,
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }
@@ -567,11 +493,9 @@ class BuildEvents extends StatelessWidget {
   const BuildEvents({
     Key? key,
     required this.noticeBoard,
-    required this.margin,
   }) : super(key: key);
 
   final List noticeBoard;
-  final EdgeInsets margin;
 
   @override
   Widget build(BuildContext context) {
@@ -585,7 +509,6 @@ class BuildEvents extends StatelessWidget {
           return AspectRatio(
             aspectRatio: 3 / 2,
             child: Card(
-              margin: margin,
               shape: RoundedRectangleBorder(
                 borderRadius: UIConfigurations.smallCardBorderRadius,
               ),
@@ -678,10 +601,9 @@ class BuildEvents extends StatelessWidget {
 }
 
 class BuildSlideShow extends StatelessWidget {
-  final EdgeInsets? margin;
   final List<dynamic>? slides;
 
-  const BuildSlideShow({Key? key, this.margin, this.slides}) : super(key: key);
+  const BuildSlideShow({Key? key, this.slides}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -694,7 +616,6 @@ class BuildSlideShow extends StatelessWidget {
           return AspectRatio(
             aspectRatio: 16 / 9,
             child: Card(
-              margin: margin,
               shape: RoundedRectangleBorder(
                 borderRadius: UIConfigurations.bgCardBorderRadius,
               ),

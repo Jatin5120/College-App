@@ -25,10 +25,11 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
   final Map<String, Widget> pages = {
     MyRoutes.home: HomeScreen(),
     MyRoutes.about: AboutScreen(),
-    MyRoutes.achievement: AchievementScreen(),
+    MyRoutes.achievements: AchievementScreen(),
     MyRoutes.placement: PlacementScreen(),
     MyRoutes.alumni: AlumniScreen(),
     MyRoutes.help: HelpScreen(),
+    MyRoutes.courses: CourseScreen(),
   };
 
   void initializeAnimation() {

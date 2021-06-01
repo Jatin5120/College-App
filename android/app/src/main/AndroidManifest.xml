@@ -1,8 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.college_app">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
    <application
         android:label="college_app"
         android:icon="@mipmap/ic_launcher">
+        <activity android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+           android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+           android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -38,5 +43,4 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
