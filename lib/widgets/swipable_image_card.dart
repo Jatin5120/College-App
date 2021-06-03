@@ -38,10 +38,7 @@ class BuildSwipableImageCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: padding * 2,
-                  vertical: padding,
-                ),
+                padding: EdgeInsets.all(padding * 2),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,6 +48,7 @@ class BuildSwipableImageCard extends StatelessWidget {
                           .textTheme
                           .bodyText1!
                           .copyWith(fontWeight: FontWeight.w600),
+                      textAlign: TextAlign.center,
                     ),
                     SizedBox(height: padding),
                     Text(
@@ -58,7 +56,7 @@ class BuildSwipableImageCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyText2,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.justify,
-                      maxLines: 6,
+                      maxLines: 5,
                     ),
                   ],
                 ),

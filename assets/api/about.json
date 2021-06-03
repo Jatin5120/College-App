@@ -13,42 +13,50 @@
             {
                 "name": "Sardarni Balbir Kaur",
                 "designation": "President",
-                "imageUrl": "Governing_Body/GB-001.jpg"
+                "imageUrl": "Governing_Body/GB-001.jpg",
+                "message": ""
             },
             {
                 "name": "Sardarni Urmiljeet Kaur",
                 "designation": "Hon. Secretary",
-                "imageUrl": "Governing_Body/GB-002.jpg"
+                "imageUrl": "Governing_Body/GB-002.jpg",
+                "message": ""
             },
             {
                 "name": "S. Jaspal Singh Waraich",
                 "designation": "Hon. Jt. Secretary",
-                "imageUrl": "Governing_Body/GB-003.jpg"
+                "imageUrl": "Governing_Body/GB-003.jpg",
+                "message": ""
             },
             {
                 "name": "S. Deepinder Singh Purewal",
                 "designation": "Member",
-                "imageUrl": "Governing_Body/GB-004.jpg"
+                "imageUrl": "Governing_Body/GB-004.jpg",
+                "message": ""
             },
             {
                 "name": "Sardarni Kartar Kaur",
                 "designation": "Member",
-                "imageUrl": "Governing_Body/GB-005.jpg"
+                "imageUrl": "Governing_Body/GB-005.jpg",
+                "message": ""
             },
             {
                 "name": "Dr. Paramjit Kaur Panag",
                 "designation": "Member",
-                "imageUrl": "Governing_Body/GB-006.jpg"
+                "imageUrl": "Governing_Body/GB-006.jpg",
+                "message": ""
             },
             {
                 "name": "S. Gurdeep Singh Sangha",
                 "designation": "Member",
-                "imageUrl": "Governing_Body/GB-007.jpg"
+                "imageUrl": "Governing_Body/GB-007.jpg",
+                "message": ""
             },
             {
                 "name": "S. Resham Singh",
                 "designation": "Member",
-                "imageUrl": "Governing_Body/GB-008.jpg"
+                "imageUrl": "Governing_Body/GB-008.jpg",
+                "message": ""
             }
         ],
         "core_team": [

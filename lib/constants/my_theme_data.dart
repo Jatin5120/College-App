@@ -34,6 +34,7 @@ class MyThemeData {
     cardTheme: CardTheme(
       color: MyColors.lightForeground,
       elevation: UIConfigurations.elevation,
+      margin: UIConfigurations.margin,
     ),
     textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(primary: MyColors.selectedColor)),

@@ -1,4 +1,4 @@
-enum Courses {
+enum MyCourses {
   bSc,
   bTech,
   bVoc,

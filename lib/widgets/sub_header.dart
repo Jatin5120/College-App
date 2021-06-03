@@ -6,11 +6,13 @@ class BuildSubHeader extends StatelessWidget {
     required this.padding,
     required this.title,
     this.icon,
+    this.isSmall = false,
   }) : super(key: key);
 
   final String title;
   final IconData? icon;
   final double padding;
+  final bool? isSmall;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class BuildSubHeader extends StatelessWidget {
         children: [
           Text(
             title,
-            style: textTheme.headline4,
+            style: isSmall! ? textTheme.headline5 : textTheme.headline4,
             textAlign: TextAlign.center,
           ),
           SizedBox(width: icon == null ? 0 : padding * 2),

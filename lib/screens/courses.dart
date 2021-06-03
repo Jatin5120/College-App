@@ -12,7 +12,7 @@ class _CourseScreenState extends State<CourseScreen> {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: fetchData(MyRoutes.courses),
-      builder: (context, snapShot) {
+      builder: (BuildContext context, AsyncSnapshot<dynamic> snapShot) {
         if (snapShot.hasData) {
           return Center(
             child: Container(

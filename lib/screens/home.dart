@@ -1,3 +1,5 @@
+import 'package:college_app/modals/modals.dart';
+import 'package:college_app/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:college_app/constants/constants.dart';
 import 'package:college_app/data/data.dart';
@@ -14,14 +16,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return FutureBuilder(
       future: fetchData(MyRoutes.home),
       builder: (BuildContext context, AsyncSnapshot<dynamic> snapShot) {
         if (snapShot.hasData) {
-          return HomePage(snapShot: snapShot);
+          final HomeModal homeModel = HomeModal.fromJson(snapShot.data);
+          return HomePage(homeModel: homeModel);
         } else {
-          return BuildLoadingHome(size: size);
+          return BuildLoadingHome();
         }
       },
     );
@@ -29,15 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class BuildLoadingHome extends StatelessWidget {
-  const BuildLoadingHome({
-    Key? key,
-    required this.size,
-  }) : super(key: key);
-
-  final Size size;
-
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return MyShimmerEffect(
       child: ListView(
         physics: NeverScrollableScrollPhysics(),
@@ -74,41 +70,44 @@ class BuildLoadingHome extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key, required this.snapShot}) : super(key: key);
+  HomePage({Key? key, required this.homeModel}) : super(key: key);
 
-  final AsyncSnapshot<dynamic> snapShot;
+  final HomeModal homeModel;
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  late Map<String, dynamic> data;
-  late List<dynamic> slides;
-  late List<dynamic> noticeBoard;
-  late Map<String, dynamic> about;
-  late List<dynamic> bsc;
-  late List<dynamic> btech;
-  late List<dynamic> bvoc;
-  late List<dynamic> diploma;
-  late List<dynamic> testimonials;
-  late List<dynamic> news;
-  late List<dynamic> industrialVisits;
+  late HomeData homeData;
+
+  late List<String?>? slides;
+  late List<NoticeBoard?>? noticeBoard;
+  late About? about;
+  late Courses? courses;
+  late List<Course?>? bSc;
+  late List<Course?>? bTech;
+  late List<Course?>? bVoc;
+  late List<Course?>? diploma;
+  late List<Testimonials?>? testimonials;
+  late List<News?>? news;
+  late List<IndustrialVisits?>? industrialVisits;
 
   @override
   void initState() {
     super.initState();
-    data = widget.snapShot.data['data'];
-    slides = data['slideShow'];
-    noticeBoard = data['noticeBoard'].reversed.toList();
-    about = data['about'];
-    bsc = data['courses']['bsc'];
-    btech = data['courses']['btech'];
-    bvoc = data['courses']['bvoc'];
-    diploma = data['courses']['diploma'];
-    testimonials = data['testimonials'];
-    news = data['news'];
-    industrialVisits = data['industrial_visits'];
+    homeData = widget.homeModel.data!;
+    slides = homeData.slideShow!;
+    noticeBoard = homeData.noticeBoard!.reversed.toList();
+    about = homeData.about!;
+    courses = homeData.courses!;
+    bSc = courses!.bsc!;
+    bTech = courses!.btech!;
+    bVoc = courses!.bvoc!;
+    diploma = courses!.diploma!;
+    testimonials = homeData.testimonials!;
+    news = homeData.news!;
+    industrialVisits = homeData.industrialVisits!;
   }
 
   @override
@@ -119,57 +118,46 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         SizedBox(height: size.height / 10),
         BuildSlideShow(slides: slides),
-        BuildSubHeaderHome(title: 'Events', padding: padding, onPressed: () {}),
-        BuildEvents(noticeBoard: noticeBoard),
-        BuildSubHeaderHome(title: 'About', padding: padding, onPressed: () {}),
+        BuildSubHeader(title: 'Events', padding: padding),
+        BuildEvents(noticeBoard: noticeBoard!),
+        BuildSubHeader(title: 'About', padding: padding),
         BuildAbout(about: about, padding: padding),
-        BuildSubHeaderHome(
-            title: 'Courses', padding: padding, onPressed: () {}),
-        for (int i = 0; i < bsc.length; i++)
-          SmallDetailCard(
-            padding: padding,
-            borderRadius: UIConfigurations.smallCardBorderRadius,
-            courseTitle: 'B.Sc',
-            name: bsc[i]['name'],
-            imageUrl: bsc[i]['imageUrl'],
-          ),
-        for (int i = 0; i < btech.length; i++)
-          SmallDetailCard(
-            padding: padding,
-            borderRadius: UIConfigurations.smallCardBorderRadius,
-            courseTitle: 'B.Tech',
-            name: btech[i]['name'],
-            imageUrl: btech[i]['imageUrl'],
-          ),
-        for (int i = 0; i < bvoc.length; i++)
-          SmallDetailCard(
-            padding: padding,
-            borderRadius: UIConfigurations.smallCardBorderRadius,
-            courseTitle: 'B.Voc',
-            name: bvoc[i]['name'],
-            imageUrl: bvoc[i]['imageUrl'],
-          ),
-        for (int i = 0; i < diploma.length; i++)
-          SmallDetailCard(
-            padding: padding,
-            borderRadius: UIConfigurations.smallCardBorderRadius,
-            courseTitle: 'Diploma',
-            name: diploma[i]['name'],
-            imageUrl: diploma[i]['imageUrl'],
-          ),
-        BuildSubHeaderHome(
-            title: 'Testimonials', padding: padding, onPressed: () {}),
+        BuildSubHeader(
+            title: 'Courses', padding: padding, icon: MyIcons.courses),
+        SmallDetailCard(
+          padding: padding,
+          courseTitle: 'B.Sc',
+          myCourses: MyCourses.bSc,
+          courses: bSc,
+        ),
+        SmallDetailCard(
+          padding: padding,
+          courseTitle: 'B.Tech',
+          myCourses: MyCourses.bTech,
+          courses: bTech,
+        ),
+        SmallDetailCard(
+          padding: padding,
+          courseTitle: 'B.Voc',
+          myCourses: MyCourses.bVoc,
+          courses: bVoc,
+        ),
+        SmallDetailCard(
+          padding: padding,
+          courseTitle: 'Diploma',
+          myCourses: MyCourses.diploma,
+          courses: diploma,
+        ),
+        BuildSubHeader(title: 'Testimonials', padding: padding),
         BuildTestimonials(testimonials: testimonials, padding: padding),
-        BuildSubHeaderHome(
-            title: 'News & Headlines', padding: padding, onPressed: () {}),
+        BuildSubHeader(title: 'News & Headlines', padding: padding),
         BuildNews(news: news, padding: padding),
-        BuildSubHeaderHome(
-            title: 'Industrial Visits', padding: padding, onPressed: () {}),
-        for (Map<String, dynamic> visit in industrialVisits)
-          BuildSwipableImageCard(item: visit, padding: padding),
+        BuildSubHeader(title: 'Industrial Visits', padding: padding),
+        for (IndustrialVisits? visit in industrialVisits!)
+          BuildSwipableImageCard(item: visit!.toJson(), padding: padding),
         Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 12.0),
+            padding: const EdgeInsets.symmetric(vertical: 24.0),
             child: Consumer<CurrentRoute>(
               builder: (context, currentRoute, child) {
                 return OutlinedButton(
@@ -177,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                     'Need Help?',
                     style: Theme.of(context).textTheme.headline6,
                   ),
-                  onPressed: () => currentRoute.setRoute(MyRoutes.about),
+                  onPressed: () => currentRoute.setRoute(MyRoutes.help),
                 );
               },
             ),
@@ -195,7 +183,7 @@ class BuildNews extends StatelessWidget {
     required this.padding,
   }) : super(key: key);
 
-  final List news;
+  final List<News?>? news;
   final double padding;
 
   @override
@@ -205,7 +193,7 @@ class BuildNews extends StatelessWidget {
       child: PageView.builder(
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        itemCount: news.length,
+        itemCount: news!.length,
         itemBuilder: (_, index) {
           return AspectRatio(
             aspectRatio: 3 / 2,
@@ -220,7 +208,7 @@ class BuildNews extends StatelessWidget {
                       aspectRatio: 9 / 8,
                       child: ClipRRect(
                         borderRadius: UIConfigurations.smallCardBorderRadius,
-                        child: ShowImage(news[index]['imageUrl']),
+                        child: ShowImage(news![index]!.imageUrl!),
                       ),
                     ),
                     Expanded(
@@ -231,7 +219,7 @@ class BuildNews extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
-                              news[index]['headline'],
+                              news![index]!.headline!,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 7,
                               textAlign: TextAlign.justify,
@@ -240,7 +228,7 @@ class BuildNews extends StatelessWidget {
                               height: padding * 2,
                             ),
                             Text(
-                              news[index]['date'],
+                              news![index]!.date!,
                               style: Theme.of(context).textTheme.overline,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 7,
@@ -268,7 +256,7 @@ class BuildTestimonials extends StatelessWidget {
     required this.padding,
   }) : super(key: key);
 
-  final List testimonials;
+  final List<Testimonials?>? testimonials;
   final double padding;
 
   @override
@@ -277,7 +265,7 @@ class BuildTestimonials extends StatelessWidget {
       aspectRatio: 1,
       child: PageView.builder(
         physics: BouncingScrollPhysics(),
-        itemCount: testimonials.length,
+        itemCount: testimonials!.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Card(
@@ -291,7 +279,7 @@ class BuildTestimonials extends StatelessWidget {
                     borderRadius: UIConfigurations.bgCardBorderRadius,
                     child: AspectRatio(
                       aspectRatio: 20 / 9,
-                      child: ShowImage(testimonials[index]['imageUrl']),
+                      child: ShowImage(testimonials![index]!.imageUrl),
                     ),
                   ),
                   Padding(
@@ -311,11 +299,11 @@ class BuildTestimonials extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '${testimonials[index]['name']}  |  ',
+                              '${testimonials![index]!.name!}  |  ',
                               style: Theme.of(context).textTheme.headline5,
                             ),
                             Text(
-                              testimonials[index]['department'],
+                              testimonials![index]!.department!,
                               style: Theme.of(context).textTheme.subtitle1,
                             ),
                           ],
@@ -324,7 +312,7 @@ class BuildTestimonials extends StatelessWidget {
                           height: padding * 1.5,
                         ),
                         Text(
-                          testimonials[index]['quote'],
+                          testimonials![index]!.quote!,
                           style: Theme.of(context).textTheme.bodyText2,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 7,
@@ -348,68 +336,77 @@ class SmallDetailCard extends StatelessWidget {
     Key? key,
     required this.padding,
     required this.courseTitle,
-    required this.name,
-    required this.imageUrl,
-    this.borderRadius,
+    required this.myCourses,
+    required this.courses,
   }) : super(key: key);
 
   final double padding;
   final String courseTitle;
-  final String name;
-  final String imageUrl;
-  final BorderRadius? borderRadius;
+  final MyCourses myCourses;
+  final List<Course?>? courses;
 
   @override
   Widget build(BuildContext context) {
+    final BorderRadius? borderRadius = UIConfigurations.smallCardBorderRadius;
     return AspectRatio(
       aspectRatio: 5 / 2,
-      child: Card(
-        margin: UIConfigurations.margin.copyWith(top: 10),
-        shape: RoundedRectangleBorder(
-          borderRadius: borderRadius ?? BorderRadius.zero,
-        ),
-        child: ClipRRect(
-          borderRadius: borderRadius ?? BorderRadius.zero,
-          child: Row(
-            children: [
-              AspectRatio(
-                aspectRatio: 4 / 3,
-                child: ClipRRect(
-                  borderRadius: borderRadius ?? BorderRadius.zero,
-                  child: ShowImage(imageUrl),
+      child: PageView.builder(
+        physics: BouncingScrollPhysics(),
+        itemCount: courses!.length,
+        itemBuilder: (context, index) {
+          final Course course = courses![index]!;
+          return AspectRatio(
+            aspectRatio: 5 / 2,
+            child: Card(
+              margin: UIConfigurations.margin.copyWith(top: 10),
+              shape: RoundedRectangleBorder(
+                borderRadius: borderRadius ?? BorderRadius.zero,
+              ),
+              child: ClipRRect(
+                borderRadius: borderRadius ?? BorderRadius.zero,
+                child: Row(
+                  children: [
+                    AspectRatio(
+                      aspectRatio: 4 / 3,
+                      child: ClipRRect(
+                        borderRadius: borderRadius ?? BorderRadius.zero,
+                        child: ShowImage(course.imageUrl!),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(
+                          padding * 2,
+                          padding,
+                          padding,
+                          padding,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              courseTitle,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            SizedBox(
+                              height: padding,
+                            ),
+                            Text(
+                              course.name!,
+                              style: Theme.of(context).textTheme.headline6,
+                              softWrap: true,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(
-                    padding * 2,
-                    padding,
-                    padding,
-                    padding,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        courseTitle,
-                        style: Theme.of(context).textTheme.subtitle1,
-                      ),
-                      SizedBox(
-                        height: padding,
-                      ),
-                      Text(
-                        name,
-                        style: Theme.of(context).textTheme.headline6,
-                        softWrap: true,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -422,7 +419,7 @@ class BuildAbout extends StatelessWidget {
     required this.padding,
   }) : super(key: key);
 
-  final Map<String, dynamic> about;
+  final About? about;
   final double padding;
 
   @override
@@ -446,7 +443,7 @@ class BuildAbout extends StatelessWidget {
                       borderRadius: UIConfigurations.bgCardBorderRadius,
                       child: AspectRatio(
                         aspectRatio: 16 / 9,
-                        child: ShowImage(about['imageUrl']),
+                        child: ShowImage(about!.imageUrl),
                       ),
                     ),
                     Padding(
@@ -457,7 +454,7 @@ class BuildAbout extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            about['title'],
+                            about!.title!,
                             style: Theme.of(context).textTheme.headline5,
                           ),
                           IconButton(
@@ -473,7 +470,7 @@ class BuildAbout extends StatelessWidget {
                         horizontal: padding * 2,
                       ),
                       child: Text(
-                        about['description'],
+                        about!.description!,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 5,
                       ),
@@ -495,7 +492,7 @@ class BuildEvents extends StatelessWidget {
     required this.noticeBoard,
   }) : super(key: key);
 
-  final List noticeBoard;
+  final List<NoticeBoard?>? noticeBoard;
 
   @override
   Widget build(BuildContext context) {
@@ -503,9 +500,9 @@ class BuildEvents extends StatelessWidget {
       aspectRatio: 3 / 2,
       child: PageView.builder(
         physics: BouncingScrollPhysics(),
-        itemCount: noticeBoard.length,
+        itemCount: noticeBoard!.length,
         itemBuilder: (_, index) {
-          final Map<String, dynamic> notice = noticeBoard[index];
+          final NoticeBoard notice = noticeBoard![index]!;
           return AspectRatio(
             aspectRatio: 3 / 2,
             child: Card(
@@ -520,7 +517,7 @@ class BuildEvents extends StatelessWidget {
                       flex: 2,
                       child: ClipRRect(
                         borderRadius: UIConfigurations.smallCardBorderRadius,
-                        child: ShowImage(notice['imageUrl']),
+                        child: ShowImage(notice.imageUrl!),
                       ),
                     ),
                     Expanded(
@@ -528,67 +525,73 @@ class BuildEvents extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(
-                              notice['topic'],
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText1!
-                                  .copyWith(fontWeight: FontWeight.w600),
+                            Expanded(
+                              flex: 2,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    notice.topic!,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1!
+                                        .copyWith(fontWeight: FontWeight.w600),
+                                  ),
+                                  if (notice.lastDate != null)
+                                    Text(
+                                      notice.lastDate!,
+                                      style:
+                                          Theme.of(context).textTheme.overline,
+                                    ),
+                                  Text(
+                                    notice.description!,
+                                    style: Theme.of(context).textTheme.caption,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 4,
+                                  ),
+                                ],
+                              ),
                             ),
-                            Text(
-                              notice['lastDate'] ?? '',
-                              style: Theme.of(context).textTheme.overline,
-                            ),
-                            Text(
-                              notice['description'],
-                              style: Theme.of(context).textTheme.bodyText2,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 4,
-                            ),
-                            notice['links'] != null
-                                ? Wrap(
-                                    spacing: 10.0,
-                                    alignment: WrapAlignment.spaceEvenly,
+                            if (notice.links != null)
+                              Expanded(
+                                flex: 1,
+                                child: Scrollbar(
+                                  child: ListView(
+                                    // scrollDirection: Axis.horizontal,
                                     children: [
-                                      if (notice['links']['registration'] !=
-                                          null)
-                                        OutlinedButton(
-                                          child: Text('Register'),
-                                          onPressed: () {},
-                                        ),
-                                      if (notice['links']['rules'] != null)
-                                        TextButton(
-                                          child: Text('Rules'),
-                                          onPressed: () {},
-                                        ),
-                                      if (notice['links']['submissionLinks'] !=
-                                          null)
-                                        for (int i = 0;
-                                            i <
-                                                notice['links']
-                                                        ['submissionLinks']
-                                                    .length;
-                                            i++)
-                                          ElevatedButton(
-                                            child: Text(
-                                              notice['links']['submissionLinks']
-                                                          .length ==
-                                                      1
-                                                  ? 'Submit'
-                                                  : 'Submit ${i + 1}',
-                                            ),
-                                            onPressed: () {},
-                                          ),
+                                      Wrap(
+                                        spacing: 10.0,
+                                        alignment: WrapAlignment.spaceEvenly,
+                                        children: [
+                                          for (Link? link in notice.links!)
+                                            link!.important!
+                                                ? ElevatedButton(
+                                                    onPressed: () =>
+                                                        Utils.openLink(
+                                                            url: link.url!),
+                                                    child:
+                                                        Text(link.displayText!),
+                                                  )
+                                                : OutlinedButton(
+                                                    onPressed: () =>
+                                                        Utils.openLink(
+                                                            url: link.url!),
+                                                    child:
+                                                        Text(link.displayText!),
+                                                  ),
+                                        ],
+                                      ),
                                     ],
-                                  )
-                                : SizedBox.shrink(),
+                                  ),
+                                ),
+                              ),
                           ],
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -601,7 +604,7 @@ class BuildEvents extends StatelessWidget {
 }
 
 class BuildSlideShow extends StatelessWidget {
-  final List<dynamic>? slides;
+  final List<String?>? slides;
 
   const BuildSlideShow({Key? key, this.slides}) : super(key: key);
   @override

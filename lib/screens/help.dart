@@ -12,7 +12,7 @@ class _HelpScreenState extends State<HelpScreen> {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: fetchData(MyRoutes.help),
-      builder: (context, snapShot) {
+      builder: (BuildContext context, AsyncSnapshot<dynamic> snapShot) {
         if (snapShot.hasData) {
           return Center(
             child: Container(

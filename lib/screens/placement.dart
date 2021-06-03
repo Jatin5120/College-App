@@ -12,7 +12,7 @@ class _PlacementScreenState extends State<PlacementScreen> {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: fetchData(MyRoutes.placement),
-      builder: (context, snapShot) {
+      builder: (BuildContext context, AsyncSnapshot<dynamic> snapShot) {
         if (snapShot.hasData) {
           return Center(
             child: Container(

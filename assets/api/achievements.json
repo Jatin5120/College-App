@@ -1,7 +1,7 @@
 {
     "baseUrl": "https://raw.githubusercontent.com/Jatin5120/College-Images/main/",
     "data": {
-        "awards": {
+        "award": {
             "heading": "Awards & Felicitations",
             "awards": [
                 {
@@ -21,7 +21,7 @@
                 }
             ]
         },
-        "achievements": {
+        "achievement": {
             "heading": "Academic Achievements",
             "achievements": [
                 {
@@ -61,7 +61,7 @@
                 }
             ]
         },
-        "conferences": {
+        "conference": {
             "heading": "Workshops & Conferences",
             "description": "In today's era of cut throat competition, updating ourselves with the latest technologies & advancements is one of the major challenges. We at LKCE believe in giving exposure to our students with respect to the emerging trends in their respective fields. In an endeavour in this direction, following workshops and conferences are conducted in the Institute",
             "conferences": [

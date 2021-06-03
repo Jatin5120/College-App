@@ -1,5 +1,6 @@
 import 'package:college_app/constants/constants.dart';
 import 'package:college_app/data/data.dart';
+import 'package:college_app/modals/modals.dart';
 import 'package:college_app/utils.dart';
 import 'package:college_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,8 @@ class _AboutScreenState extends State<AboutScreen> {
       future: fetchData(MyRoutes.about),
       builder: (BuildContext context, AsyncSnapshot<dynamic> snapShot) {
         if (snapShot.hasData) {
-          return AboutPage(snapShot: snapShot);
+          final AboutModal aboutModal = AboutModal.fromJson(snapShot.data);
+          return AboutPage(aboutModal: aboutModal);
         } else {
           return BuildLoadingAbout();
         }
@@ -64,35 +66,36 @@ class BuildLoadingAbout extends StatelessWidget {
 }
 
 class AboutPage extends StatefulWidget {
-  AboutPage({Key? key, required this.snapShot}) : super(key: key);
+  AboutPage({Key? key, required this.aboutModal}) : super(key: key);
 
-  final AsyncSnapshot<dynamic> snapShot;
+  final AboutModal aboutModal;
 
   @override
   _AboutPageState createState() => _AboutPageState();
 }
 
 class _AboutPageState extends State<AboutPage> {
-  late Map<String, dynamic> data;
-  late Map<String, dynamic> about;
-  late List<dynamic> governingBody;
-  late List<dynamic> coreTeam;
-  late String address;
-  late List<dynamic> phones;
-  late List<dynamic> emails;
-  late Map<String, dynamic> socialMedia;
+  late AboutData aboutData;
+
+  late AboutOrganization? about;
+  late List<Team?>? governingBody;
+  late List<Team?>? coreTeam;
+  late String? address;
+  late List<String?>? phones;
+  late List<String?>? emails;
+  late SocialMedia? socialMedia;
 
   @override
   void initState() {
     super.initState();
-    data = widget.snapShot.data['data'];
-    about = data['about'];
-    governingBody = data['governing_body'];
-    coreTeam = data['core_team'];
-    address = data['address'];
-    phones = data['phone'];
-    emails = data['email'];
-    socialMedia = data['social_media'];
+    aboutData = widget.aboutModal.data!;
+    about = aboutData.about!;
+    governingBody = aboutData.governingBody!;
+    coreTeam = aboutData.coreTeam!;
+    address = aboutData.address!;
+    phones = aboutData.phones;
+    emails = aboutData.emails!;
+    socialMedia = aboutData.socialMedia!;
   }
 
   @override
@@ -104,7 +107,7 @@ class _AboutPageState extends State<AboutPage> {
       children: [
         SizedBox(height: size.height / 8),
         Text(
-          data['title'],
+          aboutData.title!,
           style: textTheme.headline4!.copyWith(fontWeight: FontWeight.w600),
           overflow: TextOverflow.clip,
           textAlign: TextAlign.center,
@@ -119,21 +122,22 @@ class _AboutPageState extends State<AboutPage> {
             ),
             child: ClipRRect(
               borderRadius: UIConfigurations.bgCardBorderRadius,
-              child: ShowImage(data['imageUrl']),
+              child: ShowImage(aboutData.imageUrl!),
             ),
           ),
         ),
         BuildSubHeader(title: 'About', padding: padding),
         BuildAboutSection(padding: padding, about: about),
         BuildSubHeader(title: 'Vision', padding: padding, icon: MyIcons.vision),
-        BuildParagraph(padding: padding, paragraph: data['vision']),
+        BuildParagraph(padding: padding, paragraph: aboutData.vision!),
         BuildSubHeader(
             title: 'Mission', padding: padding, icon: MyIcons.mission),
-        BuildParagraph(padding: padding, paragraph: data['mission']),
+        BuildParagraph(padding: padding, paragraph: aboutData.mission!),
         BuildSubHeader(title: 'Governing Body', padding: padding),
-        BuildTeamCard(team: governingBody, padding: padding, isCoreTeam: false),
+        BuildTeamCard(
+            teams: governingBody, padding: padding, isCoreTeam: false),
         BuildSubHeader(title: 'Core Team', padding: padding, icon: Icons.group),
-        BuildTeamCard(team: coreTeam, padding: padding, isCoreTeam: true),
+        BuildTeamCard(teams: coreTeam, padding: padding, isCoreTeam: true),
         BuildSubHeader(
             title: 'Contacts', padding: padding, icon: Icons.contacts),
         BuildContacts(
@@ -151,12 +155,12 @@ class _AboutPageState extends State<AboutPage> {
 class BuildTeamCard extends StatelessWidget {
   const BuildTeamCard({
     Key? key,
-    required this.team,
+    required this.teams,
     required this.padding,
     required this.isCoreTeam,
   }) : super(key: key);
 
-  final List team;
+  final List<Team?>? teams;
   final double padding;
   final bool isCoreTeam;
 
@@ -167,8 +171,9 @@ class BuildTeamCard extends StatelessWidget {
       aspectRatio: 1,
       child: PageView.builder(
         physics: BouncingScrollPhysics(),
-        itemCount: team.length,
+        itemCount: teams!.length,
         itemBuilder: (context, index) {
+          final Team team = teams![index]!;
           return Card(
             margin: UIConfigurations.margin,
             shape: RoundedRectangleBorder(
@@ -183,7 +188,7 @@ class BuildTeamCard extends StatelessWidget {
                     borderRadius: UIConfigurations.bgCardBorderRadius,
                     child: AspectRatio(
                       aspectRatio: 5 / 3,
-                      child: ShowImage(team[index]['imageUrl']),
+                      child: ShowImage(team.imageUrl!),
                     ),
                   ),
                   if (!isCoreTeam) SizedBox(height: padding * 3),
@@ -192,12 +197,12 @@ class BuildTeamCard extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          team[index]['name'],
+                          team.name!,
                           style: textTheme.headline4,
                           textAlign: TextAlign.center,
                         ),
                         Text(
-                          team[index]['designation'],
+                          team.designation!,
                           style: textTheme.headline5,
                         ),
                       ],
@@ -212,20 +217,21 @@ class BuildTeamCard extends StatelessWidget {
                         context: context,
                         builder: (context) {
                           return AlertDialog(
-                            title: Text(team[index]['name']),
+                            title: Text(team.name!),
                             content: AspectRatio(
                               aspectRatio: 3 / 4,
                               child: ListView(
                                 children: [
-                                  Text(team[index]['message']),
+                                  Text(team.message!),
                                 ],
                               ),
                             ),
                             actions: [
-                              IconButton(
+                              TextButton.icon(
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
+                                label: Text('Close'),
                                 icon: Icon(Icons.close),
                               ),
                             ],
@@ -254,10 +260,10 @@ class BuildContacts extends StatelessWidget {
   }) : super(key: key);
 
   final double padding;
-  final String address;
-  final List phones;
-  final List emails;
-  final Map<String, dynamic> socialMedia;
+  final String? address;
+  final List<String?>? phones;
+  final List<String?>? emails;
+  final SocialMedia? socialMedia;
 
   @override
   Widget build(BuildContext context) {
@@ -270,21 +276,21 @@ class BuildContacts extends StatelessWidget {
         children: <Widget>[
           BuildContactsRow(
             padding: padding,
-            label: address,
+            label: address!,
             icon: Icon(MyIcons.location),
             linkType: LinkType.location,
           ),
-          for (String phone in phones)
+          for (String? phone in phones!)
             BuildContactsRow(
               padding: padding,
-              label: phone,
+              label: phone!,
               icon: Icon(MyIcons.phone, size: 20.0),
               linkType: LinkType.phone,
             ),
-          for (String email in emails)
+          for (String? email in emails!)
             BuildContactsRow(
               padding: padding,
-              label: email,
+              label: email!,
               icon: Icon(MyIcons.mail, size: 20.0),
               linkType: LinkType.mail,
             ),
@@ -293,10 +299,10 @@ class BuildContacts extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                BuildSocial(socialMedia: socialMedia, media: 'facebook'),
-                BuildSocial(socialMedia: socialMedia, media: 'twitter'),
-                BuildSocial(socialMedia: socialMedia, media: 'instagram'),
-                BuildSocial(socialMedia: socialMedia, media: 'linkedin'),
+                BuildSocial(url: socialMedia!.facebook!, media: 'facebook'),
+                BuildSocial(url: socialMedia!.twitter!, media: 'twitter'),
+                BuildSocial(url: socialMedia!.instagram!, media: 'instagram'),
+                BuildSocial(url: socialMedia!.linkedin!, media: 'linkedin'),
               ],
             ),
           ),
@@ -309,18 +315,17 @@ class BuildContacts extends StatelessWidget {
 class BuildSocial extends StatelessWidget {
   const BuildSocial({
     Key? key,
-    required this.socialMedia,
+    required this.url,
     required this.media,
   }) : super(key: key);
 
-  final Map<String, dynamic> socialMedia;
+  final String? url;
   final String media;
 
   @override
   Widget build(BuildContext context) {
-    final String url = socialMedia[media];
     return InkWell(
-      onTap: () => Utils.openLink(url: url),
+      onTap: () => Utils.openLink(url: url!),
       child: Image.asset(
         'assets/images/$media.png',
         height: 40.0,
@@ -418,7 +423,7 @@ class BuildAboutSection extends StatelessWidget {
   }) : super(key: key);
 
   final double padding;
-  final Map<String, dynamic> about;
+  final AboutOrganization? about;
 
   @override
   Widget build(BuildContext context) {
@@ -437,7 +442,7 @@ class BuildAboutSection extends StatelessWidget {
           ),
           SizedBox(height: padding),
           Text(
-            about['lkctc'],
+            about!.lkctc!,
             style: textTheme.bodyText1,
             textAlign: TextAlign.justify,
           ),
@@ -448,7 +453,7 @@ class BuildAboutSection extends StatelessWidget {
           ),
           SizedBox(height: padding),
           Text(
-            about['trust'],
+            about!.trust!,
             style: textTheme.bodyText1,
             textAlign: TextAlign.justify,
           ),

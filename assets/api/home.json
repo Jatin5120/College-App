@@ -31,11 +31,18 @@
                 "lastDate": "05 Apr 2019",
                 "imageUrl": "Notice_Board/1.jpg",
                 "description": "Lyallpur Khalsa College of Engineering, Jalandhar is organising a TechFest 'INNOVANCE 2K19' on 5th April, 2019. The participants are required to make registration online by filling the following Form.",
-                "links": {
-                    "registration": "http://tinyurl.com/LKCEtechfest2019",
-                    "rules": "http://lkcengg.edu.in/downloads/Innovance2k19.pdf",
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "http://tinyurl.com/LKCEtechfest2019"
+                    },
+                    {
+                        "display_text": "Rules",
+                        "important": false,
+                        "url": "http://lkcengg.edu.in/downloads/Innovance2k19.pdf"
+                    }
+                ]
             },
             {
                 "topic": "Workshop on Entrepreneurship",
@@ -49,22 +56,26 @@
                 "lastDate": "23 Nov 2019",
                 "imageUrl": "Notice_Board/3.jpg",
                 "description": "You will be pleased to know that Lyallpur Khalsa College of Engineering, Jalandhar is going to organize a convocation on 23rd Nov., 2019 at the college campus. We will appreciate if you kindly confirm attending the Convocation, latest by 7th November 2019 by registering for the event. \nWe look forward to welcoming you to the Convocation.",
-                "links": {
-                    "registration": "https://forms.gle/UNsw8WfSmBZv24HDA",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://forms.gle/UNsw8WfSmBZv24HDA"
+                    }
+                ]
             },
             {
                 "topic": "Faculty Development Programme",
                 "lastDate": "16 Dec 2019",
                 "imageUrl": "Notice_Board/4.jpg",
                 "description": "With a great contentment we would like to inform you that our college is organizing Six Days Faculty Development Program on 'Latest Trends in Teaching Pedagogy' from 16th Dec 2019 to 21st Dec 2019. We have invited various renowned resource persons from varied fields for this programme to explore latest pedagogical skills. Keeping in view the quality concerns and dynamics associated with current teaching learning process, we aim at providing a platform where teachers will enhance their pedagogical experience and will keep pace with academic world of todayâ€™s era.",
-                "links": {
-                    "registration": "http://lkcengg.edu.in/downloads/fdpreg.pdf",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "http://lkcengg.edu.in/downloads/fdpreg.pdf"
+                    }
+                ]
             },
             {
                 "topic": "INNOVANCE 2020",
@@ -78,101 +89,149 @@
                 "lastDate": null,
                 "imageUrl": "Notice_Board/6.jpg",
                 "description": "CSE department is organizing Poetry and Essay writing Competition for LKCE students.",
-                "links": {
-                    "registration": "https://tinyurl.com/tetskf7",
-                    "rules": null,
-                    "submissionLinks": [
-                        "https://tinyurl.com/uez4jxp",
-                        "https://tinyurl.com/rg9wd49"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Submit Poetry",
+                        "important": true,
+                        "url": "https://tinyurl.com/uez4jxp"
+                    },
+                    {
+                        "display_text": "Submit Essay",
+                        "important": true,
+                        "url": "https://tinyurl.com/rg9wd49"
+                    },
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/tetskf7"
+                    }
+                ]
             },
             {
                 "topic": "ADMIXTUR",
                 "lastDate": "20 Apr 2020",
                 "imageUrl": "Notice_Board/7.jpg",
                 "description": "Lyallpur Khalsa College of Engineering is organizing an online collage making competition ADMIXTUR on 20th April, 2020.",
-                "links": {
-                    "registration": "https://forms.gle/yrMj3tmePhWnLe3z7",
-                    "rules": null,
-                    "submissionLinks": [
-                        "https://forms.gle/mBGqt4hHLmVufPuQ8"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Submit",
+                        "important": true,
+                        "url": "https://forms.gle/mBGqt4hHLmVufPuQ8"
+                    },
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://forms.gle/yrMj3tmePhWnLe3z7"
+                    }
+                ]
             },
             {
                 "topic": "Memories in a SNAP",
                 "lastDate": null,
                 "imageUrl": "Notice_Board/8.jpg",
                 "description": "Lyllapur Khalsa College of Engineering, Jalandhar is organizing Online Photography 'Memories in a Snap' and Best out of waste 'Marvelous Out of the Discard '.",
-                "links": {
-                    "registration": null,
-                    "rules": null,
-                    "submissionLinks": [
-                        "https://forms.gle/WqqJpGrMXHVrFPkS7",
-                        "https://forms.gle/f6NSA3wzFkgcCBjH8"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Submit Photo",
+                        "important": true,
+                        "url": "https://forms.gle/WqqJpGrMXHVrFPkS7"
+                    },
+                    {
+                        "display_text": "Submit",
+                        "important": true,
+                        "url": "https://forms.gle/f6NSA3wzFkgcCBjH8"
+                    }
+                ]
             },
             {
                 "topic": "ONLINE SLOGAN WRITING COMPETITION",
                 "lastDate": "11 may 2020",
                 "imageUrl": "Notice_Board/9.jpg",
                 "description": "Computer Science & Engg department of LKCE organising ONLINE SLOGAN WRITING COMPETITION on any one of the following theme.\nTHINK POSITIVE\nLEARNING DURING COVID -19\n\nOPEN TO ALL STUDENTS( AGE ABOVE 13 YEARS)",
-                "links": {
-                    "registration": "https://tinyurl.com/lkcesloganwriting",
-                    "rules": null,
-                    "submissionLinks": [
-                        "https://tinyurl.com/lkcesloganwriting"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Submit",
+                        "important": true,
+                        "url": "https://tinyurl.com/lkcesloganwriting"
+                    },
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/lkcesloganwriting"
+                    }
+                ]
             },
             {
                 "topic": "LKCE GOT TALENT",
                 "lastDate": "15 May 2020",
                 "imageUrl": "Notice_Board/6.jpg",
                 "description": "Computer Science & Engg Department of Lyllapur Khalsa College of Engineering, Jalandhar is organizing LKCE GOT TALENT\nAn Ad Designing Contest\nOPEN TO ALL STUDENTS (Age above 13 yrs.)\nParticipants may opt any one of the Content Model for Ad preparation and designing",
-                "links": {
-                    "registration": "http://lkcengg.edu.in/downloads/cm1.pdf",
-                    "rules": "http://lkcengg.edu.in/downloads/r.pdf",
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "http://lkcengg.edu.in/downloads/cm1.pdf"
+                    },
+                    {
+                        "display_text": "Rules",
+                        "important": false,
+                        "url": "http://lkcengg.edu.in/downloads/r.pdf"
+                    }
+                ]
             },
             {
                 "topic": "Intellectica",
                 "lastDate": "8 Jun 2020",
                 "imageUrl": "Notice_Board/10.jpg",
                 "description": "Students may participate in Picture perception and Description from 11.00-11.20 am.\nAnd Mental Ability Test From 12.00-12.20pm ",
-                "links": {
-                    "registration": "https://forms.gle/AZMAnyDeLVLQ7K3XA",
-                    "rules": null,
-                    "submissionLinks": [
-                        "https://forms.gle/fecCuFp1LjCN2AoX9",
-                        "https://forms.gle/J22GH2c5MVviHaQp8"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Submit Idea",
+                        "important": true,
+                        "url": "https://forms.gle/fecCuFp1LjCN2AoX9"
+                    },
+                    {
+                        "display_text": "Submit Test",
+                        "important": true,
+                        "url": "https://forms.gle/J22GH2c5MVviHaQp8"
+                    },
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://forms.gle/AZMAnyDeLVLQ7K3XA"
+                    }
+                ]
             },
             {
                 "topic": "International Webinar On The Talent Eco System",
                 "lastDate": "15 Jun 2020",
                 "imageUrl": "Notice_Board/11.jpg",
                 "description": "Department of Applied Science In Association with TOSS Global Management UAE/ India Organizes International webinar On The Talent Eco System Resource Person Dr. Steve Mc Kenna (Faculty of Business and Law, Curtin Business School, Perth, Western Australia) Date: 15 June 2020 Time: 12 Noon- 1:00 PM At Zoom Platform E Certificates will be issued to all the Participants\n\nFor Joining the Zoom Meeting Id : 747 776 0436 password: lkc\nCoordinator: Dr. Pawanpreet Kaur, M: 8558850606\nContact: 097817-06262, 098882-50413\nE-mail: info@lkcengg.edu.in",
-                "links": {
-                    "registration": "https://tinyurl.com/talenteco",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/talenteco"
+                    }
+                ]
             },
             {
                 "topic": "E-SPARDHA 2020",
                 "lastDate": "23 Jun 2020",
                 "imageUrl": "Notice_Board/12.jpg",
                 "description": "LKCE, Jalandhar is going to organize e-SPARDHA, 2020 on 23rd June, 2020. Number of events are planned for this e-fest. Their details as mentioned below:\n\nList of Events:\n\nLAN gaming\nIndo Vs. Exotic look challenge\nCrossword\nIQ hunt\nCircuit Mania\nQuiz-Iconic Buildings in the World\n\nE-certificates will be provided to all participants.\nStudents with age 15 or above may register. For any query, you may contact: Er. Varun Sharma (9814501119) & Dr. Nancy Gupta (8283877900).\nThere are *cash prizes for each event:\n1000/- (INR) for the first position\n500/- (INR) for the second position.\n*Except for host institution participants",
-                "links": {
-                    "registration": "https://tinyurl.com/e-spardha2020-21",
-                    "rules": "http://lkcengg.edu.in/downloads/spardha.pdf",
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/e-spardha2020-21"
+                    },
+                    {
+                        "display_text": "Rules",
+                        "important": false,
+                        "url": "http://lkcengg.edu.in/downloads/spardha.pdf"
+                    }
+                ]
             },
             {
                 "topic": "Webinar on Civil and Foundation Engineering Guide",
@@ -186,48 +245,57 @@
                 "lastDate": "25 Jun 2020",
                 "imageUrl": "Notice_Board/14.jpg",
                 "description": "International Webinar CAREER STRIKE By Dr Upasana Singh, Senior Lecturer Discipline of Information Systems and Technology University of KwaZulu Natal, Westville Campus, in Durban South Africa.\n\nDate: 25 / 06 / 2020 Thursday\nTiming 12: 30 - 13: 30\nMeeting ID: 336 607 1145\nPassword: career\nFor any query, Contact: Er.Vikram Dhiman 7814879655 ",
-                "links": {
-                    "registration": "https: //tinyurl.com/LKCE-SECURITY",
-                    "rules": null,
-                    "submissionLinks": [
-                        "https: //us02web.zoom.us/j/3366071145?pwd=b2Izb1pTVkxISys1dnllTHNveU5RQT09"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Join",
+                        "important": true,
+                        "url": "https://us02web.zoom.us/j/3366071145?pwd=b2Izb1pTVkxISys1dnllTHNveU5RQT09"
+                    },
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/LKCE-SECURITY"
+                    }
+                ]
             },
             {
                 "topic": "SAYONARA-2020",
                 "lastDate": "10 Jul 2020",
                 "imageUrl": "Notice_Board/15.jpg",
                 "description": "Lyallpur Khalsa College of Engineering is going to organize e-farewell SAYONARA-2020 to bid adieu to the final year students on 15-07-2020 (10:00 AM onwards). The event will be conducted in the virtual environment through ZOOM meeting application. Ms./Mr. farewell competition is planned for the passing out students. The final year students are required to register at the following Google form link for the participation in the competition.\n\n1.\tPhotograph in modeling attire\t10 MB\n2.\tVideo Clip including their introduction followed by talent showcase (maximum three minute duration)\t25 MB",
-                "links": {
-                    "registration": null,
-                    "rules": null,
-                    "submissionLinks": [
-                        "https://tinyurl.com/sayonara-2020"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Submit",
+                        "important": true,
+                        "url": "https://tinyurl.com/sayonara-2020"
+                    }
+                ]
             },
             {
                 "topic": "IT Service Management",
                 "lastDate": "11 Jul 2020",
                 "imageUrl": "Notice_Board/16.jpg",
                 "description": "The ECE department of LKCE organizes international webinar under corporate Interaction Series on IT Service Management. The date and timings for the event is 11-07-2020 from 1100 to 1200 hours. E-certificates will be provided to all participants.\nResource Person:\nMr. Ritul Thakur\nSr. Service Delivery Manager\nAcclivis Technologies and Solutions Pvt. Ltd.\n(Member of CITIC Telecom International)\nSINGAPORE",
-                "links": {
-                    "registration": "https://tinyurl.com/webinar-ece",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/webinar-ece"
+                    }
+                ]
             },
             {
                 "topic": "Latest Evolution in Computer Science",
                 "lastDate": "23 Jul 2020",
                 "imageUrl": "Notice_Board/17.jpg",
                 "description": "The CSE department of LKCE organizes three days Short Term Training Programme on Latest Evolution in Computer Science. The date and timings for the event from 22-07-2020 to 24-07-2020.This STTP will bridge the gap between industry and academia by blending the savoir-faire of corporate and academicians. Eminent personalities from Industry and academia of international and national repute will address the congregation.\nNOTE:\nE-certificates will be provided to all participants.\nStudents of age 17yrs or above can register",
-                "links": {
-                    "registration": "https://tinyurl.com/LKCE-SECURITY",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/LKCE-SECURITY"
+                    }
+                ]
             },
             {
                 "topic": "Job Opportunities in Government Sector after Civil Engineering",
@@ -241,22 +309,26 @@
                 "lastDate": "17 Jul 2020",
                 "imageUrl": "Notice_Board/19.jpg",
                 "description": "CSE in coordination with Training & Placement dept. is organizing One day Workshop on Resume Writing & Interview Skills. The date and timings for the event is 17-07-2020 at 10:30am.\nResource Person:\nMr. Anshul Wadhwa\nCo-Founder, AptiGuide\n\nZOOM Meeting ID: 97779738372\nPassword: 396080\nEvent Coordinator: Dr. Pooja Dhand (9872476060)\nEvent Coordinator: Dr. Amarjeet Kaur (9463505370)",
-                "links": {
-                    "registration": "https://tinyurl.com/Lkce-resume",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/Lkce-resume"
+                    }
+                ]
             },
             {
                 "topic": "Resume Writing & Interview Skills",
                 "lastDate": "18 Jul 2020",
                 "imageUrl": "Notice_Board/20.jpg",
                 "description": "CSE in coordination with Training & Placement dept. is organizing One day Workshop on Resume Writing & Interview Skills. The date and timings for the event is 18-07-2020 at 10:30am.\nResource Person:\nMr. Anshul Wadhwa\nCo-Founder, AptiGuide\n\nZOOM Meeting ID: 97779738372\nPassword: 396080\nEvent Coordinator: Dr. Pooja Dhand (9872476060)\nEvent Coordinator: Dr. Amarjeet Kaur (9463505370)",
-                "links": {
-                    "registration": "https://tinyurl.com/Lkce-resume",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/Lkce-resume"
+                    }
+                ]
             },
             {
                 "topic": "Webinar on career options for civil engineering",
@@ -277,11 +349,13 @@
                 "lastDate": "30 Jul 2020",
                 "imageUrl": "Notice_Board/23.jpg",
                 "description": "Department of ECE at Lyallpur Khalsa College of Engineering is going to organize an event e-Expedition on July 30, 2020 to trigger innovative minds of todayâ€™s youth. These activities are fun filled, helpful for learning and beneficial for mental fitness. Solving puzzles helps the brain engage in a stimulating cognitive activity. Therefore, the motive of this event is to enhance the problem solving skills of the participants thus enhancing their overall personality.\nEvent Coordinator: Dr. Silky khurana",
-                "links": {
-                    "registration": "https://tinyurl.com/LKCE-Expedition",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/LKCE-Expedition"
+                    }
+                ]
             },
             {
                 "topic": "Online rakhi making competition",
@@ -295,44 +369,52 @@
                 "lastDate": "24 Aug 2020",
                 "imageUrl": "Notice_Board/25.jpg",
                 "description": "School of Engineering organizes 6-Days Online Student Induction Program for the Newly Admitted Students.\n\nMeeting ID: 820 939 7410\nPassword: SIP2020\n\nEvent Coordinator: ER. VARUN SHARMA (9876586085)\nDR. NANCY GUPTA (8283877900)",
-                "links": {
-                    "registration": "https://zoom.us/j/8209397410?pwd=VG1sREZSSXZ6VmxaMmhBRHRDa0NJZz09",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Join",
+                        "important": true,
+                        "url": "https://zoom.us/j/8209397410?pwd=VG1sREZSSXZ6VmxaMmhBRHRDa0NJZz09"
+                    }
+                ]
             },
             {
                 "topic": "Webinar on Carbonation of Self Compacting Concrete",
                 "lastDate": "24 Sep 2020",
                 "imageUrl": "Notice_Board/26.jpg",
                 "description": "Department of Civil Engineering is going to organizing webinar on â€œCarbonation of Self Compacting Concreteâ€ on 24.09.2020 at 11.30 am. In this webinar, Dr. Navdeep Singh (Assistant Professor, NIT Jalandhar) will be guide about the issues related to the Self Compacting Concrete.",
-                "links": {
-                    "registration": "https://forms.gle/2dwu63sxUVrrVbVm6",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://forms.gle/2dwu63sxUVrrVbVm6"
+                    }
+                ]
             },
             {
                 "topic": "Vasant Panchami",
                 "lastDate": "16 Feb 2021",
                 "imageUrl": "Notice_Board/27.jpg",
                 "description": "LKCTC is celebrating Vasant Panchami on 16th February, 2021, 11.30 am onwards in the College Ground. Various competitions are scheduled on this occasion listed as below:\n1. Most Vibrant Kite Design\n2. Most Eco-Friendly Kite Design\n3. Most Innovative Kite Design\n4. Kite Flying competition\nEvent Coordinator:\nDr. Nancy Gupta (8283877900)\nEr. Gagan Deep (9888873355)",
-                "links": {
-                    "registration": "https://docs.google.com/forms/d/1pERU6B1gT1Iz0NRC8SAB-O7QgFikOAqJ2jMUyp_Yhw8/edit?ts=60261cea",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://docs.google.com/forms/d/1pERU6B1gT1Iz0NRC8SAB-O7QgFikOAqJ2jMUyp_Yhw8/edit?ts=60261cea"
+                    }
+                ]
             },
             {
                 "topic": "Webinar on PLC Software STEP-7 Microwin Smart",
                 "lastDate": "19 Feb 2021",
                 "imageUrl": "Notice_Board/28.jpg",
                 "description": "ECE Department of LKC TC in collaboration with T&P Cell is going to organize a webinar on PLC Software STEP-7 Microwin Smart On February 19th, 2021Timings: 10:00 A.M. byMs. Rajinder Kaur, Technical Trainer (Wonder Automation Pvt. Ltd. Mohali).\nFaculty Coordinator:\nEr.Lovdeep Singh (Ph-9464060944)",
-                "links": {
-                    "registration": "https://forms.gle/hdM3YwNxGvuvGyUdA",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://forms.gle/hdM3YwNxGvuvGyUdA"
+                    }
+                ]
             },
             {
                 "topic": "Poster Making Competition",
@@ -346,22 +428,36 @@
                 "lastDate": "9 Apr 2021",
                 "imageUrl": "Notice_Board/29.jpg",
                 "description": "It is a matter of immense pleasure for us to inform you that at Lyallpur Khalsa College Technical Campus, we are going to organize Inter College and Inter School technical e-fest eTech-Symphonic , A confluence of innovative ideas for better tomorrow , on 9th April, 2021",
-                "links": {
-                    "registration": "https://tinyurl.com/e-TechSymphonic",
-                    "rules": "http://lkcengg.edu.in/downloads/etech.pdf",
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://tinyurl.com/e-TechSymphonic"
+                    },
+                    {
+                        "display_text": "Rules",
+                        "important": false,
+                        "url": "http://lkcengg.edu.in/downloads/etech.pdf"
+                    }
+                ]
             },
             {
                 "topic": "FUTURAMA",
                 "lastDate": "12 Apr 2021",
                 "imageUrl": "Notice_Board/30.jpg",
                 "description": "Innovation Club of LKCTC in association with Mechanical Engineering Department organizes FUTURAMA (Digital poster making competition) on 12th april 2021",
-                "links": {
-                    "registration": "https://forms.gle/aEPDAzAaXAxpV5QC8",
-                    "rules": "http://lkcengg.edu.in/downloads/futurama.pdf",
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://forms.gle/aEPDAzAaXAxpV5QC8"
+                    },
+                    {
+                        "display_text": "Rules",
+                        "important": false,
+                        "url": "http://lkcengg.edu.in/downloads/futurama.pdf"
+                    }
+                ]
             },
             {
                 "topic": "Capsule Program",
@@ -375,11 +471,13 @@
                 "lastDate": "22 Apr 2021",
                 "imageUrl": "Notice_Board/32.jpg",
                 "description": "CSE department in association with Training and Placement Department and in Collaboration with Tech Mahindra is organising Online Workshop on Full Stack Development on 22nd April 2021 at 2:30 pm.",
-                "links": {
-                    "registration": "https://docs.google.com/forms/d/e/1FAIpQLScHtw-RUZQ-3ATNW46sWZuMeOYy6noatWkjvRB2vAC9iZY2QA/viewform?vc=0&c=0&w=1&flr=0",
-                    "rules": null,
-                    "submissionLinks": null
-                }
+                "links": [
+                    {
+                        "display_text": "Register",
+                        "important": false,
+                        "url": "https://docs.google.com/forms/d/e/1FAIpQLScHtw-RUZQ-3ATNW46sWZuMeOYy6noatWkjvRB2vAC9iZY2QA/viewform?vc=0&c=0&w=1&flr=0"
+                    }
+                ]
             },
             {
                 "topic": "Alumni Talk",
@@ -421,13 +519,13 @@
                 "lastDate": "8 May 2021",
                 "imageUrl": "Notice_Board/38.jpg",
                 "description": "The ECE department organizes an event on E-FOTOPEDIA (Digital Collage Design Contest). The date for the event is 8th May, 2021.\n\nEligibility Criteria: All students of age group 15 years and above can participate.\nThemes of the event:\n1. Green Living\n2. Role of Engineering in combating COVID-19\nEvent Coordinator: Er. Pallavi Sharma (6283805394)",
-                "links": {
-                    "registration": null,
-                    "rules": null,
-                    "submissionLinks": [
-                        "https://tinyurl.com/photogramdesign"
-                    ]
-                }
+                "links": [
+                    {
+                        "display_text": "Submit",
+                        "important": true,
+                        "url": "https://tinyurl.com/photogramdesign"
+                    }
+                ]
             }
         ],
         "about": {
