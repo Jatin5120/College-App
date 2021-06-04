@@ -89,12 +89,12 @@ class _AchievementPageState extends State<AchievementPage> {
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
+    final TextTheme textTheme = Theme.of(context).textTheme;
     final Size size = MediaQuery.of(context).size;
     final double padding = (size.width / 40).roundToDouble();
     return ListView(
       children: [
-        SizedBox(height: size.height / 10),
+        UIConfigurations.spaceTop(size),
         BuildSubHeader(padding: padding, title: allAward!.heading!),
         for (Award? award in allAward!.awards!)
           BuildSwipableImageCard(item: award!.toJson(), padding: padding),
@@ -113,7 +113,7 @@ class _AchievementPageState extends State<AchievementPage> {
         ),
         for (Conference? conference in allConference!.conferences!)
           BuildConference(conference: conference, padding: padding),
-        SizedBox(height: size.height / 15),
+        UIConfigurations.spaceBottom(size),
       ],
     );
   }
@@ -131,7 +131,7 @@ class BuildConference extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return AspectRatio(
       aspectRatio: conference!.links != null ? 1.65 / 2 : 2 / 1.8,
       child: Card(

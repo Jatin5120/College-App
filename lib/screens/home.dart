@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:college_app/modals/modals.dart';
 import 'package:college_app/utils.dart';
 import 'package:flutter/material.dart';
@@ -112,58 +114,73 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     final Size size = MediaQuery.of(context).size;
     final double padding = (size.width / 40).roundToDouble();
     return ListView(
       children: <Widget>[
-        SizedBox(height: size.height / 10),
+        UIConfigurations.spaceTop(size),
         BuildSlideShow(slides: slides),
-        BuildSubHeader(title: 'Events', padding: padding),
+        BuildSubHeader(
+            title: 'Events', padding: padding, icon: Icons.event_outlined),
         BuildEvents(noticeBoard: noticeBoard!),
         BuildSubHeader(title: 'About', padding: padding),
         BuildAbout(about: about, padding: padding),
         BuildSubHeader(
             title: 'Courses', padding: padding, icon: MyIcons.courses),
+        BuildSubHeader(title: 'B.Sc', padding: padding, isSmall: true),
         SmallDetailCard(
           padding: padding,
           courseTitle: 'B.Sc',
           myCourses: MyCourses.bSc,
           courses: bSc,
         ),
+        BuildSubHeader(title: 'B.Tech', padding: padding, isSmall: true),
         SmallDetailCard(
           padding: padding,
           courseTitle: 'B.Tech',
           myCourses: MyCourses.bTech,
           courses: bTech,
         ),
+        BuildSubHeader(title: 'B.Voc', padding: padding, isSmall: true),
         SmallDetailCard(
           padding: padding,
           courseTitle: 'B.Voc',
           myCourses: MyCourses.bVoc,
           courses: bVoc,
         ),
+        BuildSubHeader(title: 'Diploma', padding: padding, isSmall: true),
         SmallDetailCard(
           padding: padding,
           courseTitle: 'Diploma',
           myCourses: MyCourses.diploma,
           courses: diploma,
         ),
-        BuildSubHeader(title: 'Testimonials', padding: padding),
+        BuildSubHeader(
+            title: 'Testimonials', padding: padding, icon: Icons.edit_outlined),
         BuildTestimonials(testimonials: testimonials, padding: padding),
-        BuildSubHeader(title: 'News & Headlines', padding: padding),
+        BuildSubHeader(
+          title: 'News & Headlines',
+          padding: padding,
+          icon: Icons.library_books_outlined,
+        ),
         BuildNews(news: news, padding: padding),
-        BuildSubHeader(title: 'Industrial Visits', padding: padding),
+        BuildSubHeader(
+          title: 'Industrial Visits',
+          padding: padding,
+          icon: Icons.place_outlined,
+        ),
         for (IndustrialVisits? visit in industrialVisits!)
           BuildSwipableImageCard(item: visit!.toJson(), padding: padding),
         Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 24.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: Consumer<CurrentRoute>(
               builder: (context, currentRoute, child) {
                 return OutlinedButton(
                   child: Text(
                     'Need Help?',
-                    style: Theme.of(context).textTheme.headline6,
+                    style: textTheme.headline6,
                   ),
                   onPressed: () => currentRoute.setRoute(MyRoutes.help),
                 );
@@ -171,6 +188,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
+        UIConfigurations.spaceBottom(size),
       ],
     );
   }
@@ -188,6 +206,7 @@ class BuildNews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return AspectRatio(
       aspectRatio: 3 / 2,
       child: PageView.builder(
@@ -229,7 +248,7 @@ class BuildNews extends StatelessWidget {
                             ),
                             Text(
                               news![index]!.date!,
-                              style: Theme.of(context).textTheme.overline,
+                              style: textTheme.overline,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 7,
                               textAlign: TextAlign.justify,
@@ -261,6 +280,7 @@ class BuildTestimonials extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return AspectRatio(
       aspectRatio: 1,
       child: PageView.builder(
@@ -300,11 +320,11 @@ class BuildTestimonials extends StatelessWidget {
                             ),
                             Text(
                               '${testimonials![index]!.name!}  |  ',
-                              style: Theme.of(context).textTheme.headline5,
+                              style: textTheme.headline5,
                             ),
                             Text(
                               testimonials![index]!.department!,
-                              style: Theme.of(context).textTheme.subtitle1,
+                              style: textTheme.subtitle1,
                             ),
                           ],
                         ),
@@ -313,7 +333,7 @@ class BuildTestimonials extends StatelessWidget {
                         ),
                         Text(
                           testimonials![index]!.quote!,
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: textTheme.bodyText2,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 7,
                           textAlign: TextAlign.justify,
@@ -347,6 +367,7 @@ class SmallDetailCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     final BorderRadius? borderRadius = UIConfigurations.smallCardBorderRadius;
     return AspectRatio(
       aspectRatio: 5 / 2,
@@ -387,14 +408,14 @@ class SmallDetailCard extends StatelessWidget {
                           children: [
                             Text(
                               courseTitle,
-                              style: Theme.of(context).textTheme.subtitle1,
+                              style: textTheme.subtitle1,
                             ),
                             SizedBox(
                               height: padding,
                             ),
                             Text(
                               course.name!,
-                              style: Theme.of(context).textTheme.headline6,
+                              style: textTheme.headline6,
                               softWrap: true,
                             ),
                           ],
@@ -422,10 +443,27 @@ class BuildAbout extends StatelessWidget {
   final About? about;
   final double padding;
 
+  void onTap({
+    required CurrentRoute currentRoute,
+    required DrawerState drawerState,
+  }) {
+    drawerState.controller.forward();
+    drawerState.changeState(true);
+    Timer(Duration(milliseconds: 300), () {
+      currentRoute.setRoute(MyRoutes.about);
+    });
+    Timer(Duration(milliseconds: 300), () {
+      drawerState.changeState(false);
+      drawerState.controller.reverse();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Consumer<CurrentRoute>(
-      builder: (context, currentRoute, child) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
+    return Consumer2(
+      builder:
+          (context, CurrentRoute currentRoute, DrawerState drawerState, child) {
         return AspectRatio(
           aspectRatio: 1,
           child: Card(
@@ -435,7 +473,8 @@ class BuildAbout extends StatelessWidget {
             child: ClipRRect(
               borderRadius: UIConfigurations.bgCardBorderRadius,
               child: InkWell(
-                onTap: () => currentRoute.setRoute(MyRoutes.about),
+                onTap: () =>
+                    onTap(currentRoute: currentRoute, drawerState: drawerState),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -455,11 +494,12 @@ class BuildAbout extends StatelessWidget {
                         children: [
                           Text(
                             about!.title!,
-                            style: Theme.of(context).textTheme.headline5,
+                            style: textTheme.headline5,
                           ),
                           IconButton(
-                            onPressed: () =>
-                                currentRoute.setRoute(MyRoutes.about),
+                            onPressed: () => onTap(
+                                currentRoute: currentRoute,
+                                drawerState: drawerState),
                             icon: Icon(MyIcons.arrow_right),
                           )
                         ],
@@ -496,6 +536,7 @@ class BuildEvents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return AspectRatio(
       aspectRatio: 3 / 2,
       child: PageView.builder(
@@ -543,12 +584,11 @@ class BuildEvents extends StatelessWidget {
                                   if (notice.lastDate != null)
                                     Text(
                                       notice.lastDate!,
-                                      style:
-                                          Theme.of(context).textTheme.overline,
+                                      style: textTheme.overline,
                                     ),
                                   Text(
                                     notice.description!,
-                                    style: Theme.of(context).textTheme.caption,
+                                    style: textTheme.caption,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 4,
                                   ),

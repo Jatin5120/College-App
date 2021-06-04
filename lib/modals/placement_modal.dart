@@ -20,31 +20,31 @@ class PlacementModal {
 }
 
 class PlacementData {
-  List<Coordinator?>? coordinator;
-  List<Recruiters?>? recruiters;
-  List<StudentsPlaced?>? studentsPlaced;
+  List<Coordinator?>? coordinators;
+  List<Recruiter?>? recruiters;
+  List<StudentPlaced?>? studentsPlaced;
   Ibm? ibm;
 
   PlacementData(
-      {this.coordinator, this.recruiters, this.studentsPlaced, this.ibm});
+      {this.coordinators, this.recruiters, this.studentsPlaced, this.ibm});
 
   PlacementData.fromJson(Map<String, dynamic> json) {
     if (json['coordinator'] != null) {
-      coordinator = <Coordinator>[];
+      coordinators = <Coordinator>[];
       json['coordinator'].forEach((v) {
-        coordinator!.add(Coordinator.fromJson(v));
+        coordinators!.add(Coordinator.fromJson(v));
       });
     }
     if (json['recruiters'] != null) {
-      recruiters = <Recruiters>[];
+      recruiters = <Recruiter>[];
       json['recruiters'].forEach((v) {
-        recruiters!.add(Recruiters.fromJson(v));
+        recruiters!.add(Recruiter.fromJson(v));
       });
     }
     if (json['studentsPlaced'] != null) {
-      studentsPlaced = <StudentsPlaced>[];
+      studentsPlaced = <StudentPlaced>[];
       json['studentsPlaced'].forEach((v) {
-        studentsPlaced!.add(StudentsPlaced.fromJson(v));
+        studentsPlaced!.add(StudentPlaced.fromJson(v));
       });
     }
     ibm = json['ibm'] != null ? Ibm.fromJson(json['ibm']) : null;
@@ -52,8 +52,8 @@ class PlacementData {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = Map<String, dynamic>();
-    if (this.coordinator != null) {
-      data['coordinator'] = this.coordinator!.map((v) => v!.toJson()).toList();
+    if (this.coordinators != null) {
+      data['coordinator'] = this.coordinators!.map((v) => v!.toJson()).toList();
     }
     if (this.recruiters != null) {
       data['recruiters'] = this.recruiters!.map((v) => v!.toJson()).toList();
@@ -98,13 +98,13 @@ class Coordinator {
   }
 }
 
-class Recruiters {
+class Recruiter {
   String? name;
   String? imageUrl;
 
-  Recruiters({this.name, this.imageUrl});
+  Recruiter({this.name, this.imageUrl});
 
-  Recruiters.fromJson(Map<String, dynamic> json) {
+  Recruiter.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     imageUrl = json['imageUrl'];
   }
@@ -117,14 +117,14 @@ class Recruiters {
   }
 }
 
-class StudentsPlaced {
+class StudentPlaced {
   String? name;
   String? imageUrl;
   String? company;
 
-  StudentsPlaced({this.name, this.imageUrl, this.company});
+  StudentPlaced({this.name, this.imageUrl, this.company});
 
-  StudentsPlaced.fromJson(Map<String, dynamic> json) {
+  StudentPlaced.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     imageUrl = json['imageUrl'];
     company = json['company'];
@@ -140,25 +140,25 @@ class StudentsPlaced {
 }
 
 class Ibm {
-  List<Students?>? ce;
-  List<Students?>? cse;
-  List<Students?>? ece;
-  List<Students?>? me;
+  List<Student?>? ce;
+  List<Student?>? cse;
+  List<Student?>? ece;
+  List<Student?>? me;
 
   Ibm({this.ce, this.cse, this.ece, this.me});
 
   Ibm.fromJson(Map<String, dynamic> json) {
     ce = json['ce'];
     if (json['cse'] != null) {
-      cse = <Students>[];
+      cse = <Student>[];
       json['cse'].forEach((v) {
-        cse!.add(Students.fromJson(v));
+        cse!.add(Student.fromJson(v));
       });
     }
     if (json['ece'] != null) {
-      ece = <Students>[];
+      ece = <Student>[];
       json['ece'].forEach((v) {
-        ece!.add(Students.fromJson(v));
+        ece!.add(Student.fromJson(v));
       });
     }
     me = json['me'];
@@ -178,13 +178,13 @@ class Ibm {
   }
 }
 
-class Students {
+class Student {
   String? name;
   String? imageUrl;
 
-  Students({this.name, this.imageUrl});
+  Student({this.name, this.imageUrl});
 
-  Students.fromJson(Map<String, dynamic> json) {
+  Student.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     imageUrl = json['imageUrl'];
   }

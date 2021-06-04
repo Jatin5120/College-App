@@ -3,24 +3,29 @@ import 'package:flutter/material.dart';
 class BuildSubHeader extends StatelessWidget {
   const BuildSubHeader({
     Key? key,
-    required this.padding,
     required this.title,
+    required this.padding,
     this.icon,
     this.isSmall = false,
   }) : super(key: key);
 
   final String title;
-  final IconData? icon;
   final double padding;
+  final IconData? icon;
   final bool? isSmall;
 
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Padding(
-      padding: EdgeInsets.only(top: padding * 3, bottom: padding / 1.5),
+      padding: EdgeInsets.only(
+        top: isSmall! ? padding : padding * 3,
+        bottom: isSmall! ? 0 : padding / 1.5,
+        left: isSmall! ? padding * 3 : 0,
+      ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment:
+            isSmall! ? MainAxisAlignment.start : MainAxisAlignment.center,
         children: [
           Text(
             title,

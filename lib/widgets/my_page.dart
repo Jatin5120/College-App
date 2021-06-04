@@ -115,9 +115,9 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
                               children: [
                                 pages[currentRoute.getCurrentRoute]!,
                                 Positioned(
-                                  top: margin,
-                                  left: margin,
-                                  right: margin,
+                                  top: margin * 2,
+                                  left: margin * 2,
+                                  right: margin * 2,
                                   child: MyAppBar(
                                     size: size,
                                     title: Text(
@@ -141,8 +141,8 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   Positioned(
-                    top: position,
-                    left: position,
+                    top: position * 1.75,
+                    left: position * 1.75,
                     child: IconButton(
                       icon: AnimatedIcon(
                         icon: AnimatedIcons.close_menu,

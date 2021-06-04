@@ -670,31 +670,31 @@
             "ece": [
                 {
                     "name": "Jaspreet",
-                    "imageUrl": "IBM/1.jpg"
+                    "imageUrl": "IBM/ECE/1.jpg"
                 },
                 {
                     "name": "Kamal",
-                    "imageUrl": "IBM/2.jpg"
+                    "imageUrl": "IBM/ECE/2.jpg"
                 },
                 {
                     "name": "Khushpreet Kaur",
-                    "imageUrl": "IBM/3.jpg"
+                    "imageUrl": "IBM/ECE/3.jpg"
                 },
                 {
                     "name": "Lavankshi",
-                    "imageUrl": "IBM/4.jpg"
+                    "imageUrl": "IBM/ECE/4.jpg"
                 },
                 {
                     "name": "Pooja",
-                    "imageUrl": "IBM/5.jpg"
+                    "imageUrl": "IBM/ECE/5.jpg"
                 },
                 {
                     "name": "Simran Bhagat",
-                    "imageUrl": "IBM/6.jpg"
+                    "imageUrl": "IBM/ECE/6.jpg"
                 },
                 {
                     "name": "Saurav",
-                    "imageUrl": "IBM/7.jpg"
+                    "imageUrl": "IBM/ECE/7.jpg"
                 }
             ],
             "me": null

@@ -6,3 +6,5 @@ export 'my_shimmer_effect.dart';
 export 'shader_widget.dart';
 export 'swipable_image_card.dart';
 export 'sub_header.dart';
+export 'cta_button.dart';
+export 'contact.dart';

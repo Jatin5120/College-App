@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => CurrentTheme()),
         ChangeNotifierProvider(create: (context) => CurrentRoute()),
         ChangeNotifierProvider(create: (context) => DrawerState()),
+        ChangeNotifierProvider(create: (context) => FAQProvider()),
       ],
       builder: (context, child) {
         return Consumer<CurrentTheme>(

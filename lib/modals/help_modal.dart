@@ -3,8 +3,8 @@ import 'common.dart';
 class HelpModal {
   String? website;
   String? address;
-  List<String?>? phone;
-  List<String?>? email;
+  List<String?>? phones;
+  List<String?>? emails;
   SocialMedia? socialMedia;
   List<UsefulLinks?>? usefulLinks;
   List<Faq?>? faq;
@@ -12,8 +12,8 @@ class HelpModal {
   HelpModal(
       {this.website,
       this.address,
-      this.phone,
-      this.email,
+      this.phones,
+      this.emails,
       this.socialMedia,
       this.usefulLinks,
       this.faq});
@@ -21,8 +21,8 @@ class HelpModal {
   HelpModal.fromJson(Map<String, dynamic> json) {
     website = json['website'];
     address = json['address'];
-    phone = json['phone'].cast<String?>();
-    email = json['email'].cast<String?>();
+    phones = json['phone'].cast<String?>();
+    emails = json['email'].cast<String?>();
     socialMedia = json['social_media'] != null
         ? SocialMedia.fromJson(json['social_media'])
         : null;
@@ -44,8 +44,8 @@ class HelpModal {
     final Map<String, dynamic> data = Map<String, dynamic>();
     data['website'] = this.website;
     data['address'] = this.address;
-    data['phone'] = this.phone;
-    data['email'] = this.email;
+    data['phone'] = this.phones;
+    data['email'] = this.emails;
     if (this.socialMedia != null) {
       data['social_media'] = this.socialMedia!.toJson();
     }

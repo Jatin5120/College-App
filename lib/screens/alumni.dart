@@ -2,8 +2,8 @@ import 'package:college_app/constants/constants.dart';
 import 'package:college_app/data/data.dart';
 import 'package:college_app/modals/modals.dart';
 import 'package:college_app/utils.dart';
+import 'package:college_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class AlumniScreen extends StatefulWidget {
   @override
@@ -63,12 +63,12 @@ class _AlumniPageState extends State<AlumniPage> {
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
+    final TextTheme textTheme = Theme.of(context).textTheme;
     final Size size = MediaQuery.of(context).size;
     final double padding = (size.width / 40).roundToDouble();
     return ListView(
       children: [
-        SizedBox(height: size.height / 8),
+        UIConfigurations.spaceTop(size),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: padding * 2),
           child: Text(
@@ -77,58 +77,192 @@ class _AlumniPageState extends State<AlumniPage> {
             textAlign: TextAlign.center,
           ),
         ),
-        BuildJoinButton(padding: padding, alumniData: alumniData),
+        CTAButton(
+          padding: padding,
+          link: alumniData.link!,
+          text: 'Join Alumni Programme',
+          toolTip: 'Open Form for Joining',
+        ),
+        BuildSubHeader(title: 'College Alumni', padding: padding),
+        BuildSubHeader(
+          title: 'Civil Department',
+          padding: padding,
+          isSmall: true,
+        ),
+        for (int i = 0; i < ce!.length; i++)
+          _BuildAlumniCard(
+              student: ce![i], padding: padding, isEven: i % 2 == 0),
+        BuildSubHeader(
+          title: 'Computer Science Department',
+          padding: padding,
+          isSmall: true,
+        ),
+        for (int i = 0; i < cse!.length; i++)
+          _BuildAlumniCard(
+              student: cse![i], padding: padding, isEven: i % 2 == 0),
+        BuildSubHeader(
+          title: 'Electronics Department',
+          padding: padding,
+          isSmall: true,
+        ),
+        for (int i = 0; i < ece!.length; i++)
+          _BuildAlumniCard(
+              student: ece![i], padding: padding, isEven: i % 2 == 0),
+        BuildSubHeader(
+          title: 'Mechanical Department',
+          padding: padding,
+          isSmall: true,
+        ),
+        for (int i = 0; i < me!.length; i++)
+          _BuildAlumniCard(
+              student: me![i], padding: padding, isEven: i % 2 == 0),
+        UIConfigurations.spaceBottom(size),
       ],
     );
   }
 }
 
-class BuildJoinButton extends StatelessWidget {
-  const BuildJoinButton({
+class _BuildAlumniCard extends StatelessWidget {
+  const _BuildAlumniCard({
     Key? key,
+    required this.student,
     required this.padding,
-    required this.alumniData,
+    required this.isEven,
   }) : super(key: key);
 
+  final Branch? student;
   final double padding;
-  final AlumniData alumniData;
+  final bool isEven;
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
-    return Padding(
-      padding:
-          EdgeInsets.symmetric(horizontal: padding * 4, vertical: padding * 2),
-      child: Consumer<CurrentTheme>(
-        builder: (context, currentTheme, child) {
-          return Tooltip(
-            message: 'Open Form for Joining',
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                    borderRadius: UIConfigurations.appBarBorderRadius),
-              ),
-              onPressed: () => Utils.openLink(url: alumniData.link!),
-              child: Padding(
-                padding: EdgeInsets.all(padding),
-                child: Text(
-                  'Join Alumni Programme',
-                  style: textTheme.headline5!.copyWith(
-                    color: currentTheme.currentThemeMode == ThemeMode.dark
-                        ? MyColors.darkForeground
-                        : currentTheme.currentThemeMode == ThemeMode.light
-                            ? MyColors.lightForeground
-                            : MediaQuery.of(context).platformBrightness ==
-                                    Brightness.dark
-                                ? MyColors.darkForeground
-                                : MyColors.lightForeground,
-                    fontWeight: FontWeight.w800,
-                  ),
+    final MainAxisAlignment mainAxisAlignment =
+        isEven ? MainAxisAlignment.start : MainAxisAlignment.end;
+    return AspectRatio(
+      aspectRatio: 9 / 5,
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: UIConfigurations.bgCardBorderRadius,
+        ),
+        child: ClipRRect(
+          borderRadius: UIConfigurations.bgCardBorderRadius,
+          child: Row(
+            mainAxisAlignment: mainAxisAlignment,
+            children: [
+              if (!isEven)
+                _BuildDetailsColumn(
+                    padding: padding, student: student, isEven: isEven),
+              AspectRatio(
+                aspectRatio: 3 / 4,
+                child: ClipRRect(
+                  borderRadius: UIConfigurations.bgCardBorderRadius,
+                  child: ShowImage(student!.imageUrl!),
                 ),
               ),
-            ),
-          );
-        },
+              if (isEven)
+                _BuildDetailsColumn(
+                    padding: padding, student: student, isEven: isEven),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _BuildDetailsColumn extends StatelessWidget {
+  const _BuildDetailsColumn({
+    Key? key,
+    required this.padding,
+    required this.student,
+    required this.isEven,
+  }) : super(key: key);
+
+  final double padding;
+  final Branch? student;
+  final bool isEven;
+
+  @override
+  Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
+    final CrossAxisAlignment crossAxisAlignment =
+        isEven ? CrossAxisAlignment.start : CrossAxisAlignment.end;
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: padding,
+        vertical: padding * 2,
+      ),
+      child: Column(
+        crossAxisAlignment: crossAxisAlignment,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: crossAxisAlignment,
+            children: [
+              Text(
+                student!.name!,
+                style: textTheme.headline6,
+              ),
+              SizedBox(height: padding / 2),
+              Text(
+                student!.batch!,
+                style: textTheme.subtitle1,
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: crossAxisAlignment,
+            children: [
+              Text(
+                student!.job!,
+                style: textTheme.bodyText1,
+              ),
+              SizedBox(height: padding / 2),
+              Text(
+                student!.company!,
+                style: textTheme.subtitle1,
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: crossAxisAlignment,
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    MyIcons.mail_outlined,
+                    size: 12.0,
+                  ),
+                  SizedBox(width: padding),
+                  GestureDetector(
+                    onTap: () => Utils.openMail(mailTo: student!.email!),
+                    child: Text(
+                      student!.email!,
+                      style: textTheme.caption,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: padding / 2),
+              Row(
+                children: [
+                  Icon(
+                    MyIcons.phone_outlined,
+                    size: 12.0,
+                  ),
+                  SizedBox(width: padding),
+                  GestureDetector(
+                    onTap: () => Utils.openCall(phone: student!.mobile!),
+                    child: Text(
+                      student!.mobile!,
+                      style: textTheme.caption,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

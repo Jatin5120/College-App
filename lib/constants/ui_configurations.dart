@@ -10,6 +10,9 @@ class UIConfigurations {
   static BorderRadius smallCardBorderRadius = BorderRadius.circular(15);
   static BorderRadius bgCardBorderRadius = BorderRadius.circular(20);
 
+  static Widget spaceTop(Size size) => SizedBox(height: size.height / 10);
+  static Widget spaceBottom(Size size) => SizedBox(height: size.height / 15);
+
   static const EdgeInsets margin = EdgeInsets.all(20.0);
 
   static const IconThemeData darkIconTheme =
