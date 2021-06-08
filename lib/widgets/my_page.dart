@@ -85,7 +85,7 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
               CurrentRoute currentRoute, Widget? child) {
             return GestureDetector(
               onHorizontalDragUpdate: (DragUpdateDetails details) {
-                if (details.delta.dx < -10.0 && drawerState.isOpen) {
+                if (details.delta.dx < -12.0 && drawerState.isOpen) {
                   drawerState.controller.reverse();
                   drawerState.changeState(false);
                 }
@@ -130,10 +130,16 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
                                   ),
                                 ),
                                 if (drawerState.isOpen)
-                                  Container(
-                                    height: double.infinity,
-                                    width: double.infinity,
-                                    color: Colors.transparent,
+                                  GestureDetector(
+                                    onTap: () {
+                                      drawerState.controller.reverse();
+                                      drawerState.changeState(false);
+                                    },
+                                    child: Container(
+                                      height: double.infinity,
+                                      width: double.infinity,
+                                      color: Colors.transparent,
+                                    ),
                                   )
                               ],
                             ),

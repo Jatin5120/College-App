@@ -41,7 +41,11 @@ class BuildSubHeader extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(width: icon == null ? 0 : padding * 2),
-          if (showRightArrow) Icon(MyIcons.arrow_right_alt),
+          if (showRightArrow)
+            Tooltip(
+              message: 'Swipe Right',
+              child: Icon(MyIcons.arrow_right_alt),
+            ),
           if (icon != null) Icon(icon),
         ],
       ),

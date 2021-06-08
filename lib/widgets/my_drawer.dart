@@ -45,8 +45,6 @@ class _MyDrawerState extends State<MyDrawer> {
     final double paddingHorizontal = (size.width / 6).roundToDouble();
     final double paddingVertical = (size.height / 13).roundToDouble();
     final TextTheme textTheme = Theme.of(context).textTheme;
-    print("paddingHorizontal: $paddingHorizontal");
-    print("paddingVertical: $paddingVertical");
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.fromLTRB(
@@ -130,11 +128,13 @@ class _MyDrawerState extends State<MyDrawer> {
                                   message:
                                       "Go to ${drawerItems[index].title} Screen",
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 24.0,
-                                      vertical: 16.0,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: paddingHorizontal / 2.85,
+                                      vertical: paddingVertical / 4.3,
                                     ),
                                     child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Icon(drawerItems[index].icon),
                                         SizedBox(
