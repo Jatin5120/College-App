@@ -20,13 +20,57 @@ class _AlumniScreenState extends State<AlumniScreen> {
           final AlumniModal alumniModal = AlumniModal.fromJson(snapShot.data);
           return AlumniPage(alumniModal: alumniModal);
         } else {
-          return Center(
-            child: Container(
-              child: Text('Alumni Screen'),
-            ),
-          );
+          return _BuildLoadingAlumni();
         }
       },
+    );
+  }
+}
+
+class _BuildLoadingAlumni extends StatelessWidget {
+  const _BuildLoadingAlumni({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    return MyShimmerEffect(
+      child: ListView(
+        physics: NeverScrollableScrollPhysics(),
+        children: [
+          SizedBox(height: size.height / 10),
+          ShaderWidget(
+            borderRadius: UIConfigurations.appBarBorderRadius,
+            aspectRatio: 5 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.smallCardBorderRadius,
+            aspectRatio: 7 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.appBarBorderRadius,
+            aspectRatio: 10 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 9 / 5,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 9 / 5,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 9 / 5,
+          ),
+        ],
+      ),
     );
   }
 }
@@ -70,7 +114,10 @@ class _AlumniPageState extends State<AlumniPage> {
       children: [
         UIConfigurations.spaceTop(size),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: padding * 2),
+          padding: EdgeInsets.symmetric(
+            horizontal: padding * 2,
+            vertical: padding,
+          ),
           child: Text(
             'Want to do something for the college? Want to be part of it even after getting placed?',
             style: textTheme.headline6,
@@ -140,30 +187,24 @@ class _BuildAlumniCard extends StatelessWidget {
         isEven ? MainAxisAlignment.start : MainAxisAlignment.end;
     return AspectRatio(
       aspectRatio: 9 / 5,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-        ),
-        child: ClipRRect(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-          child: Row(
-            mainAxisAlignment: mainAxisAlignment,
-            children: [
-              if (!isEven)
-                _BuildDetailsColumn(
-                    padding: padding, student: student, isEven: isEven),
-              AspectRatio(
-                aspectRatio: 3 / 4,
-                child: ClipRRect(
-                  borderRadius: UIConfigurations.bgCardBorderRadius,
-                  child: ShowImage(student!.imageUrl!),
-                ),
+      child: CustomCard(
+        child: Row(
+          mainAxisAlignment: mainAxisAlignment,
+          children: [
+            if (!isEven)
+              _BuildDetailsColumn(
+                  padding: padding, student: student, isEven: isEven),
+            AspectRatio(
+              aspectRatio: 3 / 4,
+              child: ClipRRect(
+                borderRadius: UIConfigurations.bgCardBorderRadius,
+                child: ShowImage(student!.imageUrl!),
               ),
-              if (isEven)
-                _BuildDetailsColumn(
-                    padding: padding, student: student, isEven: isEven),
-            ],
-          ),
+            ),
+            if (isEven)
+              _BuildDetailsColumn(
+                  padding: padding, student: student, isEven: isEven),
+          ],
         ),
       ),
     );
@@ -187,82 +228,100 @@ class _BuildDetailsColumn extends StatelessWidget {
     final TextTheme textTheme = Theme.of(context).textTheme;
     final CrossAxisAlignment crossAxisAlignment =
         isEven ? CrossAxisAlignment.start : CrossAxisAlignment.end;
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: padding,
-        vertical: padding * 2,
-      ),
-      child: Column(
-        crossAxisAlignment: crossAxisAlignment,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            crossAxisAlignment: crossAxisAlignment,
-            children: [
-              Text(
-                student!.name!,
-                style: textTheme.headline6,
-              ),
-              SizedBox(height: padding / 2),
-              Text(
-                student!.batch!,
-                style: textTheme.subtitle1,
-              ),
-            ],
-          ),
-          Column(
-            crossAxisAlignment: crossAxisAlignment,
-            children: [
-              Text(
-                student!.job!,
-                style: textTheme.bodyText1,
-              ),
-              SizedBox(height: padding / 2),
-              Text(
-                student!.company!,
-                style: textTheme.subtitle1,
-              ),
-            ],
-          ),
-          Column(
-            crossAxisAlignment: crossAxisAlignment,
-            children: [
-              Row(
-                children: [
-                  Icon(
-                    MyIcons.mail_outlined,
-                    size: 12.0,
-                  ),
-                  SizedBox(width: padding),
-                  GestureDetector(
-                    onTap: () => Utils.openMail(mailTo: student!.email!),
-                    child: Text(
-                      student!.email!,
-                      style: textTheme.caption,
+    return Expanded(
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: padding,
+          vertical: padding * 2,
+        ),
+        child: Column(
+          crossAxisAlignment: crossAxisAlignment,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: crossAxisAlignment,
+              children: [
+                Text(
+                  student!.name!,
+                  style: textTheme.headline6,
+                  softWrap: true,
+                  textAlign: isEven ? TextAlign.left : TextAlign.right,
+                ),
+                SizedBox(height: padding / 2),
+                Text(
+                  student!.batch!,
+                  style: textTheme.subtitle1,
+                  softWrap: true,
+                  textAlign: isEven ? TextAlign.left : TextAlign.right,
+                ),
+              ],
+            ),
+            Column(
+              crossAxisAlignment: crossAxisAlignment,
+              children: [
+                Text(
+                  student!.job!,
+                  style: textTheme.bodyText1,
+                  softWrap: true,
+                  textAlign: isEven ? TextAlign.left : TextAlign.right,
+                ),
+                SizedBox(height: padding / 2),
+                Text(
+                  student!.company!,
+                  style: textTheme.subtitle1,
+                  softWrap: true,
+                  textAlign: isEven ? TextAlign.left : TextAlign.right,
+                ),
+              ],
+            ),
+            Column(
+              crossAxisAlignment: crossAxisAlignment,
+              children: [
+                Row(
+                  mainAxisAlignment:
+                      isEven ? MainAxisAlignment.start : MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      MyIcons.mail_outlined,
+                      size: 12.0,
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: padding / 2),
-              Row(
-                children: [
-                  Icon(
-                    MyIcons.phone_outlined,
-                    size: 12.0,
-                  ),
-                  SizedBox(width: padding),
-                  GestureDetector(
-                    onTap: () => Utils.openCall(phone: student!.mobile!),
-                    child: Text(
-                      student!.mobile!,
-                      style: textTheme.caption,
+                    SizedBox(width: padding),
+                    GestureDetector(
+                      onTap: () => Utils.openMail(mailTo: student!.email!),
+                      child: Text(
+                        student!.email!,
+                        style: textTheme.caption,
+                        softWrap: true,
+                        textAlign: isEven ? TextAlign.left : TextAlign.right,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
+                  ],
+                ),
+                SizedBox(height: padding / 2),
+                Row(
+                  mainAxisAlignment:
+                      isEven ? MainAxisAlignment.start : MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      MyIcons.phone_outlined,
+                      size: 12.0,
+                    ),
+                    SizedBox(width: padding),
+                    GestureDetector(
+                      onTap: () => Utils.openCall(phone: student!.mobile!),
+                      child: Text(
+                        student!.mobile!,
+                        style: textTheme.caption,
+                        softWrap: true,
+                        textAlign: isEven ? TextAlign.left : TextAlign.right,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

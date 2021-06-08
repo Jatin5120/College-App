@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
    <application
-        android:label="college_app"
+        android:label="LKCTC App"
         android:icon="@mipmap/ic_launcher">
         <activity android:name="io.flutter.plugins.urllauncher.WebViewActivity"
            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"

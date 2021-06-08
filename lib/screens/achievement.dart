@@ -21,15 +21,15 @@ class _AchievementScreenState extends State<AchievementScreen> {
               AchievementModal.fromJson(snapShot.data);
           return AchievementPage(achievementModal: achievementModal);
         } else {
-          return BuildLoadingAchievement();
+          return _BuildLoadingAchievement();
         }
       },
     );
   }
 }
 
-class BuildLoadingAchievement extends StatelessWidget {
-  const BuildLoadingAchievement({
+class _BuildLoadingAchievement extends StatelessWidget {
+  const _BuildLoadingAchievement({
     Key? key,
   }) : super(key: key);
 
@@ -134,113 +134,108 @@ class BuildConference extends StatelessWidget {
     final TextTheme textTheme = Theme.of(context).textTheme;
     return AspectRatio(
       aspectRatio: conference!.links != null ? 1.65 / 2 : 2 / 1.8,
-      child: Card(
-        shape: RoundedRectangleBorder(
-            borderRadius: UIConfigurations.bgCardBorderRadius),
-        child: ClipRRect(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-          child: Column(
-            children: [
-              AspectRatio(
-                aspectRatio: 16 / 9,
-                child: ClipRRect(
-                  borderRadius: UIConfigurations.bgCardBorderRadius,
-                  child: PageView.builder(
-                    itemCount: conference!.images!.length,
-                    itemBuilder: (context, index) {
-                      return ShowImage(conference!.images![index]);
-                    },
-                  ),
+      child: CustomCard(
+        child: Column(
+          children: [
+            AspectRatio(
+              aspectRatio: 16 / 9,
+              child: ClipRRect(
+                borderRadius: UIConfigurations.bgCardBorderRadius,
+                child: PageView.builder(
+                  itemCount: conference!.images!.length,
+                  itemBuilder: (context, index) {
+                    return ShowImage(conference!.images![index]);
+                  },
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.all(padding * 2),
-                child: Column(
-                  children: [
-                    Text(
-                      conference!.topic!,
-                      style: textTheme.headline5,
-                      textAlign: TextAlign.center,
+            ),
+            Padding(
+              padding: EdgeInsets.all(padding * 2),
+              child: Column(
+                children: [
+                  Text(
+                    conference!.topic!,
+                    style: textTheme.headline5,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: padding),
+                  if (conference!.links != null)
+                    Wrap(
+                      spacing: 10.0,
+                      alignment: WrapAlignment.spaceEvenly,
+                      children: [
+                        for (Link? link in conference!.links!)
+                          link!.important!
+                              ? ElevatedButton(
+                                  onPressed: () =>
+                                      Utils.openLink(url: link.url!),
+                                  child: Text(link.displayText!),
+                                )
+                              : OutlinedButton(
+                                  onPressed: () =>
+                                      Utils.openLink(url: link.url!),
+                                  child: Text(link.displayText!),
+                                ),
+                      ],
                     ),
-                    SizedBox(height: padding),
-                    if (conference!.links != null)
-                      Wrap(
-                        spacing: 10.0,
-                        alignment: WrapAlignment.spaceEvenly,
+                  // SizedBox(height: padding * 2),
+                  InkWell(
+                    onTap: () => showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          backgroundColor: Theme.of(context).cardTheme.color,
+                          shape: RoundedRectangleBorder(
+                            borderRadius:
+                                UIConfigurations.smallCardBorderRadius,
+                          ),
+                          title: Text(
+                            conference!.topic!,
+                            textAlign: TextAlign.center,
+                          ),
+                          content: AspectRatio(
+                            aspectRatio: 3 / 4,
+                            child: Scrollbar(
+                              child: ListView(
+                                children: [
+                                  Text(conference!.description!),
+                                ],
+                              ),
+                            ),
+                          ),
+                          actionsPadding: EdgeInsets.symmetric(
+                              horizontal: padding * 2, vertical: padding),
+                          actions: [
+                            TextButton.icon(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              label: Text('Close'),
+                              icon: Icon(Icons.close),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          for (Link? link in conference!.links!)
-                            link!.important!
-                                ? ElevatedButton(
-                                    onPressed: () =>
-                                        Utils.openLink(url: link.url!),
-                                    child: Text(link.displayText!),
-                                  )
-                                : OutlinedButton(
-                                    onPressed: () =>
-                                        Utils.openLink(url: link.url!),
-                                    child: Text(link.displayText!),
-                                  ),
+                          Text(
+                            'Read more',
+                            style: textTheme.button,
+                          ),
+                          SizedBox(width: padding / 2),
+                          Icon(MyIcons.arrow_down),
                         ],
                       ),
-                    // SizedBox(height: padding * 2),
-                    InkWell(
-                      onTap: () => showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            backgroundColor: Theme.of(context).cardTheme.color,
-                            shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  UIConfigurations.smallCardBorderRadius,
-                            ),
-                            title: Text(
-                              conference!.topic!,
-                              textAlign: TextAlign.center,
-                            ),
-                            content: AspectRatio(
-                              aspectRatio: 3 / 4,
-                              child: Scrollbar(
-                                child: ListView(
-                                  children: [
-                                    Text(conference!.description!),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            actionsPadding: EdgeInsets.symmetric(
-                                horizontal: padding * 2, vertical: padding),
-                            actions: [
-                              TextButton.icon(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                label: Text('Close'),
-                                icon: Icon(Icons.close),
-                              ),
-                            ],
-                          );
-                        },
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              'Read more',
-                              style: textTheme.button,
-                            ),
-                            SizedBox(width: padding / 2),
-                            Icon(MyIcons.arrow_down),
-                          ],
-                        ),
-                      ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -261,46 +256,41 @@ class BuildDescriptionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1,
-      child: Card(
-        shape: RoundedRectangleBorder(
-            borderRadius: UIConfigurations.bgCardBorderRadius),
-        child: ClipRRect(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-          child: Column(
-            children: [
-              ClipRRect(
-                borderRadius: UIConfigurations.bgCardBorderRadius,
-                child: AspectRatio(
-                  aspectRatio: 20 / 9,
-                  child: ShowImage(achievement!.imageUrl),
-                ),
+      child: CustomCard(
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: UIConfigurations.bgCardBorderRadius,
+              child: AspectRatio(
+                aspectRatio: 20 / 9,
+                child: ShowImage(achievement!.imageUrl),
               ),
-              Padding(
-                padding: EdgeInsets.all(padding * 2),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Text(
-                      '${achievement!.heading!}',
-                      style: Theme.of(context).textTheme.headline5,
-                    ),
-                    SizedBox(
-                      height: padding * 1.5,
-                    ),
-                    Text(
-                      achievement!.description!,
-                      style: Theme.of(context).textTheme.bodyText2,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 7,
-                      textAlign: TextAlign.justify,
-                    ),
-                  ],
-                ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(padding * 2),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Text(
+                    '${achievement!.heading!}',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                  SizedBox(
+                    height: padding * 1.5,
+                  ),
+                  Text(
+                    achievement!.description!,
+                    style: Theme.of(context).textTheme.bodyText2,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 7,
+                    textAlign: TextAlign.justify,
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

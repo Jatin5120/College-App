@@ -6,14 +6,19 @@ class UIConfigurations {
 
   static const double elevation = 10;
 
-  static BorderRadius appBarBorderRadius = BorderRadius.circular(10);
-  static BorderRadius smallCardBorderRadius = BorderRadius.circular(15);
-  static BorderRadius bgCardBorderRadius = BorderRadius.circular(20);
+  static const BorderRadius appBarBorderRadius =
+      BorderRadius.all(Radius.circular(10.0));
+  static const BorderRadius smallCardBorderRadius =
+      BorderRadius.all(Radius.circular(15.0));
+  static const BorderRadius bgCardBorderRadius =
+      BorderRadius.all(Radius.circular(20.0));
 
   static Widget spaceTop(Size size) => SizedBox(height: size.height / 10);
   static Widget spaceBottom(Size size) => SizedBox(height: size.height / 15);
 
-  static const EdgeInsets margin = EdgeInsets.all(20.0);
+  static EdgeInsets margin(
+          {required double horizontal, required double vertical}) =>
+      EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical);
 
   static const IconThemeData darkIconTheme =
       IconThemeData(color: MyColors.lightForeground);

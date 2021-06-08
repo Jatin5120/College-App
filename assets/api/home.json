@@ -537,17 +537,19 @@
             "bsc": [
                 {
                     "name": "Medical Lab Sciences",
+                    "short_name": "MLS",
                     "imageUrl": "Courses/BSC-01.jpg",
                     "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader as a Medical Laboratory Scientist, education and learning experience.",
                     "mission": "• Study emphasis on diagnosis, treatment and prevention of diseases.\n• Aims to equip Medical Laboratory Scientists with current knowledge.\n• To impart skills for analysing laboratory with quality checks.",
                     "eligibility": "The candidate should have qualified 10+2(Med. or Non-Med.). The total number of seats available are 30.",
                     "opportunities": "• Military Services\n• Colleges & Universities\n• Blood Donor Centre\n• Pharmaceutical and Medicine Manufacturing Industries\n• Scientific and Research Development Services\n• Academic Institutions\n• Hospitals\n• Clinics\n• Government Agencies\n• Biotechnology Companies",
-                    "career": "B.Sc (Medical Lab Sciences) is concerned with with the treatment, diagnosis and prevention of disease through the use of clinical laboratory tests. Hence they can get job opportunities in these specialised fields:\n\n•Medical Officer\n•Medical Services Associate\n•Resident Medical Officer\n•Research Associate\n•Medical Technologist\n•Medical coder\n•Laboratory Testing Manager\n•Laboratory Manager\n•Healthcare counsellor"
+                    "career": "B.Sc (Medical Lab Sciences) is concerned with with the treatment, diagnosis and prevention of disease through the use of clinical laboratory tests. Hence they can get job opportunities in these specialised fields:\n\n• Medical Officer\n• Medical Services Associate\n• Resident Medical Officer\n• Research Associate\n• Medical Technologist\n• Medical coder\n• Laboratory Testing Manager\n• Laboratory Manager\n• Healthcare counsellor"
                 }
             ],
             "btech": [
                 {
                     "name": "Civil Engineering",
+                    "short_name": "CE",
                     "imageUrl": "Courses/BTECH-01.jpg",
                     "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in civil engineering, education and learning experience.",
                     "mission": "• To serve the society by providing industrial oriented education to its students for a successful professional career.\n• To inculcate professional ethics through quality and modern construction practices.\n• To promote moral and ethical values among students",
@@ -557,6 +559,7 @@
                 },
                 {
                     "name": "Computer Science and Engineering",
+                    "short_name": "CSE",
                     "imageUrl": "Courses/BTECH-02.jpg",
                     "vision": "To groom students into competent engineers and entrepreneurs, by inculcating technical education, ethical and moral values through measurable and continuous improvement methods.",
                     "mission": "• To model students ready for industry by grooming their employability skills using academia and corporate collaboration.\n• To blend theoretical knowledge and practical applications with the aid of trainings, peer learning and sound academic practices.\n• Cultivate leadership skills, social awareness and responsibility among the students through various co-curriculum and extra curriculum activities.\n• To encourage the involvement of faculty in pursuing their own academic excellence through the aid of faculty development programmes, short term training programmes, seminars, workshops, etc.",
@@ -566,6 +569,7 @@
                 },
                 {
                     "name": "Electronics and Communication Engineering",
+                    "short_name": "ECE",
                     "imageUrl": "Courses/BTECH-03.jpg",
                     "vision": "To meet global standards of excellence in academic activities related to Electronics & Communication Engineering through innovative and effective teaching practices, industry tie-ups & to produce creative solutions to societal needs.",
                     "mission": "• To provide a vibrant & dynamic academic environment through industry collaborations, usage of modern tools, innovative teaching learning aids & experienced faculty.\n• To achieve global recognition by providing ethical and value based education aiming at enhancing employability of graduates through proper career guidance, skill development and promotion of entrepreneurship.\n• To inculcate human or moral values in students through an honest & scientific approach making them socially responsible citizens.",
@@ -575,6 +579,7 @@
                 },
                 {
                     "name": "Mechanical Engineering",
+                    "short_name": "ME",
                     "imageUrl": "Courses/BTECH-04.jpg",
                     "vision": "To build up finest graduates from the Department of Mechanical Engineering by achieving better-quality performance together in current and upcoming technologies and to make them ethically strong to contribute to the region and the country.",
                     "mission": "• To impart best technical knowledge to the students to gain the finest practical and professional skills.\n• To collaborate with the industries and research centres of repute to improve the technical and practical skills of the students.\n• To provide friendly environment to the faculty for participation in academic and research activities in order to help the students to accomplish their desired objective.\n• To provide the excellent infrastructure facilities pertaining to Mechanical Engineering.",
@@ -586,6 +591,7 @@
             "bvoc": [
                 {
                     "name": "Automobile Servicing",
+                    "short_name": "AS",
                     "imageUrl": "Courses/BVOC-01.jpg",
                     "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Automobile Servicing, education and learning experience.",
                     "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
@@ -595,6 +601,7 @@
                 },
                 {
                     "name": "Building Construction and Technology",
+                    "short_name": "BCT",
                     "imageUrl": "Courses/BVOC-02.jpg",
                     "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Building Construction and Technology, education and learning experience.",
                     "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
@@ -604,6 +611,7 @@
                 },
                 {
                     "name": "Data and Web Analytics",
+                    "short_name": "DWA",
                     "imageUrl": "Courses/BVOC-03.jpg",
                     "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Data and Web Analytics, education and learning experience.",
                     "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
@@ -613,6 +621,7 @@
                 },
                 {
                     "name": "Refrigeration and Air Conditioning",
+                    "short_name": "RAC",
                     "imageUrl": "Courses/BVOC-04.jpg",
                     "vision": "The vision of the department is in consonance with the institutional vision in terms of becoming center of study, promoting society and ethical values. It is a recognized leader in Refrigeration and Air Conditioning services, education and learning experience.",
                     "mission": "• To teach the students fundamentals required to succeed as a technician.\n• To install intangible values like professionalism, confidence, teamwork and accountablity.\n• To present the opportunity to advance our student's career through relevant meaningful shop experience.",
@@ -624,6 +633,7 @@
             "diploma": [
                 {
                     "name": "Civil Engineering",
+                    "short_name": "CE",
                     "imageUrl": "Courses/DIP-01.jpg",
                     "vision": "DIPLOMA Courses (Polytechnic) at LKCE got established in 2019 under the aegis of Khalsa College Lyallpur Education Charitable Trust and affiliated to Punjab State Board of Technical Education and Industrial Training, Chandigarh. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers.",
                     "mission": "A DIPLOMA Course would help you achieve practical knowledge of training on the basic level. After attaining a polytechnic diploma, you could straightaway apply for jobs in the same field and often in the government or private sectors. Many students even opt for jobs immediately after their polytechnic course gets over, and pursue their degree course while working. So, basically they earn while they learn!",
@@ -633,6 +643,7 @@
                 },
                 {
                     "name": "Computer Science & Engineering",
+                    "short_name": "CSE",
                     "imageUrl": "Courses/DIP-02.jpg",
                     "vision": "DIPLOMA Courses (Polytechnic) at LKCE got established in 2019 under the aegis of Khalsa College Lyallpur Education Charitable Trust and affiliated to Punjab State Board of Technical Education and Industrial Training, Chandigarh. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers.",
                     "mission": "A DIPLOMA Course would help you achieve practical knowledge of training on the basic level. After attaining a polytechnic diploma, you could straightaway apply for jobs in the same field and often in the government or private sectors. Many students even opt for jobs immediately after their polytechnic course gets over, and pursue their degree course while working. So, basically they earn while they learn!",
@@ -642,6 +653,7 @@
                 },
                 {
                     "name": "Mechanical Engineering",
+                    "short_name": "ME",
                     "imageUrl": "Courses/DIP-03.jpg",
                     "vision": "DIPLOMA Courses (Polytechnic) at LKCE got established in 2019 under the aegis of Khalsa College Lyallpur Education Charitable Trust and affiliated to Punjab State Board of Technical Education and Industrial Training, Chandigarh. It was established with an aim to impart engineering education to the students to make them competent, motivated engineers.",
                     "mission": "A DIPLOMA Course would help you achieve practical knowledge of training on the basic level. After attaining a polytechnic diploma, you could straightaway apply for jobs in the same field and often in the government or private sectors. Many students even opt for jobs immediately after their polytechnic course gets over, and pursue their degree course while working. So, basically they earn while they learn!",

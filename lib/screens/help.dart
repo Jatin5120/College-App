@@ -21,13 +21,52 @@ class _HelpScreenState extends State<HelpScreen> {
           final HelpModal helpModal = HelpModal.fromJson(snapShot.data);
           return HelpPage(helpModal: helpModal);
         } else {
-          return Center(
-            child: Container(
-              child: Text('Help Screen'),
-            ),
-          );
+          return _BuildLoadingHelp();
         }
       },
+    );
+  }
+}
+
+class _BuildLoadingHelp extends StatelessWidget {
+  const _BuildLoadingHelp({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    return MyShimmerEffect(
+      child: ListView(
+        physics: NeverScrollableScrollPhysics(),
+        children: [
+          SizedBox(height: size.height / 10),
+          ShaderWidget(
+            borderRadius: UIConfigurations.appBarBorderRadius,
+            aspectRatio: 5 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.smallCardBorderRadius,
+            aspectRatio: 7 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 9 / 5,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 7 / 1,
+          ),
+          SizedBox(height: size.height / 25),
+          ShaderWidget(
+            borderRadius: UIConfigurations.bgCardBorderRadius,
+            aspectRatio: 3 / 2,
+          ),
+        ],
+      ),
     );
   }
 }
@@ -69,6 +108,12 @@ class _HelpPageState extends State<HelpPage> {
     final TextTheme textTheme = Theme.of(context).textTheme;
     final Size size = MediaQuery.of(context).size;
     final double padding = (size.width / 40).roundToDouble();
+    final double marginHorizontal = (size.width / 15).roundToDouble();
+    final double marginVertical = (size.height / 40).roundToDouble();
+    final EdgeInsets margin = UIConfigurations.margin(
+      horizontal: marginHorizontal,
+      vertical: marginVertical,
+    );
     return ListView(
       children: [
         UIConfigurations.spaceTop(size),
@@ -88,7 +133,7 @@ class _HelpPageState extends State<HelpPage> {
         ),
         BuildSubHeader(title: 'Useful Links', padding: padding),
         Padding(
-          padding: UIConfigurations.margin,
+          padding: margin,
           child: Wrap(
             alignment: WrapAlignment.spaceEvenly,
             spacing: padding * 2,
@@ -117,8 +162,9 @@ class _HelpPageState extends State<HelpPage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: UIConfigurations.smallCardBorderRadius,
                   ),
-                  margin:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  margin: EdgeInsets.symmetric(
+                      horizontal: marginHorizontal,
+                      vertical: marginVertical / 2),
                   child: Padding(
                     padding: EdgeInsets.all(padding * 2),
                     child: Column(
@@ -134,7 +180,9 @@ class _HelpPageState extends State<HelpPage> {
                                   style: textTheme.headline6,
                                 ),
                               ),
-                              Icon(MyIcons.arrow_down)
+                              Icon(faqProvider.expanded[index]
+                                  ? MyIcons.arrow_up
+                                  : MyIcons.arrow_down)
                             ],
                           ),
                         ),

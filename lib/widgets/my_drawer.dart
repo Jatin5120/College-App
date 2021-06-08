@@ -42,13 +42,18 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double padding = size.width / 6;
+    final double paddingHorizontal = (size.width / 6).roundToDouble();
+    final double paddingVertical = (size.height / 13).roundToDouble();
     final TextTheme textTheme = Theme.of(context).textTheme;
+    print("paddingHorizontal: $paddingHorizontal");
+    print("paddingVertical: $paddingVertical");
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: padding / 2,
-          vertical: padding / 1.2,
+        padding: EdgeInsets.fromLTRB(
+          paddingHorizontal / 2,
+          paddingVertical / 1.2,
+          paddingHorizontal / 2,
+          paddingVertical / 2,
         ),
         child: Consumer2(
           builder: (BuildContext context, CurrentRoute currentRoute,
@@ -61,7 +66,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     CircleAvatar(
-                      child: InkWell(
+                      child: GestureDetector(
                         onTap: () {
                           drawerState.controller.reverse();
                           drawerState.changeState(false);
@@ -69,12 +74,12 @@ class _MyDrawerState extends State<MyDrawer> {
                         },
                         child: Image.asset('assets/images/logo.png'),
                       ),
-                      radius: padding,
+                      radius: paddingVertical,
                       backgroundColor:
                           Theme.of(context).scaffoldBackgroundColor,
                     ),
                     SizedBox(
-                      height: padding / 7,
+                      height: paddingVertical / 7,
                     ),
                     Text(
                       'LKC TC',
@@ -98,23 +103,13 @@ class _MyDrawerState extends State<MyDrawer> {
                                 UIConfigurations.smallCardBorderRadius,
                             child: Card(
                               margin: EdgeInsets.only(
-                                right: padding * 1.5,
-                                top: padding / 2.5,
+                                right: paddingHorizontal * 1.5,
+                                top: paddingVertical / 2.5,
                               ),
                               elevation: 0,
                               shape: RoundedRectangleBorder(
                                 side: BorderSide(
-                                  color: currentTheme.currentThemeMode ==
-                                          ThemeMode.dark
-                                      ? MyColors.lightForeground
-                                      : currentTheme.currentThemeMode ==
-                                              ThemeMode.light
-                                          ? MyColors.selectedColor
-                                          : MediaQuery.of(context)
-                                                      .platformBrightness ==
-                                                  Brightness.dark
-                                              ? MyColors.lightForeground
-                                              : MyColors.selectedColor,
+                                  color: currentTheme.activeBgColor,
                                   width: 2.0,
                                   style: currentRoute.getCurrentRoute ==
                                           drawerItems[index].route
@@ -124,32 +119,34 @@ class _MyDrawerState extends State<MyDrawer> {
                                 borderRadius:
                                     UIConfigurations.smallCardBorderRadius,
                               ),
-                              child: InkWell(
+                              child: GestureDetector(
                                 onTap: () {
                                   drawerState.controller.reverse();
                                   drawerState.changeState(false);
                                   currentRoute
                                       .setRoute(drawerItems[index].route);
                                 },
-                                onLongPress: () => Tooltip(
-                                  message: drawerItems[index].title,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24.0,
-                                    vertical: 16.0,
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Icon(drawerItems[index].icon),
-                                      SizedBox(
-                                        width: padding / 5,
-                                      ),
-                                      Text(
-                                        drawerItems[index].title,
-                                        style: textTheme.headline6,
-                                      ),
-                                    ],
+                                child: Tooltip(
+                                  message:
+                                      "Go to ${drawerItems[index].title} Screen",
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 24.0,
+                                      vertical: 16.0,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Icon(drawerItems[index].icon),
+                                        SizedBox(
+                                          width: paddingHorizontal / 5,
+                                        ),
+                                        Text(
+                                          drawerItems[index].title,
+                                          style: textTheme.headline6,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -161,7 +158,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: padding / 4),
+                  padding: EdgeInsets.only(left: paddingHorizontal / 4),
                   child: Row(
                     children: [
                       Text(
@@ -169,7 +166,7 @@ class _MyDrawerState extends State<MyDrawer> {
                         style: textTheme.headline6,
                       ),
                       SizedBox(
-                        width: padding / 2,
+                        width: paddingHorizontal / 2,
                       ),
                       DropdownButton<ThemeMode>(
                         dropdownColor:

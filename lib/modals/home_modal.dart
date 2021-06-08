@@ -210,6 +210,7 @@ class Courses {
 
 class Course {
   String? name;
+  String? shortName;
   String? imageUrl;
   String? vision;
   String? mission;
@@ -219,6 +220,7 @@ class Course {
 
   Course(
       {this.name,
+      this.shortName,
       this.imageUrl,
       this.vision,
       this.mission,
@@ -228,6 +230,7 @@ class Course {
 
   Course.fromJson(Map<String, dynamic> json) {
     name = json['name'];
+    shortName = json['short_name'];
     imageUrl = json['imageUrl'];
     vision = json['vision'];
     mission = json['mission'];
@@ -239,6 +242,7 @@ class Course {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = Map<String, dynamic>();
     data['name'] = this.name;
+    data['short_name'] = this.shortName;
     data['imageUrl'] = this.imageUrl;
     data['vision'] = this.vision;
     data['mission'] = this.mission;

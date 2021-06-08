@@ -8,3 +8,5 @@ export 'swipable_image_card.dart';
 export 'sub_header.dart';
 export 'cta_button.dart';
 export 'contact.dart';
+export 'custom_card.dart';
+export 'build_para.dart';

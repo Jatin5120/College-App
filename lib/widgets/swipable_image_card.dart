@@ -16,53 +16,47 @@ class BuildSwipableImageCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-        ),
-        child: ClipRRect(
-          borderRadius: UIConfigurations.bgCardBorderRadius,
-          child: Column(
-            children: [
-              AspectRatio(
-                aspectRatio: 16 / 9,
-                child: ClipRRect(
-                  borderRadius: UIConfigurations.bgCardBorderRadius,
-                  child: PageView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: item['images'].length,
-                    itemBuilder: (context, index) {
-                      return ShowImage(item['images'][index]);
-                    },
+      child: CustomCard(
+        borderRadius: UIConfigurations.bgCardBorderRadius,
+        child: Column(
+          children: [
+            AspectRatio(
+              aspectRatio: 16 / 9,
+              child: ClipRRect(
+                borderRadius: UIConfigurations.bgCardBorderRadius,
+                child: PageView.builder(
+                  itemCount: item['images'].length,
+                  itemBuilder: (context, index) {
+                    return ShowImage(item['images'][index]);
+                  },
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(padding * 2),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    item['title'] ?? '',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText1!
+                        .copyWith(fontWeight: FontWeight.w600),
+                    textAlign: TextAlign.center,
                   ),
-                ),
+                  SizedBox(height: padding),
+                  Text(
+                    item['description'] ?? '',
+                    style: Theme.of(context).textTheme.bodyText2,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.justify,
+                    maxLines: 5,
+                  ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.all(padding * 2),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      item['title'] ?? '',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .copyWith(fontWeight: FontWeight.w600),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: padding),
-                    Text(
-                      item['description'] ?? '',
-                      style: Theme.of(context).textTheme.bodyText2,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.justify,
-                      maxLines: 5,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

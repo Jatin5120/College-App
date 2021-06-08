@@ -22,4 +22,5 @@ class MyColors {
   static const Color darkShimmerColorTwo = Color(0xFF393F47);
 
   static const Color selectedColor = Color(0xFF1F26FD);
+  static const Color inactiveColor = Color(0xAA888888);
 }

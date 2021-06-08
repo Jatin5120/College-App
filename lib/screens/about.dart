@@ -19,15 +19,15 @@ class _AboutScreenState extends State<AboutScreen> {
           final AboutModal aboutModal = AboutModal.fromJson(snapShot.data);
           return AboutPage(aboutModal: aboutModal);
         } else {
-          return BuildLoadingAbout();
+          return _BuildLoadingAbout();
         }
       },
     );
   }
 }
 
-class BuildLoadingAbout extends StatelessWidget {
-  const BuildLoadingAbout({
+class _BuildLoadingAbout extends StatelessWidget {
+  const _BuildLoadingAbout({
     Key? key,
   }) : super(key: key);
 
@@ -105,24 +105,20 @@ class _AboutPageState extends State<AboutPage> {
     return ListView(
       children: [
         UIConfigurations.spaceTop(size),
-        Text(
-          aboutData.title!,
-          style: textTheme.headline4!.copyWith(fontWeight: FontWeight.w600),
-          overflow: TextOverflow.clip,
-          textAlign: TextAlign.center,
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: padding),
+          child: Text(
+            aboutData.title!,
+            style: textTheme.headline4!.copyWith(fontWeight: FontWeight.w600),
+            overflow: TextOverflow.clip,
+            textAlign: TextAlign.center,
+          ),
         ),
-        SizedBox(height: size.width / 12),
+        SizedBox(height: size.height / 40),
         AspectRatio(
           aspectRatio: 15 / 9,
-          child: Card(
-            margin: UIConfigurations.margin,
-            shape: RoundedRectangleBorder(
-              borderRadius: UIConfigurations.bgCardBorderRadius,
-            ),
-            child: ClipRRect(
-              borderRadius: UIConfigurations.bgCardBorderRadius,
-              child: ShowImage(aboutData.imageUrl!),
-            ),
+          child: CustomCard(
+            child: ShowImage(aboutData.imageUrl!),
           ),
         ),
         BuildSubHeader(title: 'About', padding: padding),
@@ -174,103 +170,74 @@ class BuildTeamCard extends StatelessWidget {
         itemCount: teams!.length,
         itemBuilder: (context, index) {
           final Team team = teams![index]!;
-          return Card(
-            margin: UIConfigurations.margin,
-            shape: RoundedRectangleBorder(
-              borderRadius: UIConfigurations.bgCardBorderRadius,
-            ),
-            child: ClipRRect(
-              borderRadius: UIConfigurations.bgCardBorderRadius,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  ClipRRect(
+          return CustomCard(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                AspectRatio(
+                  aspectRatio: 5 / 3,
+                  child: ClipRRect(
                     borderRadius: UIConfigurations.bgCardBorderRadius,
-                    child: AspectRatio(
-                      aspectRatio: 5 / 3,
-                      child: ShowImage(team.imageUrl!),
-                    ),
+                    child: ShowImage(team.imageUrl!),
                   ),
-                  if (!isCoreTeam) SizedBox(height: padding * 3),
-                  Padding(
-                    padding: EdgeInsets.all(padding),
-                    child: Column(
-                      children: [
-                        Text(
-                          team.name!,
-                          style: textTheme.headline4,
-                          textAlign: TextAlign.center,
-                        ),
-                        Text(
-                          team.designation!,
-                          style: textTheme.headline5,
-                        ),
-                      ],
-                    ),
-                  ),
-                  if (isCoreTeam)
-                    OutlinedButton(
-                      child: Text(
-                        'Show Message',
+                ),
+                if (!isCoreTeam) SizedBox(height: padding * 3),
+                Padding(
+                  padding: EdgeInsets.all(padding),
+                  child: Column(
+                    children: [
+                      Text(
+                        team.name!,
+                        style: textTheme.headline4,
+                        textAlign: TextAlign.center,
                       ),
-                      onPressed: () => showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            title: Text(team.name!),
-                            content: AspectRatio(
-                              aspectRatio: 3 / 4,
-                              child: ListView(
-                                children: [
-                                  Text(team.message!),
-                                ],
-                              ),
+                      Text(
+                        team.designation!,
+                        style: textTheme.headline5,
+                      ),
+                    ],
+                  ),
+                ),
+                if (isCoreTeam)
+                  OutlinedButton(
+                    child: Text(
+                      'Show Message',
+                    ),
+                    onPressed: () => showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          backgroundColor: Theme.of(context).cardTheme.color,
+                          shape: RoundedRectangleBorder(
+                            borderRadius:
+                                UIConfigurations.smallCardBorderRadius,
+                          ),
+                          title: Text(team.name!),
+                          content: AspectRatio(
+                            aspectRatio: 3 / 4,
+                            child: ListView(
+                              children: [
+                                Text(team.message!),
+                              ],
                             ),
-                            actions: [
-                              TextButton.icon(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                label: Text('Close'),
-                                icon: Icon(Icons.close),
-                              ),
-                            ],
-                          );
-                        },
-                      ),
+                          ),
+                          actions: [
+                            TextButton.icon(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              label: Text('Close'),
+                              icon: Icon(Icons.close),
+                            ),
+                          ],
+                        );
+                      },
                     ),
-                ],
-              ),
+                  ),
+              ],
             ),
           );
         },
-      ),
-    );
-  }
-}
-
-class BuildParagraph extends StatelessWidget {
-  const BuildParagraph({
-    Key? key,
-    required this.padding,
-    required this.paragraph,
-  }) : super(key: key);
-
-  final double padding;
-  final String paragraph;
-
-  @override
-  Widget build(BuildContext context) {
-    final TextTheme textTheme = Theme.of(context).textTheme;
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: padding * 3,
-        vertical: padding,
-      ),
-      child: Text(
-        paragraph,
-        style: textTheme.bodyText1,
-        textAlign: TextAlign.justify,
       ),
     );
   }

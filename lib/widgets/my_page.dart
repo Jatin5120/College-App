@@ -1,3 +1,4 @@
+import 'package:college_app/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:college_app/constants/constants.dart';
@@ -29,7 +30,6 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
     MyRoutes.placement: PlacementScreen(),
     MyRoutes.alumni: AlumniScreen(),
     MyRoutes.help: HelpScreen(),
-    MyRoutes.courses: CourseScreen(),
   };
 
   void initializeAnimation() {
@@ -73,8 +73,10 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double position = (size.width / 30).roundToDouble();
-    final double margin = (size.width / 40).roundToDouble();
+    final double positionHorizontal = (size.width / 30).roundToDouble();
+    final double marginHorizontal = (size.width / 40).roundToDouble();
+    final double positionVertical = (size.height / 64).roundToDouble();
+    final double marginVertical = (size.height / 87).roundToDouble();
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
@@ -83,8 +85,7 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
               CurrentRoute currentRoute, Widget? child) {
             return GestureDetector(
               onHorizontalDragUpdate: (DragUpdateDetails details) {
-                if (details.delta.dx < -5.0 && drawerState.isOpen) {
-                  print(details.delta.dx);
+                if (details.delta.dx < -10.0 && drawerState.isOpen) {
                   drawerState.controller.reverse();
                   drawerState.changeState(false);
                 }
@@ -115,9 +116,9 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
                               children: [
                                 pages[currentRoute.getCurrentRoute]!,
                                 Positioned(
-                                  top: margin * 2,
-                                  left: margin * 2,
-                                  right: margin * 2,
+                                  top: marginVertical * 2,
+                                  left: marginHorizontal * 2,
+                                  right: marginHorizontal * 2,
                                   child: MyAppBar(
                                     size: size,
                                     title: Text(
@@ -128,11 +129,21 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
                                     isImage: false,
                                   ),
                                 ),
+                                if (drawerState.isOpen)
+                                  Container(
+                                    height: double.infinity,
+                                    width: double.infinity,
+                                    color: Colors.transparent,
+                                  )
                               ],
                             ),
                             floatingActionButton: FloatingActionButton(
-                              onPressed: () {},
-                              tooltip: 'query',
+                              onPressed: () => Utils.openMail(
+                                  mailTo: 'info@lkcengg.edu.in',
+                                  subject: 'Query: <Query Subject>',
+                                  body:
+                                      '<Body of Query>\n\n\nName: <Name>\nContact: <Contact Details>\n\nPlease provide contact details so that we can contact you'),
+                              tooltip: 'Query',
                               child: Icon(MyIcons.message),
                             ),
                           ),
@@ -141,8 +152,8 @@ class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   Positioned(
-                    top: position * 1.75,
-                    left: position * 1.75,
+                    top: positionVertical * 1.75,
+                    left: positionHorizontal * 1.75,
                     child: IconButton(
                       icon: AnimatedIcon(
                         icon: AnimatedIcons.close_menu,
