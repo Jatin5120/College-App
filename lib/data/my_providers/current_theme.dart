@@ -67,19 +67,3 @@ class CurrentTheme extends ChangeNotifier {
     notifyListeners();
   }
 }
-
-/*
-
-currentTheme.currentThemeMode ==
-      ThemeMode.dark
-  ? MyColors.lightForeground
-  : currentTheme.currentThemeMode ==
-          ThemeMode.light
-      ? MyColors.selectedColor
-      : MediaQuery.of(context)
-                  .platformBrightness ==
-              Brightness.dark
-          ? MyColors.lightForeground
-          : MyColors.selectedColor
-
- */

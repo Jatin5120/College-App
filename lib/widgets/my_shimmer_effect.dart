@@ -78,9 +78,11 @@ class _MyShimmerEffectState extends State<MyShimmerEffect>
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    final double paddingHorizontal = (size.width / 15).roundToDouble();
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: EdgeInsets.symmetric(horizontal: paddingHorizontal),
         child: ShaderMask(
           shaderCallback: (rect) {
             return LinearGradient(

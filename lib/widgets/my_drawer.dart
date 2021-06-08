@@ -93,7 +93,7 @@ class _MyDrawerState extends State<MyDrawer> {
                     builder: (BuildContext context, CurrentRoute currentRoute,
                         DrawerState drawerState, Widget? child) {
                       return ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: BouncingScrollPhysics(),
                         itemCount: drawerItems.length,
                         itemBuilder: (BuildContext context, int index) {
                           return ClipRRect(

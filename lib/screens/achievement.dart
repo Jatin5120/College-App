@@ -40,7 +40,7 @@ class _BuildLoadingAchievement extends StatelessWidget {
       child: ListView(
         physics: NeverScrollableScrollPhysics(),
         children: [
-          SizedBox(height: size.height / 8),
+          UIConfigurations.spaceTop(size),
           ShaderWidget(
             borderRadius: UIConfigurations.bgCardBorderRadius,
             aspectRatio: 4 / 1,

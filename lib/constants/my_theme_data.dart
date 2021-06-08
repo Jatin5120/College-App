@@ -10,6 +10,9 @@ class MyThemeData {
   const MyThemeData._();
 
   static ThemeData lightThemeData = ThemeData(
+    pageTransitionsTheme: PageTransitionsTheme(builders: {
+      TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+    }),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     primaryColor: MyColors.selectedColor,
     accentColor: MyColors.lightAccentColor,
@@ -131,6 +134,9 @@ class MyThemeData {
   );
 
   static ThemeData darkThemeData = ThemeData(
+    pageTransitionsTheme: PageTransitionsTheme(builders: {
+      TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+    }),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     primaryColor: MyColors.selectedColor,
     accentColor: MyColors.darkAccentColor,

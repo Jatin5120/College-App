@@ -39,7 +39,7 @@ class _BuildLoadingAlumni extends StatelessWidget {
       child: ListView(
         physics: NeverScrollableScrollPhysics(),
         children: [
-          SizedBox(height: size.height / 10),
+          UIConfigurations.spaceTop(size),
           ShaderWidget(
             borderRadius: UIConfigurations.appBarBorderRadius,
             aspectRatio: 5 / 1,

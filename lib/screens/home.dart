@@ -40,7 +40,7 @@ class _BuildLoadingHome extends StatelessWidget {
       child: ListView(
         physics: NeverScrollableScrollPhysics(),
         children: [
-          SizedBox(height: size.height / 10),
+          UIConfigurations.spaceTop(size),
           ShaderWidget(
             borderRadius: UIConfigurations.bgCardBorderRadius,
             aspectRatio: 3 / 2,
@@ -722,42 +722,6 @@ class BuildEvents extends StatelessWidget {
   }
 }
 
-/*
-
-if (notice.links != null)
-  Expanded(
-    flex: 1,
-    child: Scrollbar(
-      child: ListView(
-        children: [
-          Wrap(
-            spacing: 10.0,
-            alignment: WrapAlignment.spaceEvenly,
-            children: [
-              for (Link? link in notice.links!)
-                link!.important!
-                    ? ElevatedButton(
-                        onPressed: () =>
-                            Utils.openLink(
-                                url: link.url!),
-                        child:
-                            Text(link.displayText!),
-                      )
-                    : OutlinedButton(
-                        onPressed: () =>
-                            Utils.openLink(
-                                url: link.url!),
-                        child:
-                            Text(link.displayText!),
-                      ),
-            ],
-          ),
-        ],
-      ),
-    ),
-  ),
-
- */
 class BuildSlideShow extends StatelessWidget {
   final List<String?>? slides;
 

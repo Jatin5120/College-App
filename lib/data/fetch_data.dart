@@ -1,13 +1,14 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 Future<Map<String, dynamic>> fetchData(String file) async {
-  // http.Response response = await http.get(Uri.parse(url));
+  final String base = 'https://lkctc-app.herokuapp.com';
+  final String url = '$base$file';
+  print(url);
   try {
-    debugPrint("Reading - assets/api$file.json");
-    String jsonResult = await rootBundle.loadString("assets/api$file.json");
-    Map<String, dynamic> data = json.decode(jsonResult);
+    http.Response response = await http.get(Uri.parse(url));
+    Map<String, dynamic> data = json.decode(response.body);
     return data;
   } catch (e) {
     debugPrint("Didn't get data\nError: $e");
