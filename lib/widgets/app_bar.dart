@@ -20,7 +20,7 @@ class MyAppBar extends StatelessWidget {
       padding = size!.width - size!.width * 0.75;
     }
     return Material(
-      elevation: 10,
+      elevation: UIConfigurations.elevation,
       borderRadius: UIConfigurations.appBarBorderRadius,
       child: ClipRRect(
         borderRadius: UIConfigurations.appBarBorderRadius,
