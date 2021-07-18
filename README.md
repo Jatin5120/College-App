@@ -1,6 +1,8 @@
 # LKCTC Student App
 
-A Mobile App designed to present the data of  my College [LKCTC Jalandhar](http://lkcengg.edu.in/ "LKCTC HomePage").
+A Mobile App developed to represent the data of  My College [LKCTC Jalandhar](http://lkcengg.edu.in/ "LKCTC HomePage").
+
+To fetch and Use the Data to make your version of it, usr this [API](https://lkctc-app.herokuapp.com/ "LKCTC API")[1]
 
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
