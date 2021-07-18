@@ -76,11 +76,9 @@ To fetch and Use the Data to make your version of it, usr this [API](https://lkc
 </table>
 
 
-## Getting Started
+### If you're New to Flutter
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+A few resources to get you started:
 
 -   [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 -   [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
