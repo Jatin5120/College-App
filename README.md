@@ -2,7 +2,7 @@
 
 A Mobile App developed to represent the data of  My College [LKCTC Jalandhar](http://lkcengg.edu.in/ "LKCTC HomePage").
 
-To fetch and Use the Data to make your version of it, usr this [API][1](https://lkctc-app.herokuapp.com/ "LKCTC API")
+To fetch and Use the Data to make your version of it, usr this [API](https://lkctc-app.herokuapp.com/ "LKCTC API")
 
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
