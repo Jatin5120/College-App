@@ -9,6 +9,7 @@ A Mobile App designed to present the data of  my College [LKCTC Jalandhar](http:
 #### Incase you need any help in this you can mail me at getjatin5120@gmail.com
 
 <br>
+
 ## Screenshots
 
 <!-- ![Demo.gif](https://media.giphy.com/media/ADyHM4kgYCyMasVRMo/giphy.gif) -->
