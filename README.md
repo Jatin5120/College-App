@@ -8,65 +8,66 @@ A Mobile App designed to present the data of  my College [LKCTC Jalandhar](http:
 
 #### Incase you need any help in this you can mail me at getjatin5120@gmail.com
 
+<br>
 ## Screenshots
 
 <!-- ![Demo.gif](https://media.giphy.com/media/ADyHM4kgYCyMasVRMo/giphy.gif) -->
-<br><br>
+<br>
 <table>
   <tr>
     <td>
       <img src="screenshots/home_light.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/home_dark.png?raw=true" width="250">
+      <img src="screenshots/home_dark.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/drawer_light.png?raw=true" width="250">
+      <img src="screenshots/drawer_light.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/drawer_dark.png?raw=true" width="250">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/about_light.png?raw=true" width="250">
-    </td>
-    <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/about_dark.png?raw=true" width="250">
-    </td>
-    <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/achievement_light.png?raw=true" width="250">
-    </td>
-    <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/achievement_dark.png?raw=true" width="250">
+      <img src="screenshots/drawer_dark.png?raw=true" width="250">
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/alumni_light.png?raw=true" width="250">
+      <img src="screenshots/about_light.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/alumni_dark.png?raw=true" width="250">
+      <img src="screenshots/about_dark.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/courses_light.png?raw=true" width="250">
+      <img src="screenshots/achievement_light.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/courses_dark.png?raw=true" width="250">
+      <img src="screenshots/achievement_dark.png?raw=true" width="250">
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/help_light.png?raw=true" width="250">
+      <img src="screenshots/alumni_light.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/help_dark.png?raw=true" width="250">
+      <img src="screenshots/alumni_dark.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/placement_light.png?raw=true" width="250">
+      <img src="screenshots/courses_light.png?raw=true" width="250">
     </td>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/placement_dark.png?raw=true" width="250">
+      <img src="screenshots/courses_dark.png?raw=true" width="250">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/help_light.png?raw=true" width="250">
+    </td>
+    <td>
+      <img src="screenshots/help_dark.png?raw=true" width="250">
+    </td>
+    <td>
+      <img src="screenshots/placement_light.png?raw=true" width="250">
+    </td>
+    <td>
+      <img src="screenshots/placement_dark.png?raw=true" width="250">
     </td>
   </tr>
 </table>
