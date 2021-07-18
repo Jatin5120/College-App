@@ -4,7 +4,7 @@ A Mobile App designed to present the data of  my College [LKCTC Jalandhar](http:
 
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
-#### APK  --> [LKCTC App.apk](https://github.com/Jatin5120/College-App/blob/main/LKCTC App.apk)
+#### APK  --> [LKCTC App.apk](https://github.com/Jatin5120/College-App/blob/main/LKCTC_App.apk)
 
 #### Incase you need any help in this you can mail me at getjatin5120@gmail.com
 
@@ -15,7 +15,7 @@ A Mobile App designed to present the data of  my College [LKCTC Jalandhar](http:
 <table>
   <tr>
     <td>
-      <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/home_light.png?raw=true" width="250">
+      <img src="screenshots/home_light.png?raw=true" width="250">
     </td>
     <td>
       <img src="https://github.com/Jatin5120/College-App/blob/main/screenshots/home_dark.png?raw=true" width="250">
