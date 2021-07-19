@@ -13,9 +13,8 @@ To fetch and Use the Data to make your version of it, usr this [API](https://lkc
 <br>
 
 ## Screenshots
-
-<img src="gifs/Drawer&Theme.gif" alt="Theme Changing and Drawer" align="center">
-<img src="gifs/ExternalLinks.gif" alt="External Links.gif">
+<p align="center"><img src="gifs/Drawer&Theme.gif" alt="Theme Changing and Drawer" align="center" width="300px"></p>
+<p align="center"><img src="gifs/ExternalLinks.gif" alt="External Links.gif" width="300px"></p>
 <br>
 <table>
   <tr>
