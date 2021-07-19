@@ -14,7 +14,7 @@ To fetch and Use the Data to make your version of it, usr this [API](https://lkc
 
 ## Screenshots
 
-<!-- ![Demo.gif](https://media.giphy.com/media/ADyHM4kgYCyMasVRMo/giphy.gif) -->
+![Theme Changing and Drawer.gif](gifs/Drawer&Theme.gif "Theme Changing and Drawer")
 <br>
 <table>
   <tr>
